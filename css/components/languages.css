@@ -1,6 +1,17 @@
-.colorlib-languages .progress-wrap {
+.languages {
+	background-color: var(--background-lighter);
+    margin-top: 10px;
+	margin-bottom: 10px;
+}
+.languages .progress-wrap {
 	text-align: center;
-	margin-bottom: 20px;
+}
+
+.languages .desc h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
 }
 .progress-wrap h3 {
 	font-size: 16px;
@@ -44,86 +55,59 @@
 	top: -22px;
 	right: -32px;
 }
-.progress-bar.color-1 {
-	background: var(--primary-color);
-}
-.progress-bar.color-1:after {
-	background: var(--primary-color);
-}
+.progress-bar.color-1,
+.progress-bar.color-1:after,
 .progress-bar.color-1 span {
-	color: var(--primary-color);
+	background: #0077b6;
+	color: #0077b6;
 }
-.progress-bar.color-2 {
-	background: #ec5453;
-}
-.progress-bar.color-2:after {
-	background: #ec5453;
-}
+.progress-bar.color-2,
+.progress-bar.color-2:after,
 .progress-bar.color-2 span {
+	background: #ec5453;
 	color: #ec5453;
 	padding-top: 2px;
 }
-.progress-bar.color-3 {
-	background: var(--background-light);
-}
-.progress-bar.color-3:after {
-	background: var(--background-light);
-}
+.progress-bar.color-3,
+.progress-bar.color-3:after,
 .progress-bar.color-3 span {
-	color: var(--background-light);
+	background: #f4ade8;
+	color: #f4ade8;
 }
-.progress-bar.color-4 {
-	background: #a84cb8;
-}
-.progress-bar.color-4:after {
-	background: #a84cb8;
-}
+.progress-bar.color-4,
+.progress-bar.color-4:after,
 .progress-bar.color-4 span {
+	background: #a84cb8;
 	color: #a84cb8;
 }
-.progress-bar.color-5 {
-	background: #2fa499;
-}
-.progress-bar.color-5:after {
-	background: #2fa499;
-}
+.progress-bar.color-5,
+.progress-bar.color-5:after,
 .progress-bar.color-5 span {
+	background: #2fa499;
 	color: #2fa499;
 }
-.progress-bar.color-6 {
-	background: #4054b2;
-}
-.progress-bar.color-6:after {
-	background: #4054b2;
-}
+.progress-bar.color-6,
+.progress-bar.color-6:after,
 .progress-bar.color-6 span {
+	background: #4054b2;
 	color: #4054b2;
 }
-.progress-bar.color-7 {
-	background: #ec5453;
-}
-.progress-bar.color-7:after {
-	background: #ec5453;
-}
+.progress-bar.color-7,
+.progress-bar.color-7:after,
 .progress-bar.color-7 span {
+	background: #ec5453;
 	color: #ec5453;
 }
-.progress-bar.color-8 {
-	background: var(--background-light);
-}
-.progress-bar.color-8:after {
-	background: var(--background-light);
-}
+.progress-bar.color-8,
+.progress-bar.color-8:after,
 .progress-bar.color-8 span {
-	color: var(--background-light);
+	background: #ade8f4;
+	color: #ade8f4;
 }
-.progress-bar.color-9 {
-	background: #a84cb8;
-}
-.progress-bar.color-9:after {
-	background: #a84cb8;
-}
+.progress-bar.color-9,
+.progress-bar.color-9:after,
 .progress-bar.color-9 span {
+	background: #a84cb8;
 	color: #a84cb8;
 }
 .progress-wrap h3 {

@@ -1,5 +1,4 @@
 .testimonials {
-	background-color: #f9f9f9;
 	padding: 50px 15px;
 }
 .testimonial-title {
@@ -17,7 +16,7 @@
 	justify-content: center;
 }
 .carousel-control-prev:hover, .carousel-control-next:hover {
-	background-color: #0056b3;
+	background-color: var(--primary-color-hover);
 }
 .contact-info {
 	font-size: 1.2em;
@@ -40,5 +39,5 @@
 	margin-top: 20px;
 }
 .call-to-action:hover {
-	background-color: #0056b3;
+	background-color: var(--primary-color-hover);
 }

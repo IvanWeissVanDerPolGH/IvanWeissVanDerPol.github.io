@@ -90,24 +90,29 @@ function createSkillItem(skill) {
     const listItem = document.createElement('li');
     listItem.className = 'skill-item';
 
+    const imageContainer = document.createElement('div');
     if (imagePath) {
         const image = document.createElement('img');
         image.className = 'skill-logo';
         image.setAttribute('src', imagePath);
         image.setAttribute('alt', `Logo of ${skillName}`);
         image.setAttribute('loading', 'lazy');
-        listItem.appendChild(image);
+        imageContainer.appendChild(image);
     }
+    listItem.appendChild(imageContainer);
 
+    const textContainer = document.createElement('div');
     const skillNameSpan = document.createElement('span');
     skillNameSpan.className = 'skill-name';
     skillNameSpan.textContent = skillName;
-    listItem.appendChild(skillNameSpan);
+    textContainer.appendChild(skillNameSpan);
 
     const descriptionP = document.createElement('p');
     descriptionP.className = 'skill-description';
     descriptionP.textContent = description || '';  // Set to empty string if no description
-    listItem.appendChild(descriptionP);
+    textContainer.appendChild(descriptionP);
+
+    listItem.appendChild(textContainer);
 
     return listItem;
 }
@@ -117,7 +122,7 @@ function createCertificationItem(certification) {
     const { certificationName = '', image = '', preview = '#', description = '' } = certification || {};
 
     const certificationCard = document.createElement('li');
-    certificationCard.className = 'skill-item';
+    certificationCard.className = 'cert-item';
 
     const link = document.createElement('a');
     link.setAttribute('href', preview);
@@ -128,14 +133,14 @@ function createCertificationItem(certification) {
         const img = document.createElement('img');
         img.setAttribute('src', image);
         img.setAttribute('alt', `Image of ${certificationName}`);
-        img.setAttribute('class', 'certification-img');
+        img.setAttribute('class', 'cert-img');
         img.setAttribute('loading', 'lazy');
         link.appendChild(img);
     }
 
     const nameElement = document.createElement('h4');
     nameElement.textContent = certificationName;
-    nameElement.className = 'skill-name';
+    nameElement.className = 'cert-name';
     link.appendChild(nameElement);
 
     if (description) {
@@ -149,7 +154,7 @@ function createCertificationItem(certification) {
 
 function createExperienceItem(experience) {
     if (enableLogging) console.log('Creating experience item:', experience);
-    const { title, subtitle, duration, details, tags, icon } = experience;
+    const { title, subtitle, duration, details, tags, icon, institution_logo, project_logo, institution_website } = experience;
 
     const experienceEntry = document.createElement('article');
     experienceEntry.className = 'timeline-entry animate-box fadeInUp animated';
@@ -159,9 +164,22 @@ function createExperienceItem(experience) {
 
     const timelineIcon = document.createElement('div');
     timelineIcon.className = 'timeline-icon color-3';
-    const iconElement = document.createElement('i');
-    iconElement.className = `fa ${icon}`;
-    timelineIcon.appendChild(iconElement);
+
+    if (project_logo && project_logo !== "") {
+        const projectLogo = document.createElement('img');
+        projectLogo.setAttribute('src', project_logo);
+        projectLogo.setAttribute('alt', 'Project Logo');
+        projectLogo.setAttribute('class', 'work-logo');
+        timelineIcon.appendChild(projectLogo);
+    }
+
+    if (institution_logo && institution_logo !== "") {
+        const institutionLogo = document.createElement('img');
+        institutionLogo.setAttribute('src', institution_logo);
+        institutionLogo.setAttribute('alt', 'Institution Logo');
+        institutionLogo.setAttribute('class', 'work-logo');
+        timelineIcon.appendChild(institutionLogo);
+    }
 
     const timelineLabel = document.createElement('div');
     timelineLabel.className = 'timeline-label';
@@ -190,6 +208,17 @@ function createExperienceItem(experience) {
         tagsDiv.appendChild(tagSpan);
     });
     timelineLabel.appendChild(tagsDiv);
+
+    if (Array.isArray(institution_website)) {
+        const websiteDiv = document.createElement('div');
+        institution_website.forEach(website => {
+            const websiteLink = document.createElement('a');
+            websiteLink.setAttribute('href', website.url);
+            websiteLink.textContent = website.urlText;
+            websiteDiv.appendChild(websiteLink);
+        });
+        timelineLabel.appendChild(websiteDiv);
+    }
 
     timelineInner.appendChild(timelineIcon);
     timelineInner.appendChild(timelineLabel);
@@ -364,7 +393,30 @@ function createGitHubCard(username) {
 /**
  * Create and return a category element.
  */
-function createCategoryElement(categoryName, items, createItemCallback) {
+function createCategoryElement_certifications(categoryName, items, createItemCallback) {
+    if (enableLogging) console.log('Creating category element:', categoryName);
+    const listItem = createElement('li');
+    const linkDiv = createElement('div', { className: 'link', children: [['p', { text: categoryName, style: 'margin-bottom: 0px; cursor: pointer;' }]] });
+    const sublist = createElement('ul', { className: 'submenu', style: 'display: none;' });
+
+    listItem.appendChild(linkDiv);
+    listItem.appendChild(sublist);
+
+    // Populate the sublist with items
+    items.forEach(item => {
+        sublist.appendChild(createItemCallback(item));
+    });
+
+    // Add click event to toggle the submenu display
+    linkDiv.addEventListener('click', () => {
+        const isDisplayed = sublist.style.display === 'flex' || sublist.style.display === '';
+        sublist.style.display = isDisplayed ? 'none' : 'flex';
+    });
+
+    return listItem;
+}
+
+function createCategoryElement_skills(categoryName, items, createItemCallback) {
     if (enableLogging) console.log('Creating category element:', categoryName);
     const listItem = createElement('li');
     const linkDiv = createElement('div', { className: 'link', children: [['p', { text: categoryName, style: 'margin-bottom: 0px; cursor: pointer;' }]] });
@@ -447,7 +499,7 @@ function populateSkillsAccordion(containerId, skills, enableLogging = false) {
     const skillsAccordion = document.getElementById(containerId);
     Object.keys(skills).forEach(category => {
         if (skills[category]) {
-            const categoryElement = createCategoryElement(category.replace(/_/g, ' '), skills[category], createSkillItem);
+            const categoryElement = createCategoryElement_skills(category.replace(/_/g, ' '), skills[category], createSkillItem);
             skillsAccordion.appendChild(categoryElement);
         } else {
             if (enableLogging) console.warn(`Undefined skill category: ${category}`);
@@ -459,7 +511,7 @@ function populateCertificationsAccordion(containerId, certifications, enableLogg
     const certificationsAccordion = document.getElementById(containerId);
     Object.keys(certifications).forEach(category => {
         if (certifications[category]) {
-            const categoryElement = createCategoryElement(category.replace(/_/g, ' '), certifications[category], createCertificationItem);
+            const categoryElement = createCategoryElement_certifications(category.replace(/_/g, ' '), certifications[category], createCertificationItem);
             certificationsAccordion.appendChild(categoryElement);
         } else {
             if (enableLogging) console.warn(`Undefined certification category: ${category}`);
@@ -496,10 +548,10 @@ document.addEventListener("DOMContentLoaded", () => {
         populateContainer('languages', languages, createLanguageSkillElement);
 
         // Populate skills accordion
-        populateSkillsAccordion('skills-accordion', skills, enableLogging);
+        populateSkillsAccordion('skills-list', skills, enableLogging);
 
         // Populate certifications accordion
-        populateCertificationsAccordion('accordion', certifications, enableLogging);
+        populateCertificationsAccordion('cert-list', certifications, enableLogging);
 
         // Populate experience
         populateContainer('experience', experience, createExperienceItem);

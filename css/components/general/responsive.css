@@ -12,22 +12,21 @@
 	}
 }
 @media screen and (max-width: 878px) {
-	.colorlib-narrow-content {
+	.narrow-content {
 		width: 100%;
-		padding: 0 1em;
 	}
 }
 @media screen and (max-width: 768px) {
-	.colorlib-experience,
-	.colorlib-languages,
-	.colorlib-profile,
-	.colorlib-certifications,
-	.colorlib-education,
-	.colorlib-work,
-	.colorlib-about,
-	.colorlib-installation,
-	.colorlib-services,
-	.colorlib-contact {
+	.experience,
+	.languages,
+	.profile,
+	.certifications,
+	.education,
+	.work,
+	.about,
+	.installation,
+	.services,
+	.contact {
 		padding-top: 2em;
 		padding-bottom: 0em;
 	}
@@ -37,7 +36,7 @@
 	}
 }
 @media screen and (max-width: 768px) {
-	.colorlib-heading {
+	.heading {
 		margin-bottom: 2em;
 	}
 }

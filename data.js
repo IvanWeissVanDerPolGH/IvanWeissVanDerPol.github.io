@@ -337,7 +337,6 @@ export const certifications = {
     ]
 }
 
-
 export const experience = [
     {
         title: "MentorMate",
@@ -351,6 +350,40 @@ export const experience = [
         ],
         tags: ["Professional Development", "Regulatory Compliance", "QA Methodologies", "Global Collaboration", "Healthcare Software"],
         icon: "briefcase",
+        institution_logo: "images/work_exp/mentormate_logo.jpeg",
+        project_logo: "",
+        institution_website: {
+            urlText: "Professional",
+            url: "https://www.mentormate.com"
+        }
+    },
+    {
+        title: "MentorMate",
+        subtitle: "Quality Specialist II - Royal Bank of Canada",
+        duration: "July 2024 - Present",
+        details: [
+            "Working as a Quality Assurance Engineer in the Royal Bank of Canada project, focusing on the automation of the testing process using Selenium and Playwright.",
+            "Collaborating with the development team to ensure the quality of the software products.",
+            "Participating in the daily stand-up meetings and sprint planning meetings."
+        ],
+        tags: ["Quality Assurance", "Automation", "Selenium", "Playwright", "Royal Bank of Canada"],
+        icon: "briefcase",
+        institution_logo: "images/work_exp/mentormate_logo.jpeg",
+        project_logo: "images/work_exp/RBC_logo.png",
+        institution_website: [
+            {
+                urlText: "Professional",
+                url: "https://www.mentormate.com"
+            },
+            {
+                urlText: "LinkedIn",
+                url: "https://www.linkedin.com/company/mentormate/"
+            },
+            {
+                urlText: "Royal Bank of Canada",
+                url: "https://www.rbc.com/"
+            }
+        ]
     },
     {
         title: "MentorMate",
@@ -364,6 +397,26 @@ export const experience = [
         ],
         tags: ["Flyte Project", "FDA Compliance", "Quality Assurance", "Test Automation", "Project Documentation"],
         icon: "heartbeat",
+        institution_logo: "images/work_exp/mentormate_logo.jpeg",
+        project_logo: "images/work_exp/pelvital_logo.jpeg",
+        institution_website: [
+            {
+                urlText: "Professional",
+                url: "https://www.mentormate.com"
+            },
+            {
+                urlText: "LinkedIn",
+                url: "https://www.linkedin.com/company/mentormate/"
+            },
+            {
+                urlText: "Pelvital",
+                url: "https://www.linkedin.com/company/pelvital/"
+            },
+            {
+                urlText: "Flyte Therapy",
+                url: "https://flytetherapy.com/"
+            }
+        ]
     },
     {
         title: "WPG.srl",
@@ -377,6 +430,18 @@ export const experience = [
         ],
         tags: ["Software Testing", "Software Development", "Automation", "Machine Learning", "Documentation"],
         icon: "globe",
+        institution_logo: "images/work_exp/wpg_logo.png",
+        project_logo: "images/work_exp/software_development.png",
+        institution_website: [
+            {
+                urlText: "Professional",
+                url: "http://www.wpg.com.py/index.php?lang=en"
+            },
+            {
+                urlText: "LinkedIn",
+                url: "https://www.linkedin.com/company/wpg-software-srl/"
+            }
+        ]
     }
 ];
 
@@ -453,54 +518,54 @@ export const testimonials = {
     period: "Six-Month Review",
     company: "MentorMate",
     feedback: [
-      {
-        title: "Structured and Clear Communication",
-        detail: "Ivan expresses ideas and presents concepts in a structured way. He is incredibly articulate, making it easy for team members to understand complex information."
-      },
-      {
-        title: "Professionalism and Manners",
-        detail: "Ivan is very well-mannered, always polite, and maintains a positive demeanor, which enhances the work environment."
-      },
-      {
-        title: "Proactive Problem-Solving",
-        detail: "Ivan demonstrates a proactive approach to problem-solving, preferring to address challenges independently before seeking help, which shows his initiative and determination."
-      },
-      {
-        title: "Innovative Use of Technology",
-        detail: "Actively incorporates AI tools to enhance workflow efficiency, showing his adeptness at leveraging technology to streamline processes."
-      },
-      {
-        title: "Commitment to Team Growth",
-        detail: "Shows immense enthusiasm in training sessions related to coding, actively helping to elevate the team’s overall skill level."
-      },
-      {
-        title: "Technical Skills and Analysis",
-        detail: "Ivan is incredibly smart and talented. He has a knack for automation and possesses electrical/mechanical skills, which enable him to analyze and solve problems efficiently."
-      },
-      {
-        title: "Team Collaboration and Support",
-        detail: "During the Pelvital project, Ivan was attentive to details and always willing to help and support team members. His teamwork mindset has made him a crucial part of our project’s success."
-      },
-      {
-        title: "Efficiency and Communication",
-        detail: "He handles his tickets quickly and efficiently, maintaining direct, fluid, and cordial communication with ticket authors."
-      },
-      {
-        title: "Energy and Passion for Learning",
-        detail: "Ivan has an endless amount of energy and a strong desire to learn and improve. When he finds a task interesting, he goes above and beyond to deliver, especially when it involves back-end technologies or automation."
-      },
-      {
-        title: "Contributions to Team Knowledge",
-        detail: "Ivan is always open to helping his team with anything, including creating scripts to improve our workflow. His contributions are much appreciated."
-      },
-      {
-        title: "Innovative Problem Solving",
-        detail: "In the project, Ivan took the initiative to assist with the testing of controller data—a challenging task. His insights were invaluable and greatly assisted the team."
-      }
+        {
+            title: "Structured and Clear Communication",
+            detail: "Ivan expresses ideas and presents concepts in a structured way. He is incredibly articulate, making it easy for team members to understand complex information."
+        },
+        {
+            title: "Professionalism and Manners",
+            detail: "Ivan is very well-mannered, always polite, and maintains a positive demeanor, which enhances the work environment."
+        },
+        {
+            title: "Proactive Problem-Solving",
+            detail: "Ivan demonstrates a proactive approach to problem-solving, preferring to address challenges independently before seeking help, which shows his initiative and determination."
+        },
+        {
+            title: "Innovative Use of Technology",
+            detail: "Actively incorporates AI tools to enhance workflow efficiency, showing his adeptness at leveraging technology to streamline processes."
+        },
+        {
+            title: "Commitment to Team Growth",
+            detail: "Shows immense enthusiasm in training sessions related to coding, actively helping to elevate the team’s overall skill level."
+        },
+        {
+            title: "Technical Skills and Analysis",
+            detail: "Ivan is incredibly smart and talented. He has a knack for automation and possesses electrical/mechanical skills, which enable him to analyze and solve problems efficiently."
+        },
+        {
+            title: "Team Collaboration and Support",
+            detail: "During the Pelvital project, Ivan was attentive to details and always willing to help and support team members. His teamwork mindset has made him a crucial part of our project’s success."
+        },
+        {
+            title: "Efficiency and Communication",
+            detail: "He handles his tickets quickly and efficiently, maintaining direct, fluid, and cordial communication with ticket authors."
+        },
+        {
+            title: "Energy and Passion for Learning",
+            detail: "Ivan has an endless amount of energy and a strong desire to learn and improve. When he finds a task interesting, he goes above and beyond to deliver, especially when it involves back-end technologies or automation."
+        },
+        {
+            title: "Contributions to Team Knowledge",
+            detail: "Ivan is always open to helping his team with anything, including creating scripts to improve our workflow. His contributions are much appreciated."
+        },
+        {
+            title: "Innovative Problem Solving",
+            detail: "In the project, Ivan took the initiative to assist with the testing of controller data—a challenging task. His insights were invaluable and greatly assisted the team."
+        }
     ]
-  };
-  
-  export const footer = [
+};
+
+export const footer = [
     {
         intro_text: "Check out the links below:", // Intro text for the footer
         footer_links: [
@@ -558,5 +623,5 @@ export const testimonials = {
             },
         ],
     },
-    
+
 ];

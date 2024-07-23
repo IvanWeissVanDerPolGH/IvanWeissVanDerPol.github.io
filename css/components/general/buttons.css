@@ -38,7 +38,7 @@
 	border: 2px solid var(--primary-color);
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-	background: var(--primary-color);
+	background: var(--primary-color-hover);
 	color: var(--light-color);
 }
 .btn-success {

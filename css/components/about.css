@@ -1,9 +1,29 @@
 /* About Section Styles */
-.colorlib-about h1 {
-	font-size: 3em;
+.about h1 {
+	font-size: 3.5em; /* Increased font size for better readability */
 	color: var(--primary-color);
+	font-family: 'Arial', sans-serif; /* Different font style for headings */
 }
-.colorlib-about #bio {
-	text-align: left;
-	margin-bottom: 1.5em;
+.about-bio {
+	font-size: 1.5em; /* Increased font size for better readability */
+	font-family: 'Times New Roman', serif; /* Different font style for body text */
+	line-height: 1.5; /* Increased line height for better readability */
+}
+
+.profile {
+	background-image: linear-gradient(to right, var(--background-lighter), var(--background-lighter-opacity)); /* Subtle background gradient for differentiation */
+	padding: 40px; /* Increased padding for more whitespace and readability */
+}	
+.profile-cards {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	padding: 40px; /* Increased padding for more whitespace and readability */
+	box-sizing: border-box;
+}
+.github-card {
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px; /* Added padding for more whitespace and readability */
 }

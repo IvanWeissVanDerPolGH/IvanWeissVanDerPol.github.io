@@ -1,93 +1,105 @@
-#certifications {
-	padding: 50px 15px;
-	border-bottom: 1px solid #dcd9d9;
-	text-align: center;
-	background-color: var(--background-light);
+.certifications {
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    margin-top: 10px;
+	margin-bottom: 10px;
 }
-#certifications h2 {
-	color: var(--primary-color);
-	margin-bottom: 50px;
+
+.certifications .desc h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
 }
-.project {
-	position: relative;
-	max-width: 900px;
-	margin: 0 auto 30px auto;
-	overflow: hidden;
-	background: var(--light-color);
-	border-radius: 4px;
+
+.certifications .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
-.project-image {
-	float: left;
+.certifications .link:hover {
+    background: var(--primary-color-hover);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transform: translateY(-5px);
 }
-.certifications-card {
-	height: auto;
+
+.certifications .link p {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
 }
-.project-info {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	margin-left: 300px;
-	padding: 15px;
+
+.certifications .submenu {
+    display: none;
+    padding: 20px;
+    background: var(--light-color);
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
-.project-info h3 {
-	font-size: 1.5em;
-	font-weight: 300;
-	color: var(--primary-color);
-	margin: 0 0 15px 0;
+
+.certifications .submenu.show {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-.project-info p {
-	color: #74808a;
-	margin: 0 0 15px 0;
-	font-size: 0.9em;
+
+.certifications .submenu .cert-item {
+    list-style: none;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--background-light);
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
-.no-image .project-info {
-	position: relative;
-	margin: 0;
-	padding: 30px 15px;
-	transform: none;
+
+.certifications .submenu .cert-item:hover {
+    background: var(--background-light-hover);
 }
-#more-certifications {
-	display: none;
+
+.certifications .submenu .cert-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }
-.panel-heading a {
-	padding: 20px 25px;
-	display: block;
-	width: 100%;
-	font-weight: 500;
-	font-size: 14px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	font-family: var(--font-primary);
-	background-color: var(--primary-color);
-	color: var(--light-color);
-	position: relative;
-	box-shadow: none !important;
+
+.certifications .submenu .cert-item .cert-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
 }
-.panel {
-	box-shadow: none !important;
-	border: none;
+
+.certifications .submenu .cert-item .cert-description {
+    color: var(--dark-color);
+    font-size: 1em;
+    text-align: center;
 }
-.panel-heading a:after {
-	font-family: "icomoon";
-	content: "\e115";
-	position: absolute;
-	right: 20px;
-	font-size: 14px;
-	font-weight: 400;
-	top: 50%;
-	line-height: 1;
-	margin-top: -7px;
-}
-.panel-heading a.collapsed:after {
-	content: "\e114";
-}
-.panel-heading a.collapsed {
-	background: #f2f3f7;
-	border: 1px solid #e6e6e6 !important;
-	color: var(--dark-color);
-}
-.panel-body {
-	padding: 1.5em;
-	margin-top: 5px;
-	border: 1px solid #e6e6e6 !important;
+
+@media (max-width: 768px) {
+    .certifications .link p {
+        font-size: 1.2em;
+    }
+
+    .certifications .submenu .cert-item {
+        width: calc(50% - 10px);
+    }
+
+    .certifications .submenu .cert-item .cert-name {
+        font-size: 1.2em;
+    }
 }

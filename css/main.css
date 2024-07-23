@@ -13,14 +13,15 @@
 @import url('./components/general/button.css');
 @import url('./components/general/responsive.css');
 
+
 :root {
-	--font-primary: "Quicksand", Arial, sans-serif;
-	--font-secondary: "Montserrat", sans-serif;
-	--font-tertiary: "Playfair Display", Georgia, serif;
-	--input-border: #3a456a;
-	--btn-bg-color: #f1f2fc;
-	--btn-hover-bg: #d5d9f6;
-	--btn-color: #1e2641;
+    --text-color: var(--primary-color);
+	--title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+}
+section {
+    background-color: var(--background-lighter);
 }
 
 /* General styles */
@@ -36,7 +37,7 @@ a {
     transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-    color: var(--primary-color);
+    color: var(--primary-color-hover);
     outline: none;
     text-decoration: none !important;
 }

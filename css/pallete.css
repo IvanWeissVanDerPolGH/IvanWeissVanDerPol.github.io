@@ -1,119 +1,243 @@
 /* Default Theme */
 .theme-default {
 	--primary-color: #0077b6;
+	--primary-color-hover: #0056b3; /* Added */
 	--secondary-color: #023e8a;
+	--secondary-color-hover: #012a4a; /* Added */
 	--tertiary-color: #90e0ef;
+	--tertiary-color-hover: #7dd3cf; /* Added */
 	--dark-color: #03045e;
+	--dark-color-hover: #020a3c; /* Added */
 	--light-color: #caf0f8;
+	--light-color-hover: #b3acf2; /* Added */
 	--background-dark: #023047;
+	--background-dark-hover: #012a4a; /* Added */
 	--background-light: #ade8f4;
+	--background-light-hover: #b3acf2; /* Added */
+	--background-lighter: #e0f2fe; /* Added */
+	--background-lighter-hover: #d3d3d3; /* Added */
 	--error-color: #ef233c;
+	--error-color-hover: #d62828; /* Added */
 	--success-color: #2a9d8f;
+	--success-color-hover: #38b000; /* Added */
 	--warning-color: #ffb703;
+	--warning-color-hover: #ffca3a; /* Added */
 	--info-color: #8ecae6;
+	--info-color-hover: #2ec4b6; /* Added */
+	--font-primary: "Quicksand", Arial, sans-serif;
+	--font-secondary: "Montserrat", sans-serif;
+	--font-tertiary: "Playfair Display", Georgia, serif;
+	--input-border: #3a456a;
+	--btn-bg-color: #f1f2fc;
+	--btn-hover-bg: #d5d9f6;
+	--btn-color: #1e2641;
+    --aside-width: 300px;
+    --spacing: 3em;
+    --mobile-spacing: 1em;
 
-	--text-color: var(--primary-color);
-	--title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
 }
 
 /* Ocean Breeze Theme */
 .theme-ocean-breeze {
 	--primary-color: #0077b6;
+	--primary-color-hover: #0056b3; /* Added */
 	--secondary-color: #023e8a;
+	--secondary-color-hover: #012a4a; /* Added */
 	--tertiary-color: #90e0ef;
+	--tertiary-color-hover: #7dd3cf; /* Added */
 	--dark-color: #03045e;
+	--dark-color-hover: #020a3c; /* Added */
 	--light-color: #caf0f8;
+	--light-color-hover: #b3acf2; /* Added */
 	--background-dark: #023047;
+	--background-dark-hover: #012a4a; /* Added */
 	--background-light: #ade8f4;
+	--background-light-hover: #b3acf2; /* Added */
+	--background-lighter: #e0f2fe; /* Added */
+	--background-lighter-hover: #d3d3d3; /* Added */
 	--error-color: #ef233c;
+	--error-color-hover: #d62828; /* Added */
 	--success-color: #2a9d8f;
+	--success-color-hover: #38b000; /* Added */
 	--warning-color: #ffb703;
+	--warning-color-hover: #ffca3a; /* Added */
 	--info-color: #8ecae6;
+	--info-color-hover: #2ec4b6; /* Added */
+	--font-primary: "Quicksand", Arial, sans-serif;
+	--font-secondary: "Montserrat", sans-serif;
+	--font-tertiary: "Playfair Display", Georgia, serif;
+	--input-border: #3a456a;
+	--btn-bg-color: #f1f2fc;
+	--btn-hover-bg: #d5d9f6;
+	--btn-color: #1e2641;
+    --aside-width: 300px;
+    --spacing: 3em;
+    --mobile-spacing: 1em;
 
-	--text-color: var(--primary-color);
-	--title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
+
+	
 }
 
 /* Sunset Glow Theme */
 .theme-sunset-glow {
 	--primary-color: #ff6f61;
+	--primary-color-hover: #d62828; /* Added */
 	--secondary-color: #ff9a76;
+	--secondary-color-hover: #e67e22; /* Added */
 	--tertiary-color: #ffd1ba;
+	--tertiary-color-hover: #f4a261; /* Added */
 	--dark-color: #d1495b;
+	--dark-color-hover: #c53030; /* Added */
 	--light-color: #ffe8d6;
+	--light-color-hover: #f0f9f4; /* Added */
 	--background-dark: #6d597a;
+	--background-dark-hover: #5a4a4e; /* Added */
 	--background-light: #f4acb7;
+	--background-light-hover: #f0f9f4; /* Added */
+	--background-lighter: #f8e2cf; /* Added */
+	--background-lighter-hover: #d3d3d3; /* Added */
 	--error-color: #d62828;
+	--error-color-hover: #c53030; /* Added */
 	--success-color: #38b000;
+	--success-color-hover: #2a9d8f; /* Added */
 	--warning-color: #ffca3a;
+	--warning-color-hover: #f4a261; /* Added */
 	--info-color: #2ec4b6;
+	--info-color-hover: #457b9d; /* Added */
+	--font-primary: "Quicksand", Arial, sans-serif;
+	--font-secondary: "Montserrat", sans-serif;
+	--font-tertiary: "Playfair Display", Georgia, serif;
+	--input-border: #3a456a;
+	--btn-bg-color: #f1f2fc;
+	--btn-hover-bg: #d5d9f6;
+	--btn-color: #1e2641;
+    --aside-width: 300px;
+    --spacing: 3em;
+    --mobile-spacing: 1em;
 
-	--text-color: var(--primary-color);
-	--title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
+
+	
 }
 
 /* Forest Harmony Theme */
 .theme-forest-harmony {
 	--primary-color: #2a9d8f;
+	--primary-color-hover: #38b000; /* Added */
 	--secondary-color: #264653;
+	--secondary-color-hover: #1d3557; /* Added */
 	--tertiary-color: #e9c46a;
+	--tertiary-color-hover: #f4a261; /* Added */
 	--dark-color: #1d3557;
+	--dark-color-hover: #14213d; /* Added */
 	--light-color: #f1faee;
+	--light-color-hover: #e4f0f6; /* Added */
 	--background-dark: #457b9d;
+	--background-dark-hover: #3a456a; /* Added */
 	--background-light: #a8dadc;
+	--background-light-hover: #e4f0f6; /* Added */
+	--background-lighter: #e4f0f6; /* Added */
+	--background-lighter-hover: #d3d3d3; /* Added */
 	--error-color: #e63946;
+	--error-color-hover: #c53030; /* Added */
 	--success-color: #2a9d8f;
+	--success-color-hover: #38b000; /* Added */
 	--warning-color: #f4a261;
+	--warning-color-hover: #ffca3a; /* Added */
 	--info-color: #457b9d;
+	--info-color-hover: #2ec4b6; /* Added */
+	--font-primary: "Quicksand", Arial, sans-serif;
+	--font-secondary: "Montserrat", sans-serif;
+	--font-tertiary: "Playfair Display", Georgia, serif;
+	--input-border: #3a456a;
+	--btn-bg-color: #f1f2fc;
+	--btn-hover-bg: #d5d9f6;
+	--btn-color: #1e2641;
+    --aside-width: 300px;
+    --spacing: 3em;
+    --mobile-spacing: 1em;
 
-	--text-color: var(--primary-color);
-	--title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
+
+	
 }
 
 /* Desert Mirage Theme */
 .theme-desert-mirage {
 	--primary-color: #e76f51;
+	--primary-color-hover: #e76f51; /* Added */
 	--secondary-color: #264653;
+	--secondary-color-hover: #264653; /* Added */
 	--tertiary-color: #f4a261;
+	--tertiary-color-hover: #f4a261; /* Added */
 	--dark-color: #2a9d8f;
+	--dark-color-hover: #1a2e4e; /* Added */
 	--light-color: #e9c46a;
+	--light-color-hover: #f0f9f4; /* Added */
 	--background-dark: #1d3557;
+	--background-dark-hover: #1a2e4e; /* Added */
 	--background-light: #f1faee;
+	--background-light-hover: #f0f9f4; /* Added */
+	--background-lighter: #e4f0f6;
+	--background-lighter-hover: #d3d3d3; /* Added */
 	--error-color: #e63946;
+	--error-color-hover: #c53030; /* Added */
 	--success-color: #2a9d8f;
+	--success-color-hover: #38b000; /* Added */
 	--warning-color: #f4a261;
+	--warning-color-hover: #ffca3a; /* Added */
 	--info-color: #457b9d;
+	--info-color-hover: #2ec4b6; /* Added */
+	--font-primary: "Quicksand", Arial, sans-serif;
+	--font-secondary: "Montserrat", sans-serif;
+	--font-tertiary: "Playfair Display", Georgia, serif;
+	--input-border: #3a456a;
+	--btn-bg-color: #f1f2fc;
+	--btn-hover-bg: #d5d9f6;
+	--btn-color: #1e2641;
+    --aside-width: 300px;
+    --spacing: 3em;
+    --mobile-spacing: 1em;
 
-	--text-color: var(--primary-color);
-	--title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
+
+	
 }
 
 /* Midnight Sky Theme */
 .theme-midnight-sky {
 	--primary-color: #14213d;
+	--primary-color-hover: #14213d; /* Added */
 	--secondary-color: #fca311;
+	--secondary-color-hover: #fca311; /* Added */
 	--tertiary-color: #e5e5e5;
+	--tertiary-color-hover: #e5e5e5; /* Added */
 	--dark-color: #000000;
+	--dark-color-hover: #000000; /* Added */
 	--light-color: #ffffff;
+	--light-color-hover: #ffffff; /* Added */
 	--background-dark: #2a2a2a;
+	--background-dark-hover: #2a2a2a; /* Added */
 	--background-light: #e5e5e5;
+	--background-light-hover: #e5e5e5; /* Added */
+	--background-lighter: #f0f0f0; /* Added */
+	--background-lighter-hover: #d3d3d3; /* Added */
 	--error-color: #e63946;
+	--error-color-hover: #c53030; /* Added */
 	--success-color: #38b000;
+	--success-color-hover: #2a9d8f; /* Added */
 	--warning-color: #fca311;
+	--warning-color-hover: #ffca3a; /* Added */
 	--info-color: #3a86ff;
+	--info-color-hover: #457b9d; /* Added */
+	--font-primary: "Quicksand", Arial, sans-serif;
+	--font-secondary: "Montserrat", sans-serif;
+	--font-tertiary: "Playfair Display", Georgia, serif;
+	--input-border: #3a456a;
+	--btn-bg-color: #f1f2fc;
+	--btn-hover-bg: #d5d9f6;
+	--btn-color: #1e2641;
+    --aside-width: 300px;
+    --spacing: 3em;
+    --mobile-spacing: 1em;
 
-	--text-color: var(--primary-color);
-	--title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
+
+	
 }
