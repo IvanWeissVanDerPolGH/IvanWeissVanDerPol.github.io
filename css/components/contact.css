@@ -1,0 +1,28 @@
+.colorlib-contact {
+	background: var(--background);
+	padding: 4em 0;
+}
+.colorlib-narrow-content {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.about-desc h1 {
+	font-size: 2.5em;
+	color: var(--primary-color);
+	font-weight: bold;
+}
+#contact-info {
+	font-size: 1.2em;
+	color: rgba(0, 0, 0, 0.7);
+	line-height: 1.6;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 20px;
+}

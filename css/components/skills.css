@@ -1,0 +1,31 @@
+.skills-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 20px;
+	background: #f8f9fa;
+}
+.skill-item {
+	text-align: center;
+	flex-basis: 20%;
+	margin: 20px;
+	flex-direction: column;
+}
+.skill-logo {
+	width: 60px;
+	height: 60px;
+	margin-bottom: 10px;
+}
+.skill-name {
+	font-weight: bold;
+	font-size: 16px;
+	color: #333;
+	display: block;
+	margin-bottom: 5px;
+}
+.skill-description {
+	font-size: 14px;
+	color: #666;
+	font-size: 0.8em;
+	margin-top: 5px;
+}

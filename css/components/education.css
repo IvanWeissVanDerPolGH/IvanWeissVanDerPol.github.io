@@ -1,0 +1,48 @@
+/* Education Section Styles */
+.education-section {
+    padding: 50px 15px;
+    background-color: var(--background-light);
+}
+
+.education-section h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.education-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3 {
+    font-size: 1.8em;
+    color: var(--secondary-color);
+    margin: 0 0 10px 0;
+}
+
+.education-item p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin: 5px 0;
+}
+
+.education-item .date {
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .education-section h2 {
+        font-size: 2em;
+    }
+    .education-item {
+        padding: 15px;
+    }
+}

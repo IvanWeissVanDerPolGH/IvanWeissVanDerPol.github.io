@@ -1,0 +1,43 @@
+@import url('./components/sidebar.css');
+@import url('./components/about.css');
+@import url('./components/languages.css');
+@import url('./components/skills.css');
+@import url('./components/certifications.css');
+@import url('./components/work-experience.css');
+@import url('./components/education.css');
+@import url('./components/testimonials.css');
+@import url('./components/contact.css');
+@import url('./components/footer.css');
+@import url('./components/general.css');
+@import url('./components/general/modal.css');
+@import url('./components/general/button.css');
+@import url('./components/general/responsive.css');
+
+:root {
+	--font-primary: "Quicksand", Arial, sans-serif;
+	--font-secondary: "Montserrat", sans-serif;
+	--font-tertiary: "Playfair Display", Georgia, serif;
+	--input-border: #3a456a;
+	--btn-bg-color: #f1f2fc;
+	--btn-hover-bg: #d5d9f6;
+	--btn-color: #1e2641;
+}
+
+/* General styles */
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.8;
+    color: black;
+}
+a {
+    color: var(--primary-color);
+    transition: 0.5s;
+}
+a:hover, a:active, a:focus {
+    color: var(--primary-color);
+    outline: none;
+    text-decoration: none !important;
+}
+/* Other general styles */

@@ -278,52 +278,78 @@ function createTestimonialElement(testimonial, isActive) {
     return wrapper;
 }
 
+
 function createFooterItem(item) {
     if (enableLogging) console.log('Creating footer item:', item);
-    const { label, data } = item;
+    const { intro_text, footer_links } = item;
 
-    if (label === "copyright-text") {
-        const copyrightDiv = document.createElement('div');
-        data.forEach(text => {
-            const paragraph = document.createElement('p');
-            paragraph.innerHTML = text;
-            copyrightDiv.appendChild(paragraph);
-        });
-        return copyrightDiv;
-    } else {
+    // Create a container for the footer item
+    const footerDiv = document.createElement('div');
+    footerDiv.className = 'footer';
+
+    // If there's an intro_text, create a div for it
+    if (intro_text) {
+        const introDiv = document.createElement('div');
+        introDiv.className = 'footer-intro'; // Add a class for styling
+        introDiv.textContent = intro_text; // Set the intro text
+        footerDiv.appendChild(introDiv); // Append intro text to the footer
+    }
+
+    // Create the navigation for the footer
+    footer_links.forEach(linkGroup => {
         const colDiv = document.createElement('div');
         colDiv.className = 'col';
 
-        const colTitle = document.createElement('p');
-        colTitle.className = 'col-title';
-        colTitle.textContent = label;
-        colDiv.appendChild(colTitle);
+        // Create the column title
+        if (linkGroup.label) {
+            const colTitle = document.createElement('p');
+            colTitle.className = 'col-title';
+            colTitle.textContent = linkGroup.label;
+            colDiv.appendChild(colTitle);
+        }
 
+        // Create the navigation for the column
         const nav = document.createElement('nav');
         nav.className = 'col-list';
         const ul = document.createElement('ul');
-        data.forEach(linkItem => {
-            const li = document.createElement('li');
-            const a = document.createElement('a');
-            a.textContent = linkItem.text;
-            if (linkItem.link) {
-                a.setAttribute('href', linkItem.link);
-                if (linkItem.target) {
-                    a.setAttribute('target', linkItem.target);
+
+        // Check if data is defined before calling forEach
+        if (linkGroup.data && Array.isArray(linkGroup.data)) {
+            // Populate the list with links
+            linkGroup.data.forEach(linkItem => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.textContent = linkItem.text;
+                if (linkItem.link) {
+                    a.setAttribute('href', linkItem.link);
+                    if (linkItem.target) {
+                        a.setAttribute('target', linkItem.target);
+                    }
                 }
-            }
-            if (linkItem.func) {
-                a.addEventListener('click', window[linkItem.func]);
-            }
-            li.appendChild(a);
-            ul.appendChild(li);
-        });
+                if (linkItem.icon) {
+                    const icon = document.createElement('i');
+                    icon.className = `fa ${linkItem.icon}`; // Add icon class
+                    a.prepend(icon); // Add icon before the text
+                }
+                if (linkItem.cta) {
+                    const ctaSpan = document.createElement('span');
+                    ctaSpan.textContent = ` (${linkItem.cta})`; // Add CTA text
+                    a.appendChild(ctaSpan); // Append CTA to the link
+                }
+                li.appendChild(a);
+                ul.appendChild(li);
+            });
+        } else {
+            if (enableLogging) console.warn('Data is not defined or is not an array for footer item:', item);
+        }
         nav.appendChild(ul);
         colDiv.appendChild(nav);
+        footerDiv.appendChild(colDiv); // Append the column div to the footer div
+    });
 
-        return colDiv;
-    }
+    return footerDiv; // Return the constructed footer div
 }
+
 
 /**
  * Create and return a GitHub card element.
@@ -492,5 +518,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } catch (error) {
         console.error(`Error during initialization: ${error.message}`);
+        console.error(`Error occurred at line: ${error.lineNumber}, column: ${error.columnNumber}`);
+        console.error(`Stack trace: ${error.stack}`);
     }
 });

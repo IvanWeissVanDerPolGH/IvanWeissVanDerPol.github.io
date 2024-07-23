@@ -500,53 +500,63 @@ export const testimonials = {
     ]
   };
   
-
-export const footer = [
+  export const footer = [
     {
-        label: "Dev Profiles",
-        data: [
+        intro_text: "Check out the links below:", // Intro text for the footer
+        footer_links: [
             {
-                text: "GitHub",
-                link: "https://github.com/IvanWeissVanDerPol",
+                label: "Dev Profiles",
+                data: [
+                    {
+                        text: "GitHub",
+                        link: "https://github.com/IvanWeissVanDerPol",
+                        icon: "fa-github",
+                        cta: "Follow me on GitHub" // Call to action
+                    },
+                ],
+            },
+            {
+                label: "Resources",
+                data: [
+                    {
+                        text: "Send me a mail",
+                        link: "mailto:weissvanderpol.ivan@gmail.com",
+                        icon: "fa-envelope",
+                        cta: "Get in touch" // Call to action
+                    },
+                    {
+                        text: "Download Resume",
+                        link: "assets/Ivan_Weiss_Resume.pdf",
+                        target: "_blank",
+                        icon: "fa-file-download",
+                        cta: "View my resume" // Call to action
+                    }
+                ],
+            },
+            {
+                label: "Social Profiles",
+                data: [
+                    {
+                        text: "LinkedIn",
+                        link: "https://www.linkedin.com/in/IvanWeissVanDerPol/",
+                        icon: "fa-linkedin",
+                        cta: "Connect with me" // Call to action
+                    },
+                    {
+                        text: "WhatsApp",
+                        link: "https://wa.me/595981324569",
+                        icon: "fa-whatsapp",
+                        cta: "Chat with me" // Call to action
+                    },
+                    {
+                        text: "Instagram",
+                        link: "https://www.instagram.com/ivan_weiss_van_der_pol/",
+                        icon: "fa-instagram",
+                        cta: "Follow me on Instagram" // Call to action
+                    },
+                ],
             },
         ],
     },
-    {
-        label: "Resources",
-        data: [
-            {
-                text: "send me a mail",
-                link: "mailto:weissvanderpol.ivan@gmail.com",
-            },
-            {
-                text: "Download Resume",
-                link: "assets\\Ivan_Weiss_Resume.pdf",
-                target: "_blank"
-            }
-        ],
-    },
-    {
-        label: "Social Profiles",
-        data: [
-            {
-                text: "Linkedin",
-                link: "https://www.linkedin.com/in/IvanWeissVanDerPol/",
-            },
-            {
-                text: "whatsapp",
-                link: "https://wa.me/595981324569",
-            },
-            {
-                text: "Instagram",
-                link: "https://www.instagram.com/ivan_weiss_van_der_pol/",
-            },
-        ],
-    },
-    {
-        label: "copyright-text",
-        data: [
-            "Made with &hearts; by IvanWeissVanDerPol.",
-            "&copy; No Copyrights. Feel free to use this template.",
-        ],
-    },
+    
 ];

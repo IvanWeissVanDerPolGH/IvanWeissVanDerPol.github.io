@@ -1,0 +1,124 @@
+.btn {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	font-family: var(--font-primary);
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 2px;
+	transition: 0.5s;
+	padding: 8px 15px !important;
+}
+.btn.btn-sm {
+	padding: 4px 15px !important;
+}
+.btn.btn-md {
+	padding: 8px 20px !important;
+}
+.btn.btn-lg {
+	padding: 18px 36px !important;
+}
+.btn:hover, .btn:active, .btn:focus {
+	box-shadow: none !important;
+	outline: none !important;
+}
+.btn-primary {
+	background: var(--primary-color);
+	color: var(--light-color);
+	border: 2px solid var(--primary-color);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+	background: #44a4f2 !important;
+	border-color: #44a4f2 !important;
+}
+.btn-primary.btn-outline {
+	background: transparent;
+	color: var(--primary-color);
+	border: 2px solid var(--primary-color);
+}
+.btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
+	background: var(--primary-color);
+	color: var(--light-color);
+}
+.btn-success {
+	background: var(--success-color);
+	color: var(--light-color);
+	border: 2px solid var(--success-color);
+}
+.btn-success:hover, .btn-success:focus, .btn-success:active {
+	background: #4cae4c !important;
+	border-color: #4cae4c !important;
+}
+.btn-success.btn-outline {
+	background: transparent;
+	color: var(--success-color);
+	border: 2px solid var(--success-color);
+}
+.btn-success.btn-outline:hover, .btn-success.btn-outline:focus, .btn-success.btn-outline:active {
+	background: var(--success-color);
+	color: var(--light-color);
+}
+.btn-info {
+	background: var(--info-color);
+	color: var(--light-color);
+	border: 2px solid var(--info-color);
+}
+.btn-info:hover, .btn-info:focus, .btn-info:active {
+	background: #46b8da !important;
+	border-color: #46b8da !important;
+}
+.btn-info.btn-outline {
+	background: transparent;
+	color: var(--info-color);
+	border: 2px solid var(--info-color);
+}
+.btn-info.btn-outline:hover, .btn-info.btn-outline:focus, .btn-info.btn-outline:active {
+	background: var(--info-color);
+	color: var(--light-color);
+}
+.btn-warning {
+	background: var(--warning-color);
+	color: var(--light-color);
+	border: 2px solid var(--warning-color);
+}
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active {
+	background: #eea236 !important;
+	border-color: #eea236 !important;
+}
+.btn-warning.btn-outline {
+	background: transparent;
+	color: var(--warning-color);
+	border: 2px solid var(--warning-color);
+}
+.btn-warning.btn-outline:hover, .btn-warning.btn-outline:focus, .btn-warning.btn-outline:active {
+	background: var(--warning-color);
+	color: var(--light-color);
+}
+.btn-danger {
+	background: var(--error-color);
+	color: var(--light-color);
+	border: 2px solid var(--error-color);
+}
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active {
+	background: #d43f3a !important;
+	border-color: #d43f3a !important;
+}
+.btn-danger.btn-outline {
+	background: transparent;
+	color: var(--error-color);
+	border: 2px solid var(--error-color);
+}
+.btn-danger.btn-outline:hover, .btn-danger.btn-outline:focus, .btn-danger.btn-outline:active {
+	background: var(--error-color);
+	color: var(--light-color);
+}
+.btn-outline {
+	background: none;
+	border: 2px solid gray;
+	font-size: 16px;
+	transition: 0.3s;
+}
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active {
+	box-shadow: none;
+}

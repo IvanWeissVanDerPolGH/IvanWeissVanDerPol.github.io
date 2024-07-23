@@ -1,0 +1,93 @@
+#certifications {
+	padding: 50px 15px;
+	border-bottom: 1px solid #dcd9d9;
+	text-align: center;
+	background-color: var(--background-light);
+}
+#certifications h2 {
+	color: var(--primary-color);
+	margin-bottom: 50px;
+}
+.project {
+	position: relative;
+	max-width: 900px;
+	margin: 0 auto 30px auto;
+	overflow: hidden;
+	background: var(--light-color);
+	border-radius: 4px;
+}
+.project-image {
+	float: left;
+}
+.certifications-card {
+	height: auto;
+}
+.project-info {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: 300px;
+	padding: 15px;
+}
+.project-info h3 {
+	font-size: 1.5em;
+	font-weight: 300;
+	color: var(--primary-color);
+	margin: 0 0 15px 0;
+}
+.project-info p {
+	color: #74808a;
+	margin: 0 0 15px 0;
+	font-size: 0.9em;
+}
+.no-image .project-info {
+	position: relative;
+	margin: 0;
+	padding: 30px 15px;
+	transform: none;
+}
+#more-certifications {
+	display: none;
+}
+.panel-heading a {
+	padding: 20px 25px;
+	display: block;
+	width: 100%;
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-family: var(--font-primary);
+	background-color: var(--primary-color);
+	color: var(--light-color);
+	position: relative;
+	box-shadow: none !important;
+}
+.panel {
+	box-shadow: none !important;
+	border: none;
+}
+.panel-heading a:after {
+	font-family: "icomoon";
+	content: "\e115";
+	position: absolute;
+	right: 20px;
+	font-size: 14px;
+	font-weight: 400;
+	top: 50%;
+	line-height: 1;
+	margin-top: -7px;
+}
+.panel-heading a.collapsed:after {
+	content: "\e114";
+}
+.panel-heading a.collapsed {
+	background: #f2f3f7;
+	border: 1px solid #e6e6e6 !important;
+	color: var(--dark-color);
+}
+.panel-body {
+	padding: 1.5em;
+	margin-top: 5px;
+	border: 1px solid #e6e6e6 !important;
+}

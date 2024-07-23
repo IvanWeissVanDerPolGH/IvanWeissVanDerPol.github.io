@@ -1,0 +1,9 @@
+/* About Section Styles */
+.colorlib-about h1 {
+	font-size: 3em;
+	color: var(--primary-color);
+}
+.colorlib-about #bio {
+	text-align: left;
+	margin-bottom: 1.5em;
+}

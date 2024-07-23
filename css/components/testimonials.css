@@ -1,0 +1,44 @@
+.testimonials {
+	background-color: #f9f9f9;
+	padding: 50px 15px;
+}
+.testimonial-title {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.carousel-control-prev, .carousel-control-next {
+	background-color: var(--primary-color);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover {
+	background-color: #0056b3;
+}
+.contact-info {
+	font-size: 1.2em;
+}
+.contact-info a {
+	color: var(--primary-color);
+	text-decoration: none;
+}
+.contact-info a:hover {
+	text-decoration: underline;
+}
+.call-to-action {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: var(--primary-color);
+	color: #fff;
+	border-radius: 5px;
+	font-size: 1.2em;
+	text-align: center;
+	margin-top: 20px;
+}
+.call-to-action:hover {
+	background-color: #0056b3;
+}

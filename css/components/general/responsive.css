@@ -1,0 +1,54 @@
+@media screen and (max-width: 992px) {
+	body {
+		font-size: 16px;
+	}
+	h2, h4 {
+		text-align: center;
+	}
+}
+@media screen and (max-width: 480px) {
+	figure figcaption {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 878px) {
+	.colorlib-narrow-content {
+		width: 100%;
+		padding: 0 1em;
+	}
+}
+@media screen and (max-width: 768px) {
+	.colorlib-experience,
+	.colorlib-languages,
+	.colorlib-profile,
+	.colorlib-certifications,
+	.colorlib-education,
+	.colorlib-work,
+	.colorlib-about,
+	.colorlib-installation,
+	.colorlib-services,
+	.colorlib-contact {
+		padding-top: 2em;
+		padding-bottom: 0em;
+	}
+	.profile-cards {
+		width: 100%;
+		padding: 0 1em;
+	}
+}
+@media screen and (max-width: 768px) {
+	.colorlib-heading {
+		margin-bottom: 2em;
+	}
+}
+@media screen and (max-width: 992px) {
+	.col-image {
+		width: 100%;
+		padding: 25px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
