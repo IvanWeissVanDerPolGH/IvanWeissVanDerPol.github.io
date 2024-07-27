@@ -1,29 +1,131 @@
 /* About Section Styles */
-.about h1 {
-	font-size: 3.5em; /* Increased font size for better readability */
-	color: var(--primary-color);
-	font-family: 'Arial', sans-serif; /* Different font style for headings */
+
+.about {
+    background-color: var(--about-bg-color);
+    padding: var(--padding-large);
+}
+.about-header {
+    font-size: var(--text-giant);
+    font-family: var(--font-secondary);
+    text-align: center;
+    margin-bottom: var(--margin-medium);
+    color: var(--about-header-text-color);
 }
 .about-bio {
-	font-size: 1.5em; /* Increased font size for better readability */
-	font-family: 'Times New Roman', serif; /* Different font style for body text */
-	line-height: 1.5; /* Increased line height for better readability */
+    font-size: var(--text-medium);
+    font-family: var(--font-primary);
+    line-height: var(--margin-medium);
+    color: var(--about-bio-text-color);
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bio_item {
+    line-height: var(--bio-item-line-height);
+    margin-bottom: var(--bio-item-margin-bottom);
+    color: var(--about-bio-text-color);
 }
 
 .profile {
-	background-image: linear-gradient(to right, var(--background-lighter), var(--background-lighter-opacity)); /* Subtle background gradient for differentiation */
-	padding: 40px; /* Increased padding for more whitespace and readability */
-}	
-.profile-cards {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 100%;
-	padding: 40px; /* Increased padding for more whitespace and readability */
-	box-sizing: border-box;
+    background-color: var(--profile-bg-color);
 }
-.github-card {
-	width: 100%;
-	margin: 0 auto;
-	padding: 20px; /* Added padding for more whitespace and readability */
+#gh-desc {
+    font-size: var(--text-medium);
+    font-family: var(--font-primary);
+    line-height: var(--margin-medium);
+    border:0;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.profile-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.github_card {
+    width: 100%;
+    margin: 0;
+    padding: var(--padding-medium);
+}
+
+.profile-card {
+    font-family: var(--font-primary);
+    border-radius: 6px;
+    line-height: 1.5;
+    padding: var(--profile-card-padding);
+    font-size: var(--text-medium);
+    color: var(--profile-card-text-color);
+    background-color: var(--profile-card-bg-color);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-top: -4px;
+    font-size: var(--text-giant);
+    color: var(--profile-header-text-color);
+    font-family: var(--font-secondary);
+    text-align: center;
+    margin-bottom: var(--margin-medium);
+}
+
+.profile-avatar {
+    width: var(--profile-avatar-size);
+    height: var(--profile-avatar-size);
+    border-radius: 50%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--profile-info-margin-left);
+}
+
+.profile-name {
+    font-weight: var(--text-weight);
+    color: var(--profile-text-color);
+    font-size: var(--text-large);
+}
+
+.profile-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile-username {
+    font-weight: var(--text-weight);
+    color: var(--profile-text-color);
+    font-size: var(--text-small);
+}
+
+.profile-stats {
+    margin-top: var(--profile-stat-margin-top);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.profile-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-stat-title {
+    font-size: var(--profile-stat-title-size);
+    font-weight: var(--text-weight);
+    color: var(--profile-text-color);
+}
+
+.profile-stat-value {
+    font-weight: var(--text-weight);
+    color: var(--profile-text-color);
+    font-size: var(--profile-stat-value-size);
+    line-height: 1;
 }

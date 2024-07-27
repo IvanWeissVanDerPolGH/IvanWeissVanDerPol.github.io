@@ -51,7 +51,7 @@ function populateContainer(containerId, items, createElementCallback) {
  * Example of a generic createElementCallback
  */
 function createBioItem(item) {
-    return createElement('p', { text: item });
+    return createElement('p', { text: item, className: 'bio_item' });
 }
 
 /**
@@ -59,19 +59,19 @@ function createBioItem(item) {
  */
 function createLanguageSkillElement(language) {
     if (enableLogging) console.log('Creating language skill element:', language);
-    const { skillName, color, percentage } = language;
+    const { skillName: LangName, color, percentage } = language;
     const skillContainer = createElement('div', {
-        className: 'col-md-6 animate-box',
+        className: 'language_skill_container',
         children: [
             ['div', {
-                className: 'progress-wrap',
+                className: 'progress_wrap',
                 children: [
-                    ['h3', { text: skillName }],
+                    ['h3', { text: LangName, className: 'language_name' }],
                     ['div', {
                         className: 'progress',
                         children: [
                             ['div', {
-                                className: `progress-bar color-${color}`,
+                                className: `progress_bar progress_bar_color_${color}`,
                                 attributes: { style: `width: ${percentage}%` }
                             }]
                         ]
@@ -88,12 +88,12 @@ function createSkillItem(skill) {
     const { skillName, imagePath, description } = skill;
 
     const listItem = document.createElement('li');
-    listItem.className = 'skill-item';
+    listItem.className = 'skill_item';
 
     const imageContainer = document.createElement('div');
     if (imagePath) {
         const image = document.createElement('img');
-        image.className = 'skill-logo';
+        image.className = 'skill_logo';
         image.setAttribute('src', imagePath);
         image.setAttribute('alt', `Logo of ${skillName}`);
         image.setAttribute('loading', 'lazy');
@@ -103,12 +103,12 @@ function createSkillItem(skill) {
 
     const textContainer = document.createElement('div');
     const skillNameSpan = document.createElement('span');
-    skillNameSpan.className = 'skill-name';
+    skillNameSpan.className = 'skill_name';
     skillNameSpan.textContent = skillName;
     textContainer.appendChild(skillNameSpan);
 
     const descriptionP = document.createElement('p');
-    descriptionP.className = 'skill-description';
+    descriptionP.className = 'skill_description';
     descriptionP.textContent = description || '';  // Set to empty string if no description
     textContainer.appendChild(descriptionP);
 
@@ -122,7 +122,7 @@ function createCertificationItem(certification) {
     const { certificationName = '', image = '', preview = '#', description = '' } = certification || {};
 
     const certificationCard = document.createElement('li');
-    certificationCard.className = 'cert-item';
+    certificationCard.className = 'cert_item';
 
     const link = document.createElement('a');
     link.setAttribute('href', preview);
@@ -133,14 +133,14 @@ function createCertificationItem(certification) {
         const img = document.createElement('img');
         img.setAttribute('src', image);
         img.setAttribute('alt', `Image of ${certificationName}`);
-        img.setAttribute('class', 'cert-img');
+        img.setAttribute('class', 'cert_image');
         img.setAttribute('loading', 'lazy');
         link.appendChild(img);
     }
 
     const nameElement = document.createElement('h4');
     nameElement.textContent = certificationName;
-    nameElement.className = 'cert-name';
+    nameElement.className = 'cert_name';
     link.appendChild(nameElement);
 
     if (description) {
@@ -157,57 +157,62 @@ function createExperienceItem(experience) {
     const { title, subtitle, duration, details, tags, icon, institution_logo, project_logo, institution_website } = experience;
 
     const experienceEntry = document.createElement('article');
-    experienceEntry.className = 'timeline-entry animate-box fadeInUp animated';
+    experienceEntry.className = 'experience_article';
 
-    const timelineInner = document.createElement('div');
-    timelineInner.className = 'timeline-entry-inner';
+    const experienceInner = document.createElement('div');
+    experienceInner.className = 'experience_inner';
 
-    const timelineIcon = document.createElement('div');
-    timelineIcon.className = 'timeline-icon';
+    const header = document.createElement('div');
+    header.className = 'header';
 
-    if (project_logo && project_logo !== "") {
-        const projectLogo = document.createElement('img');
-        projectLogo.setAttribute('src', project_logo);
-        projectLogo.setAttribute('alt', 'Project Logo');
-        projectLogo.setAttribute('class', 'work-logo');
-        timelineIcon.appendChild(projectLogo);
-    }
+    const titleHTML = document.createElement('h2');
+    titleHTML.innerHTML = `${title} <span class="timeline_sublabel">${subtitle}</span>`;
+    header.appendChild(titleHTML);
+
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'image_container';
 
     if (institution_logo && institution_logo !== "") {
         const institutionLogo = document.createElement('img');
         institutionLogo.setAttribute('src', institution_logo);
         institutionLogo.setAttribute('alt', 'Institution Logo');
-        institutionLogo.setAttribute('class', 'work-logo');
-        timelineIcon.appendChild(institutionLogo);
+        institutionLogo.setAttribute('class', 'work_logo');
+        imageContainer.appendChild(institutionLogo);
     }
 
-    const timelineLabel = document.createElement('div');
-    timelineLabel.className = 'timeline-label';
+    if (project_logo && project_logo !== "") {
+        const projectLogo = document.createElement('img');
+        projectLogo.setAttribute('src', project_logo);
+        projectLogo.setAttribute('alt', 'Project Logo');
+        projectLogo.setAttribute('class', 'work_logo');
+        imageContainer.appendChild(projectLogo);
+    }
 
-    const titleHTML = document.createElement('h2');
-    titleHTML.innerHTML = `${title} <span class="timeline-sublabel">${subtitle}</span>`;
-    timelineLabel.appendChild(titleHTML);
+    header.appendChild(imageContainer);
+
+    const experienceLabel = document.createElement('div');
+    experienceLabel.className = 'experience_label';
 
     const durationSpan = document.createElement('span');
-    durationSpan.className = 'duration';
+    durationSpan.className = 'experience_duration';
     durationSpan.textContent = duration;
-    timelineLabel.appendChild(durationSpan);
+    experienceLabel.appendChild(durationSpan);
 
     details.forEach(detail => {
         const detailParagraph = document.createElement('p');
-        detailParagraph.className = 'timeline-text';
+        detailParagraph.className = 'experience_detail';
         detailParagraph.textContent = detail;
-        timelineLabel.appendChild(detailParagraph);
+        experienceLabel.appendChild(detailParagraph);
     });
 
     const tagsDiv = document.createElement('div');
     tags.forEach(tag => {
         const tagSpan = document.createElement('span');
-        tagSpan.className = 'badge badge-secondary';
+        tagSpan.className = 'experience_tag';
         tagSpan.textContent = tag;
         tagsDiv.appendChild(tagSpan);
     });
-    timelineLabel.appendChild(tagsDiv);
+    experienceLabel.appendChild(tagsDiv);
 
     if (Array.isArray(institution_website)) {
         const websiteDiv = document.createElement('div');
@@ -217,72 +222,93 @@ function createExperienceItem(experience) {
             websiteLink.textContent = website.urlText;
             websiteDiv.appendChild(websiteLink);
         });
-        timelineLabel.appendChild(websiteDiv);
+        experienceLabel.appendChild(websiteDiv);
     }
 
-    timelineInner.appendChild(timelineIcon);
-    timelineInner.appendChild(timelineLabel);
-    experienceEntry.appendChild(timelineInner);
+    experienceInner.appendChild(header);
+    experienceInner.appendChild(experienceLabel);
+    experienceEntry.appendChild(experienceInner);
 
     return experienceEntry;
 }
 
 function createEducationItem(education) {
     if (enableLogging) console.log('Creating education item:', education);
-    const { title, subtitle, duration, details, tags, icon } = education;
+    const { title, subtitle, duration, details, tags, education_institution_logo, institution_website } = education;
 
     const educationEntry = document.createElement('article');
-    educationEntry.className = 'timeline-entry animate-box fadeInUp animated';
+    educationEntry.className = 'education_article';
 
-    const timelineInner = document.createElement('div');
-    timelineInner.className = 'timeline-entry-inner';
+    const educationInner = document.createElement('div');
+    educationInner.className = 'education_inner';
 
-    const timelineIcon = document.createElement('div');
-    timelineIcon.className = 'timeline-icon';
-    const iconElement = document.createElement('i');
-    iconElement.className = `fa ${icon}`;
-    timelineIcon.appendChild(iconElement);
+    const header = document.createElement('div');
+    header.className = 'header';
 
-    const timelineLabel = document.createElement('div');
-    timelineLabel.className = 'timeline-label';
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'image_container';
+
+    if (education_institution_logo && education_institution_logo !== "") {
+        const institutionLogo = document.createElement('img');
+        institutionLogo.setAttribute('src', education_institution_logo);
+        institutionLogo.setAttribute('alt', 'Education Institution Logo');
+        institutionLogo.setAttribute('class', 'edu_logo');
+        imageContainer.appendChild(institutionLogo);
+    }
 
     const titleHTML = document.createElement('h2');
-    titleHTML.innerHTML = `${title} <span class="timeline-sublabel">${subtitle}</span>`;
-    timelineLabel.appendChild(titleHTML);
+    titleHTML.innerHTML = `${title} <span class="timeline_sublabel">${subtitle}</span>`;
+    header.appendChild(titleHTML);
+
+    header.appendChild(imageContainer); // Moved imageContainer to the right of the text
+
+    const educationLabel = document.createElement('div');
+    educationLabel.className = 'education_label';
 
     const durationSpan = document.createElement('span');
-    durationSpan.className = 'duration';
+    durationSpan.className = 'education_duration';
     durationSpan.textContent = duration;
-    timelineLabel.appendChild(durationSpan);
+    educationLabel.appendChild(durationSpan);
 
     details.forEach(detail => {
         const detailParagraph = document.createElement('p');
-        detailParagraph.className = 'timeline-text';
+        detailParagraph.className = 'education_detail';
         detailParagraph.textContent = detail;
-        timelineLabel.appendChild(detailParagraph);
+        educationLabel.appendChild(detailParagraph);
     });
 
     const tagsDiv = document.createElement('div');
     tags.forEach(tag => {
         const tagSpan = document.createElement('span');
-        tagSpan.className = 'badge badge-secondary';
+        tagSpan.className = 'education_tag';
         tagSpan.textContent = tag;
         tagsDiv.appendChild(tagSpan);
     });
-    timelineLabel.appendChild(tagsDiv);
+    educationLabel.appendChild(tagsDiv);
 
-    timelineInner.appendChild(timelineIcon);
-    timelineInner.appendChild(timelineLabel);
-    educationEntry.appendChild(timelineInner);
+    if (Array.isArray(institution_website)) {
+        const websiteDiv = document.createElement('div');
+        institution_website.forEach(website => {
+            const websiteLink = document.createElement('a');
+            websiteLink.setAttribute('href', website.url);
+            websiteLink.textContent = website.urlText;
+            websiteDiv.appendChild(websiteLink);
+        });
+        educationLabel.appendChild(websiteDiv);
+    }
+
+    educationInner.appendChild(header);
+    educationInner.appendChild(educationLabel);
+    educationEntry.appendChild(educationInner);
 
     return educationEntry;
 }
 
 /**
  * Creates an HTML element for a testimonial.
- * @param {Object} testimonial - An object containing the title and detail of a testimonial.
- * @param {boolean} isActive - A boolean indicating if the testimonial is active.
- * @returns {HTMLElement} - A DOM element representing the testimonial.
+ * @param {Object} testimonial _ An object containing the title and detail of a testimonial.
+ * @param {boolean} isActive _ A boolean indicating if the testimonial is active.
+ * @returns {HTMLElement} _ A DOM element representing the testimonial.
  */
 function createTestimonialElement(testimonial, isActive) {
     if (enableLogging) console.log('Creating testimonial element:', testimonial, 'isActive:', isActive);
@@ -307,7 +333,6 @@ function createTestimonialElement(testimonial, isActive) {
     return wrapper;
 }
 
-
 function createFooterItem(item) {
     if (enableLogging) console.log('Creating footer item:', item);
     const { intro_text, footer_links } = item;
@@ -319,7 +344,7 @@ function createFooterItem(item) {
     // If there's an intro_text, create a div for it
     if (intro_text) {
         const introDiv = document.createElement('div');
-        introDiv.className = 'footer-intro'; // Add a class for styling
+        introDiv.className = 'footer_intro'; // Add a class for styling
         introDiv.textContent = intro_text; // Set the intro text
         footerDiv.appendChild(introDiv); // Append intro text to the footer
     }
@@ -332,14 +357,14 @@ function createFooterItem(item) {
         // Create the column title
         if (linkGroup.label) {
             const colTitle = document.createElement('p');
-            colTitle.className = 'col-title';
+            colTitle.className = 'col_title';
             colTitle.textContent = linkGroup.label;
             colDiv.appendChild(colTitle);
         }
 
         // Create the navigation for the column
         const nav = document.createElement('nav');
-        nav.className = 'col-list';
+        nav.className = 'col_list';
         const ul = document.createElement('ul');
 
         // Check if data is defined before calling forEach
@@ -379,13 +404,12 @@ function createFooterItem(item) {
     return footerDiv; // Return the constructed footer div
 }
 
-
 /**
  * Create and return a GitHub card element.
  */
 function createGitHubCard(username) {
     if (enableLogging) console.log('Creating GitHub card for username:', username);
-    const githubCardDiv = document.getElementById('github-card');
+    const githubCardDiv = document.getElementById('github_card');
     githubCardDiv.setAttribute('username', username);
     return githubCardDiv;
 }
@@ -395,9 +419,9 @@ function createGitHubCard(username) {
  */
 function createCategoryElement_certifications(categoryName, items, createItemCallback) {
     if (enableLogging) console.log('Creating category element:', categoryName);
-    const listItem = createElement('li');
-    const linkDiv = createElement('div', { className: 'link', children: [['p', { text: categoryName, style: 'margin-bottom: 0px; cursor: pointer;' }]] });
-    const sublist = createElement('ul', { className: 'submenu', style: 'display: none;' });
+    const listItem = createElement('li', { className: 'category_item' });
+    const linkDiv = createElement('div', { className: 'link', children: [['p', { text: categoryName }]] });
+    const sublist = createElement('ul', { className: 'cert_sublist', style: 'display: none;' });
 
     listItem.appendChild(linkDiv);
     listItem.appendChild(sublist);
@@ -409,8 +433,8 @@ function createCategoryElement_certifications(categoryName, items, createItemCal
 
     // Add click event to toggle the submenu display
     linkDiv.addEventListener('click', () => {
-        const isDisplayed = sublist.style.display === 'flex' || sublist.style.display === '';
-        sublist.style.display = isDisplayed ? 'none' : 'flex';
+        const isDisplayed = sublist.style.display === 'grid' || sublist.style.display === '';
+        sublist.style.display = isDisplayed ? 'none' : 'grid';
     });
 
     return listItem;
@@ -418,9 +442,9 @@ function createCategoryElement_certifications(categoryName, items, createItemCal
 
 function createCategoryElement_skills(categoryName, items, createItemCallback) {
     if (enableLogging) console.log('Creating category element:', categoryName);
-    const listItem = createElement('li');
-    const linkDiv = createElement('div', { className: 'link', children: [['p', { text: categoryName, style: 'margin-bottom: 0px; cursor: pointer;' }]] });
-    const sublist = createElement('ul', { className: 'submenu', style: 'display: none;' });
+    const listItem = createElement('li', { className: 'category_item' });
+    const linkDiv = createElement('div', { className: 'link', children: [['p', { text: categoryName }]] });
+    const sublist = createElement('ul', { className: 'skill_sublist', style: 'display: none;' });
 
     listItem.appendChild(linkDiv);
     listItem.appendChild(sublist);
@@ -432,60 +456,13 @@ function createCategoryElement_skills(categoryName, items, createItemCallback) {
 
     // Add click event to toggle the submenu display
     linkDiv.addEventListener('click', () => {
-        const isDisplayed = sublist.style.display === 'flex' || sublist.style.display === '';
-        sublist.style.display = isDisplayed ? 'none' : 'flex';
+        const isDisplayed = sublist.style.display === 'grid' || sublist.style.display === '';
+        sublist.style.display = isDisplayed ? 'none' : 'grid';
     });
 
     return listItem;
 }
 
-/**
- * A unified fetch function to handle all data retrieval needs.
- */
-async function fetchData(url, handleData) {
-    if (enableLogging) console.log('Fetching data from URL:', url);
-    try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        const data = await response.json();
-        handleData(data);
-    } catch (error) {
-        console.error(`Error fetching data: ${error.message}`);
-    }
-}
-
-function mapBasicResponse(response) {
-    const { basics } = response;
-    const { name, label, image, email, phone, url, summary, profiles, headline, blog, yearsOfExperience, username, locationAsString, region, karma, id, followers, following, picture, website } = basics;
-    if (enableLogging) console.log('Mapping basic response:', basics);
-    window.parent.document.title = name;
-}
-function initializeCarousel(carouselSelector, prevButtonSelector, nextButtonSelector, interval = 3000, enableLogging = false) {
-    const carouselElement = $(carouselSelector);
-    carouselElement.carousel({
-        interval: interval
-    });
-
-    document.getElementById(prevButtonSelector).addEventListener('click', () => {
-        if (enableLogging) console.log('Previous testimonial button clicked');
-        carouselElement.carousel('prev');
-        carouselElement.carousel('pause');
-    });
-
-    document.getElementById(nextButtonSelector).addEventListener('click', () => {
-        if (enableLogging) console.log('Next testimonial button clicked');
-        carouselElement.carousel('next');
-        carouselElement.carousel('pause');
-    });
-
-    document.addEventListener('click', (event) => {
-        const isClickInside = event.target.closest(`#${prevButtonSelector}`) || event.target.closest(`#${nextButtonSelector}`);
-        if (!isClickInside) {
-            if (enableLogging) console.log('Click outside navigation buttons, resuming carousel');
-            carouselElement.carousel('cycle');
-        }
-    });
-}
 
 function populateTestimonials(containerId, testimonials, enableLogging = false) {
     if (enableLogging) console.log('Populating testimonials');
@@ -497,6 +474,7 @@ function populateTestimonials(containerId, testimonials, enableLogging = false) 
 
 function populateSkillsAccordion(containerId, skills, enableLogging = false) {
     const skillsAccordion = document.getElementById(containerId);
+    skillsAccordion.className = 'skills_list'; // Add class for styling
     Object.keys(skills).forEach(category => {
         if (skills[category]) {
             const categoryElement = createCategoryElement_skills(category.replace(/_/g, ' '), skills[category], createSkillItem);
@@ -527,7 +505,6 @@ function populatePersonalInfo(fullNameId, emailId, contactInfoId, fullName, emai
     emailElement.setAttribute('href', `mailto:${email}`);
     document.getElementById(contactInfoId).textContent = contactInfo;
 }
-
 document.addEventListener("DOMContentLoaded", () => {
     try {
         if (enableLogging) console.log('Document loaded, initializing...');
@@ -536,11 +513,11 @@ document.addEventListener("DOMContentLoaded", () => {
         setMetaTags();
 
         // Populate personal info
-        populatePersonalInfo('fullname', 'email', 'contact-info', FullName, mail, contactInfo, enableLogging);
+        populatePersonalInfo('fullname', 'email', 'contact_info', FullName, mail, contactInfo, enableLogging);
 
         // Create GitHub card
         createGitHubCard(githubUsername);
-        // fetchData(URLs.gitConnected, mapBasicResponse);
+
         // Populate bio
         populateContainer('bio', bio, createBioItem);
 
@@ -548,10 +525,10 @@ document.addEventListener("DOMContentLoaded", () => {
         populateContainer('languages', languages, createLanguageSkillElement);
 
         // Populate skills accordion
-        populateSkillsAccordion('skills-list', skills, enableLogging);
+        populateSkillsAccordion('skills_list', skills, enableLogging);
 
         // Populate certifications accordion
-        populateCertificationsAccordion('cert-list', certifications, enableLogging);
+        populateCertificationsAccordion('cert_list', certifications, enableLogging);
 
         // Populate experience
         populateContainer('experience', experience, createExperienceItem);
@@ -565,8 +542,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Populate footer
         populateContainer('footer', footer, createFooterItem);
 
-        // Initialize carousel
-        initializeCarousel('#testimonialCarousel', 'prevTestimonial', 'nextTestimonial', 3000, enableLogging);
+        // Initialize carousel with autoplay
+        initializeCarouselWithAutoPlay('#testimonialCarousel', 'prevTestimonial', 'nextTestimonial', 5000000000, enableLogging);
 
     } catch (error) {
         console.error(`Error during initialization: ${error.message}`);
@@ -574,3 +551,62 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error(`Stack trace: ${error.stack}`);
     }
 });
+
+/**
+ * Initialize the carousel with autoplay functionality.
+ */
+function initializeCarouselWithAutoPlay(carouselSelector, prevButtonSelector, nextButtonSelector, interval , enableLogging = false) {
+    const carouselElement = document.querySelector(carouselSelector);
+    const items = carouselElement.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
+    let carouselInterval;
+
+    function showItem(index) {
+        items.forEach((item, i) => {
+            item.classList.remove('active');
+            item.style.display = 'none'; // Hide non-active items
+        });
+
+        items[index].classList.add('active');
+        items[index].style.display = 'flex'; // Show active item
+    }
+
+    function nextItem() {
+        currentIndex = (currentIndex + 1) % items.length;
+        showItem(currentIndex);
+    }
+
+    function prevItem() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        showItem(currentIndex);
+    }
+
+    document.getElementById(prevButtonSelector).addEventListener('click', () => {
+        if (enableLogging) console.log('Previous testimonial button clicked');
+        prevItem();
+        resetInterval();
+    });
+
+    document.getElementById(nextButtonSelector).addEventListener('click', () => {
+        if (enableLogging) console.log('Next testimonial button clicked');
+        nextItem();
+        resetInterval();
+    });
+
+    function resetInterval() {
+        clearInterval(carouselInterval);
+        carouselInterval = setInterval(nextItem, interval);
+    }
+
+    carouselElement.addEventListener('mouseover', () => {
+        clearInterval(carouselInterval);
+    });
+
+    carouselElement.addEventListener('mouseleave', () => {
+        carouselInterval = setInterval(nextItem, interval);
+    });
+
+    carouselInterval = setInterval(nextItem, interval);
+
+    showItem(currentIndex);
+}

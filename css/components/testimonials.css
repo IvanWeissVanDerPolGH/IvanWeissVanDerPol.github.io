@@ -1,43 +1,112 @@
-.testimonials {
-	padding: 50px 15px;
+/* Center the controls */
+.carousel-controls {
+    text-align: center;
+    margin-top: 20px;
 }
-.testimonial-title {
-	font-size: 1.5em;
-	font-weight: bold;
-	margin-bottom: 20px;
+
+.carousel-controls .btn {
+    background: /*make a var*/;
+    color: var(--btn-color);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
-.carousel-control-prev, .carousel-control-next {
-	background-color: var(--primary-color);
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+
+.carousel-controls .btn:hover {
+    background: var/*make a var*/);
 }
-.carousel-control-prev:hover, .carousel-control-next:hover {
-	background-color: var(--primary-color-hover);
+
+/* Carousel Inner Styling */
+.carousel-inner {
+    background: var(--lighter);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
-.contact-info {
-	font-size: 1.2em;
+
+/* Carousel Item Styling */
+.carousel-item {
+    flex: 0 0 100%;
+    display: none; /* Hide by default */
+    transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
 }
-.contact-info a {
-	color: var(--primary-color);
-	text-decoration: none;
+
+.carousel-item.active {
+    display: flex; /* Show active item */
+    opacity: 1;
 }
-.contact-info a:hover {
-	text-decoration: underline;
+
+.carousel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: var(--light);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    min-width: 300px;
+    text-align: center; /* Center align text */
 }
-.call-to-action {
-	display: inline-block;
-	padding: 10px 20px;
-	background-color: var(--primary-color);
-	color: #fff;
-	border-radius: 5px;
-	font-size: 1.2em;
-	text-align: center;
-	margin-top: 20px;
+
+.carousel-content h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
-.call-to-action:hover {
-	background-color: var(--primary-color-hover);
+
+.carousel-content p {
+    font-size: 1em;
+    color: var(--dark-color);
+}
+
+/* Indicators for the carousel */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carousel-indicators .indicator {
+    width: 10px;
+    height: 10px;
+    background: /*make a var*/;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators .indicator.active {
+    background: var/*make a var*/);
+}
+
+/* Add transition effects */
+.carousel-item {
+    transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    display: flex; /* Ensure items are displayed */
+    opacity: 0; /* Start with 0 opacity */
+}
+
+/* Immediate display for next and previous items */
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right,
+.carousel-item.active {
+    opacity: 1; /* Fully opaque when active */
 }

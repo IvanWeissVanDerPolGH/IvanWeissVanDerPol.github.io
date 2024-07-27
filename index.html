@@ -1,57 +1,71 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <title id="page-title"></title>
+   <title id="page-title" class="page-title"></title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="description" content="">
-   <meta name="keywords" content="">
-   <meta name="author" content="">
+   <meta name="description" content="" id="meta-description" class="meta-description">
+   <meta name="keywords" content="" id="meta-keywords" class="meta-keywords">
+   <meta name="author" content="IvanWeissVanDerPol" id="meta-author" class="meta-author">
 
-   <link rel="icon" type="image/png" href="/images/logo_face.png">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Playfair+Display:wght@400;400i;700&family=Montserrat|Open+Sans|Raleway&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" href="css/animate.css">
-   <link rel="stylesheet" href="css/bootstrap.css">
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" type="text/css" href="css/pallete.css">
-   
+   <link rel="icon" type="image/png" href="/images/logo_face.png" id="favicon" class="favicon">
+   <link rel="preconnect" href="https://fonts.googleapis.com" id="google-fonts-preconnect"
+      class="google-fonts-preconnect">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin id="google-fonts-preconnect-crossorigin"
+      class="google-fonts-preconnect-crossorigin">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Playfair+Display:wght@400;400i;700&family=Montserrat|Open+Sans|Raleway&display=swap"
+      rel="stylesheet" id="google-fonts" class="google-fonts">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      id="font-awesome" class="font-awesome">
+   <link rel="stylesheet" href="css/animate.css" id="animate-css" class="animate-css">
+   <link rel="stylesheet" href="css/main.css" id="main-css" class="main-css">
+   <link rel="stylesheet" type="text/css" href="css/pallete.css" id="pallete-css" class="pallete-css">
+
    <!-- Modernizr JS -->
-   <script src="js/modernizr-2.6.2.min.js" defer></script>
-   <script type="module" src="index.js" defer></script>
-   <script src="js/theme.js" defer></script>
-   <script src="js/profile-card.js" defer></script>
+   <script src="js/modernizr-2.6.2.min.js" defer id="modernizr" class="modernizr"></script>
+   <script type="module" src="index.js" defer id="index-js" class="index-js"></script>
+   <script src="js/theme.js" defer id="theme-js" class="theme-js"></script>
+   <script src="js/profile-card.js" defer id="profile-card-js" class="profile-card-js"></script>
 
 </head>
-<body id="theme-style" class="theme-ocean-breeze">
-   <div id="page">
-      <div class="container-wrap">
-         <a href="#" class="js-nav-toggle nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+
+<body id="theme-style" class="theme-default">
+   <div id="page" class="page">
+      <div class="container-wrap" id="container-wrap" class="container-wrap">
          <!--------------------[START] Side Bar-------------------------->
-         <aside id="aside" role="complementary" class="border js-fullheight ">
-            <div class="text-center">
-               <div class="author-img">
-                  <img alt="profile-img" src="images/logo_face.png">
+         <aside id="aside" role="complementary"  id="aside" class="aside">
+            <div class="text-center" id="text-center" class="text-center">
+               <div class="author-img" id="author-img" class="author-img">
+                  <img alt="profile-img" src="images/logo_face.png" id="profile-img" class="profile-img">
                </div>
-               <h1 id="logo"><a href="./index.html" id="fullname"></a></h1>
-               <p><b><a href="mailto:" id="email"></a></b></p>
+               <h1 id="FullName" class="FullName"><a id="fullname" class="fullname"></a></h1>
+               <p id="email-p" class="email-p"><b><a href="mailto:" id="email" class="email"></a></b></p>
             </div>
-            <nav id="main-menu" role="navigation" class="navbar" style="padding-top: 2em">
-               <div id="navbar" class="collapse">
-                  <ul>
-                     <li><a href="#" data-nav-section="about">About</a></li>
-                     <li><a href="#" data-nav-section="languages">Languages</a></li>
-                     <li><a href="#" data-nav-section="skills">Skills</a></li>
-                     <li><a href="#" data-nav-section="certifications">Certifications</a></li>
-                     <li><a href="#" data-nav-section="experience">Work Experience</a></li>
-                     <li><a href="#" data-nav-section="education">Education</a></li>
-                     <li><a href="#" data-nav-section="testimonials">Testimonials</a></li>
-                     <li><a href="#" data-nav-section="contact">Contact</a></li>
-                     <li>
-                        <select id="theme-selector">
+            <nav id="main-menu" role="navigation" class="navbar" id="main-menu"
+               class="main-menu">
+               <div id="navbar" class="collapse" id="navbar" class="navbar-collapse">
+                  <ul id="nav-list" class="nav-list">
+                     <li id="about-nav" class="nav-item"><a href="#" data-nav-section="about" id="about-link"
+                           class="nav-link">About</a></li>
+                     <li id="languages-nav" class="nav-item"><a href="#" data-nav-section="languages"
+                           id="languages-link" class="nav-link">Languages</a></li>
+                     <li id="skills-nav" class="nav-item"><a href="#" data-nav-section="skills" id="skills-link"
+                           class="nav-link">Skills</a></li>
+                     <li id="certifications-nav" class="nav-item"><a href="#" data-nav-section="certifications"
+                           id="certifications-link" class="nav-link">Certifications</a></li>
+                     <li id="experience-nav" class="nav-item"><a href="#" data-nav-section="experience"
+                           id="experience-link" class="nav-link">Work Experience</a></li>
+                     <li id="education-nav" class="nav-item"><a href="#" data-nav-section="education"
+                           id="education-link" class="nav-link">Education</a></li>
+                     <li id="testimonials-nav" class="nav-item"><a href="#" data-nav-section="testimonials"
+                           id="testimonials-link" class="nav-link">Testimonials</a></li>
+                     <li id="contact-nav" class="nav-item"><a href="#" data-nav-section="contact" id="contact-link"
+                           class="nav-link">Contact</a></li>
+                     <li id="theme-selector-nav" class="nav-item">
+                        <select id="theme-selector" class="theme-selector">
                         </select>
                      </li>
                   </ul>
@@ -60,154 +74,141 @@
          </aside>
          <!--------------------[END] Side Bar---------------------------->
          <!--------------------[START] Main Page------------------------->
-         <div id="main">
+         <div id="main" class="main-section">
             <!--------------------[START] About me-------------------------->
-            <section class="about section" data-section="about">
-               <div class="narrow-content">
-                  <div class="row animate-box" data-animate-effect="fadeInLeft">
-                     <div class="desc">
-                        <h1>About</h1>
-                        <div id="bio" class="about-bio"></div>
-                     </div>
+            <section class="section" data-section="about" id="about-section">
+               <div class="narrow-content" id="about-narrow-content">
+                  <div class="desc" id="about-desc">
+                     <h1 class="about-header">About</h1>
+                     <div id="bio" class="about-bio"></div>
                   </div>
                </div>
             </section>
             <!--------------------[END] About me---------------------------->
             <!--------------------[START] prof summary------------------------>
-            <section class="profile section" data-section="profile-card">
-               <div class="narrow-content">
-                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                     <div class="profile-cards">
-                        <div id="github-card" class="github-card"></div>
+            <section class="section" data-section="profile-card" id="profile-section">
+               <div class="narrow-content" id="profile-narrow-content">
+                  <div class="desc" id="gh-desc">
+                     <div class="profile-cards" id="profile-cards">
+                        <div id="github_card" class="github_card"></div>
                      </div>
                   </div>
                </div>
             </section>
             <!--------------------[END] prof summary-------------------------->
             <!--------------------[START] languages---------------------------->
-            <section class="languages section" data-section="languages">
-               <div class="narrow-content">
-                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                     <div class="desc">
-                        <h1>Languages</h1>
-                     </div>
+            <section class="section" data-section="languages" id="languages-section">
+               <div class="narrow-content" id="languages-narrow-content">
+                  <div class="desc" id="languages-desc">
+                     <h1 class="languages-header">Languages</h1>
+                     <div id="languages" class="language_container"></div>
                   </div>
-                  <div id="languages" class="row"></div>
                </div>
             </section>
             <!--------------------[END] languages------------------------------>
             <!--------------------[START] Skills-------------------------->
-            <section class="skills section" data-section="skills">
-               <div class="narrow-content">
-                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                     <div class="desc">
-                        <h1>Skills</h1>
-                     </div>
+            <section class="section" data-section="skills" id="skills-section">
+               <div class="narrow-content" id="skills-narrow-content">
+                  <div class="desc" id="skills-desc">
+                     <h1 class="skills-header">Skills</h1>
+                     <ul id="skills_list" class="skills_list" data-animate-effect="fadeInLeft"></ul>
                   </div>
-                  <ul id="skills-list" class="" data-animate-effect="fadeInLeft"></ul>
                </div>
             </section>
             <!--------------------[END] Skills---------------------------->
             <!--------------------[START] Certifications-------------------------->
-            <section class="certifications section" data-section="certifications">
-               <div class="narrow-content">
-                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                     <div class="desc">
-                        <h1>Certifications</h1>
-                     </div>
+            <section class="section" data-section="certifications" id="certifications-section">
+               <div class="narrow-content" id="certifications-narrow-content">
+                  <div class="desc" id="certifications-desc">
+                     <h1 class="certifications-header">Certifications</h1>
+                     <ul id="cert_list" class="cert_list" data-animate-effect="fadeInLeft"></ul>
                   </div>
-                  <ul id="cert-list" class="" data-animate-effect="fadeInLeft"></ul>
                </div>
             </section>
             <!--------------------[END] Certifications---------------------------->
             <!--------------------[START] Work Experience------------------->
-            <section class="experience section" data-section="experience">
-               <div class="narrow-content">
-                  <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-                     <div class="desc">
-                        <h1>Work <span class="highlightedText">Experience</span></h1>
-                     </div>
+            <section class="section" data-section="experience" id="experience-section">
+               <div class="narrow-content" id="experience-narrow-content">
+                  <div class="desc" id="experience-desc">
+                     <h1 class="experience-header">Work <span class="highlightedText">Experience</span></h1>
+                     <div class="timeline-centered" id="experience"></div>
                   </div>
-                  <div class="timeline-centered" id="experience"></div>
                </div>
+
             </section>
             <!--------------------[END] Work Experience--------------------->
             <!--------------------[START] Education------------------------->
-            <section class="education section" data-section="education">
-               <div class="narrow-content">
-                  <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-                     <div class="desc">
-                        <h1>Education</h1>
-                     </div>
+            <section class="section" data-section="education" id="education-section">
+               <div class="narrow-content" id="education-narrow-content">
+                  <div class="desc" id="education-desc">
+                     <h1 class="education-header">Education</h1>
+                     <div class="timeline-centered" id="education"></div>
                   </div>
-                  <div class="timeline-centered" id="education"></div>
                </div>
             </section>
             <!--------------------[END] Education--------------------------->
             <!--------------------[START] Testimonials------------------------->
-            <section class="testimonials section" data-section="testimonials">
-               <div class="narrow-content">
-                 <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-                   <div class="desc">
-                     <h1>Testimonials</h1> <!-- Enhanced Title -->
+            <section class="section" data-section="testimonials" id="testimonials-section">
+               <div class="narrow-content" id="testimonials-narrow-content">
+                   <div class="desc" id="testimonials-desc">
+                       <h1 class="testimonials-header">Testimonials</h1>
                    </div>
-                 </div>
-                 <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
-                   <div class="carousel-inner" id="testimonialItems">
-                     <!-- Carousel items will be dynamically inserted here -->
-                   </div>
-                   <div class="carousel-controls">
-                     <button id="prevTestimonial" class="btn">&lt;</button>
-                     <span id="testimonialTitle"></span>
-                     <button id="nextTestimonial" class="btn">&gt;</button>
-                   </div>
-                 </div>
                </div>
-             </section>
-             
+               <div id="testimonialCarousel" class="carousel_slide" data-ride="carousel">
+                   <div class="carousel-inner" id="testimonialItems">
+                       <!-- Carousel items will be dynamically inserted here -->
+                   </div>
+                   <div class="carousel-controls" id="carousel-controls">
+                       <button id="prevTestimonial" class="btn">&lt;</button>
+                       <span id="testimonialTitle" class="testimonialTitle"></span>
+                       <button id="nextTestimonial" class="btn">&gt;</button>
+                   </div>
+               </div>
+           </section>
+           
             <!--------------------[END] Testimonials--------------------------->
             <!--------------------[START] Contact--------------------------->
-            <section class="contact section" data-section="contact">
-               <div class="narrow-content">
-                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                     <div class="desc">
-                        <h1>Contact</h1>
-                     </div>
-                     <p id="contact-info"></p>
+            <section class="section" data-section="contact" id="contact-section">
+               <div class="narrow-content" id="contact-narrow-content">
+                  <div class="desc" id="contact-desc">
+                     <h1 class="contact-header">Contact</h1>
+                     <p id="contact_info" class="contact_info"></p>
                   </div>
                </div>
             </section>
             <!--------------------[END] Contact----------------------------->
             <!--------------------[START] Footer---------------------------->
-            <section class="footer section" data-section="footer">
-               
-                   <footer class="footer" id="footer">
-                       <!-- Existing footer content will be populated here -->
-                   </footer>
-                   <div class="footer-notes">
-                       <p>Made with ♥ by IvanWeissVanDerPol.</p>
-                       <p>© No Copyrights. Feel free to use this template.</p>
-                   </div>
-           </section>
+            <section class="section" data-section="footer" id="footer-section">
+               <footer class="footer" id="footer">
+                  <!-- Existing footer content will be populated here -->
+               </footer>
+               <div class="footer-notes" id="footer-notes">
+                  <p>Made with ♥ by IvanWeissVanDerPol.</p>
+                  <p>© No Copyrights. Feel free to use this template.</p>
+               </div>
+            </section>
             <!--------------------[END] Footer------------------------------>
          </div>
+
          <!-----[END] Main Page--------->
       </div>
    </div>
 
    <!-- jQuery -->
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" id="jquery" class="jquery"></script>
    <!-- jQuery Easing -->
-   <script src="js/jquery.easing.1.3.js"></script>
+   <script src="js/jquery.easing.1.3.js" id="jquery-easing" class="jquery-easing"></script>
    <!-- Bootstrap -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" id="bootstrap"
+      class="bootstrap"></script>
    <!-- Waypoints -->
-   <script src="js/jquery.waypoints.min.js"></script>
+   <script src="js/jquery.waypoints.min.js" id="waypoints" class="waypoints"></script>
    <!-- Flexslider -->
-   <script src="js/jquery.flexslider-min.js"></script>
+   <script src="js/jquery.flexslider-min.js" id="flexslider" class="flexslider"></script>
    <!-- Counters -->
-   <script src="js/jquery.countTo.js"></script>
+   <script src="js/jquery.countTo.js" id="counters" class="counters"></script>
    <!-- MAIN JS -->
-   <script src="js/main.js"></script>
+   <script src="js/main.js" id="main-js" class="main-js"></script>
 </body>
+
 </html>

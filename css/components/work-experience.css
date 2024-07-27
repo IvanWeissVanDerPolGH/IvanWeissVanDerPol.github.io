@@ -1,31 +1,127 @@
-.timeline-centered {
-    position: relative;
-    margin-bottom: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.timeline-centered::before {
-    content: "";
-    position: absolute;
-    width: 4px;
-    height: 100%;
-    background: var(--background-light);
-    left: 50%;
-    transform: translateX(-50%);
-}
 
-.timeline-entry {
-    position: relative;
-    margin: 20px 0;
+.experience_article {
+    background-color: var(--btn-bg-color);
     padding: 20px;
-    background: var(--background-light);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    animation: slideIn 0.5s ease;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
+.experience_article:hover {
+    transform: scale(1.02);
+}
+
+/* Header Styling */
+.timeline_sublabel {
+    display: flex;
+    align-items: center;
+    justify-content: space_between;
+    margin-bottom: 20px;
+    font-size: 1.75em;
+    font-weight: bold;
+    color: var(--text-primary-color);
+    flex: 1;
+}
+
+.work-logo {
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    box-shadow: 0 0 0 3px #fff;
+    border-radius: 15%;
+}
+
+/* Experience Label Styling */
+.experience_label {
+    width: 100%;
+    text-align: left;
+}
+
+.experience_duration {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: /*make a var*/);
+}
+
+.experience_detail {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+/* Experience Tags Styling */
+.experience_tag {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.875em;
+    font-weight: bold;
+    color: #fff;
+    background-color: /*make a var*/;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+
+/* Links Styling */
+.experience_label a {
+    display: inline-block;
+    margin-top: 10px;
+    color: /*make a var*/;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid /*make a var*/;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+}
+
+.experience_label a:hover {
+    color: #fff;
+    background-color: /*make a var*/;
+    border-color: /*make a var*/;
+}
+
+.experience_label a::after {
+    content: " ↗";
+    font-size: 0.8em;
+    vertical-align: middle;
+    margin-left: 2px;
+    transition: transform 0.3s;
+}
+
+.experience_label a:hover::after {
+    transform: translateX(2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .work-logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .experience_label {
+        text-align: center;
+    }
+}
+
+
+/* Animation */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -37,157 +133,19 @@
     }
 }
 
-.timeline-entry .timeline-entry-inner {
-    display: flex;
-    align-items: center;
+.experience_article {
+    animation: slideIn 0.5s ease;
+    border-left: 5px solid /*make a var*/;
 }
 
 
+/* Skills List Styling */
 
-.timeline-entry .timeline-entry-inner .timeline-label {
-    flex: 1;
-    padding: 20px;
-    background: var(--background-light);
-    border-radius: 4px;
-    margin-left: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.category-item {
+    margin-bottom: 20px; /* Space between categories */
 }
 
-.timeline-entry .timeline-entry-inner .timeline-label:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #f2f3f7 transparent transparent;
-    left: 0;
-    top: 20px;
-    margin-left: -10px;
-}
-
-.timeline-entry .timeline-entry-inner .timeline-label p + p {
-    margin-top: 10px;
-}
-
-.timeline-entry .timeline-entry-inner .timeline-label h2 {
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.timeline-entry .timeline-entry-inner .timeline-label .timeline-sublabel {
-    font-weight: 600;
-    margin: 0 0 5px;
-}
-
-.timeline-entry .timeline-entry-inner .timeline-label .timeline-text {
-    margin-bottom: 10px;
-    font-size: 13px;
-}
-
-.timeline-entry .timeline-entry-inner .timeline-label div {
-    margin-top: 10px;
-}
-
-.timeline-entry .timeline-entry-inner .timeline-label h2 span {
-    opacity: 0.9;
-    font-size: 16px;
-}
-
-
-
-
-.timeline-entry h3 {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-bottom: 5px;
-}
-
-.timeline-entry .institution {
-    font-weight: bold;
-    color: #555;
-}
-
-.timeline-entry {
-    margin-bottom: 20px;
-}
-
-.timeline-entry ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    color: #666;
-}
-
-.timeline-entry ul li {
-    margin-bottom: 5px;
-}
-
-/* Added CSS classes for missing elements */
-.narrow-content {
-    max-width: 800px;
-    margin: auto;
-}
-
-.desc {
-    text-align: center;
-}
-
-.highlightedText {
-    color: var(--primary-color);
-}
-
-.row-bottom-padded-sm {
-    margin-bottom: 20px;
-}
-
-.animate-box {
-    opacity: 0;
-}
-
-.animated {
-    opacity: 1;
-}
-
-.duration {
-    font-weight: bold;
-    color: #555;
-}
-
-.badge {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: 20px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-}
-
-.badge-secondary {
-    background-color: var(--secondary-color);
-}
-
-.timeline-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.work-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    background: var(--secondary-color);
-    border-radius: 25%;
-    margin-right: 20px;
-    box-shadow: 0 0 0 5px #f2f3f7;
-    margin: 20px;
+.link {
+    cursor: pointer; /* Indicate clickable items */
+    font-weight: bold; /* Emphasize category titles */
 }

@@ -369,7 +369,7 @@ export const experience = [
         tags: ["Quality Assurance", "Automation", "Selenium", "Playwright", "Royal Bank of Canada"],
         icon: "briefcase",
         institution_logo: "images/work_exp/mentormate_logo.jpeg",
-        project_logo: "images/work_exp/RBC_logo.png",
+        project_logo: "images/work_exp/rbc_logo.jpeg",
         institution_website: [
             {
                 urlText: "Professional",
@@ -430,8 +430,8 @@ export const experience = [
         ],
         tags: ["Software Testing", "Software Development", "Automation", "Machine Learning", "Documentation"],
         icon: "globe",
-        institution_logo: "images/work_exp/wpg_logo.png",
-        project_logo: "images/work_exp/software_development.png",
+        institution_logo: "images/work_exp/wpg_logo.jpeg",
+        project_logo: "",
         institution_website: [
             {
                 urlText: "Professional",
@@ -479,6 +479,13 @@ export const education = [
             "Technical Writing",
         ],
         icon: "graduation-cap",
+        education_institution_logo: "images/work_exp/FPuna_logo.jpg",
+        institution_website: [
+            {
+                urlText: "Official Website",
+                url: "https://www.fp.una.py"
+            }
+        ]
     },
     {
         title: "Study Abroad Program",
@@ -510,6 +517,13 @@ export const education = [
             "Team Leadership"
         ],
         icon: "briefcase",
+        education_institution_logo: "images/work_exp/wsu_logo.png",
+        institution_website: [
+            {
+                urlText: "Official Website",
+                url: "https://www.wichita.edu"
+            }
+        ]
     },
 ];
 

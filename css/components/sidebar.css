@@ -1,235 +1,192 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-secondary);
-}
 
-#aside {
+.aside {
     text-align: center;
-    padding-bottom: 1px;
-    margin: 0 var(--spacing); /* Use CSS variable for spacing */
+    padding-top: 3em;
+    padding-bottom: var(--padding-small);
+    margin: 0 var(--sidebar-margin);
     float: left;
-    width: var(--aside-width);
     position: fixed;
-    z-index: 1001;
-    background-color: var(--background-light);
-    transition: 0.5s;
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-bg-color);
+    transition: var(--sidebar-transition);
     height: 100%;
+    padding-left: var(--sidebar-padding);
+    padding-right: var(--sidebar-padding);
+    color: var(--sidebar-text-color);
+    box-shadow: var(--sidebar-shadow);
+    
 }
 
 @media screen and (max-width: 768px) {
-    #aside {
-        width: 100%; /* Full width on mobile */
-        transform: translateX(0); /* Adjusted for visibility on mobile */
-        padding-top: 2em; /* Reduce padding for better fit */
+    .aside {
+        width: 100%;
+        transform: translateX(-100%);
+        padding-top: var(--padding-large);
         height: auto;
-        margin: 0; /* Remove margin for better fit */
-        position: relative; /* Make it relative on mobile for easier layout handling */
+        margin: 0;
+        position: relative;
+        box-shadow: none;
+    }
+    .aside.open {
+        transform: translateX(0);
     }
 }
 
-#aside .author-img {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 30px;
-    border-radius: 50%;
+.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#aside .author-img img {
+.author-img {
+    width: 150px;
+    height: 150px;
+    margin: var(--margin-large) auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
     width: 100%;
     height: auto;
     object-fit: contain;
-    padding: 0;
+    padding: var(--padding-medium);
+    border: var(--padding-medium) solid var(--sidebar-border-color);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--margin-medium);
 }
 
-#aside h1 {
-    font-family: "Raleway", sans-serif;
+.FullName {
+    font-family: var(--font-tertiary);
     margin: 0;
-    font-size: 1.5em; /* Adjust font size for better readability */
+    font-size: var(--text-extra-large);
+    color: var(--sidebar-text-color);
 }
 
-#aside .position {
-    display: block;
-    margin-bottom: 2em;
-    font-size: 12px;
-    text-transform: uppercase;
+.email {
+    font-family: var(--font-tertiary);
+    margin: 0;
+    font-weight: bold;
+    font-size: var(--text-medium);
+    color: var(--sidebar-text-color);
+    padding-left: var(--padding-medium);
+    padding-right: var(--padding-medium);
 }
 
-#aside #logo {
-    text-align: center; /* Center-align logo */
-    font-weight: 700;
-    font-size: 1.2em; /* Adjust font size */
-    margin-bottom: 0.5em;
-    display: block;
-    width: 100%;
+.theme-selector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--margin-medium);
+    padding: var(--padding-medium);
+    background-color: var(--sidebar-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--sidebar-shadow);
 }
 
-#aside #logo a {
-    display: block;
-    color: var(--background-dark);
-    padding-right: 0.3em;
-}
-
-#aside #main-menu {
+.navbar {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
 }
 
-#aside #main-menu .collapse {
+.navbar .collapse {
     display: block !important;
 }
 
-#aside #main-menu ul {
+.navbar ul {
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
 @media screen and (max-width: 768px) {
-    #aside #main-menu ul {
-        margin-bottom: 2em;
+    .navbar ul {
+        margin-bottom: var(--margin-large);
     }
 }
 
-#aside #main-menu ul li {
-    margin: 0 0 10px;
+.nav-item {
+    margin: var(--margin-small) 0;
     padding: 0;
     list-style: none;
-    font-size: 12px;
+    font-size: var(--text-small);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-#aside #main-menu ul li a {
-    color: rgba(0, 0, 0, 0.7);
+.nav-link {
+    color: var(--sidebar-link-color);
     text-decoration: none;
     position: relative;
-    padding: 10px 0;
+    padding: var(--padding-medium) 0;
     font-family: var(--font-secondary);
-    transition: 0.3s;
+    transition: var(--sidebar-transition);
 }
 
-#aside #main-menu ul li a:after {
+.nav-link:after {
     content: "";
     position: absolute;
     height: 1px;
     bottom: 7px;
     left: 0;
     right: 0;
-    background-color: var(--primary-color);
+    background-color: var(--sidebar-link-color);
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#aside #main-menu ul li a:hover {
-    color: black;
-}
-
-#aside #main-menu ul li a:hover:after {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-#aside #main-menu ul li.active a {
-    font-size: 15px;
+.nav-item.active a {
+    font-size: var(--text-medium);
     font-weight: 600;
 }
 
-#aside #main-menu ul li.active a:after {
+.nav-item.active a:after {
     visibility: visible;
     transform: scaleX(1);
 }
 
-#main {
-    width: calc(100% - var(--aside-width) - 2 * var(--spacing)); /* Calculate width based on aside width and spacing */
-    margin: auto;
-    margin-left: calc(var(--aside-width) + var(--spacing)); /* Space between main and aside */
-    padding: 0 var(--spacing); /* Ensure main content has padding on both sides */
+/* Toggle Button for Mobile */
+.toggle-btn {
+    display: none;
+    position: absolute;
+    top: var(--padding-medium);
+    left: var(--padding-medium);
+    background-color: var(--sidebar-bg-color);
+    border: none;
+    font-size: var(--sidebar-icon-size);
+    cursor: pointer;
+}
+
+.toggle-btn:focus {
+    outline: var(--sidebar-focus-outline);
 }
 
 @media screen and (max-width: 768px) {
-    #main {
-        width: 100%; /* Full width on mobile */
-        margin-left: 0; /* Remove left margin */
+    .toggle-btn {
+        display: block;
+    }
+}
+
+.main-section {
+    width: calc(100% - var(--sidebar-width) - var(--spacing));
+    margin: auto;
+    float: right;
+    transform: translateX(var(--sidebar-width));
+}
+
+@media screen and (max-width: 768px) {
+    .main-section {
+        width: 100%;
+        margin-left: 0;
         padding: 0 var(--mobile-spacing);
     }
-}
-
-#main-menu ul li {
-    padding: 10px 15px;
-}
-
-#main-menu ul li a {
-    transition: color 0.3s ease;
-}
-
-#main-menu ul li a:hover {
-    color: var(--btn-hover-bg);
-}
-
-#aside .footer {
-    font-size: 20px;
-    text-align: center;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-    #aside .footer {
-        position: relative; /* Adjusted for footer to be relative on mobile */
-        bottom: 0; /* Footer at the bottom on mobile */
-        width: 100%; /* Full width on mobile */
-    }
-}
-
-#aside .footer span {
-    display: block;
-}
-
-#aside .footer ul {
-    padding: 0 20px;
-    margin: 0 0 10px;
-}
-
-#aside .footer ul li {
-    padding: 0 20px;
-    margin: 0 0 10px;
-    display: inline;
-    list-style: none;
-}
-
-#aside .footer h3 {
-    font-family: inherit;
-    padding: 4px;
-}
-
-#aside .footer h3 a {
-    color: #ff722c;
-    font-size: 18px;
-}
-
-#rcorners2 {
-    border-radius: 15px;
-    background: black;
-    padding: 20px;
-    width: 50%;
-    height: 40px;
-}
-
-#aside .footer ul li a {
-    color: rgba(255, 255, 255, 0.3);
-    padding: 4px;
-}
-
-#aside .footer ul li a:hover,
-#aside .footer ul li a:active,
-#aside .footer ul li a:focus {
-    text-decoration: none;
-    outline: none;
-    color: black;
 }

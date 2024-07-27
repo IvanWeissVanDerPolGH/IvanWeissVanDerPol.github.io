@@ -24,9 +24,9 @@
 	outline: none !important;
 }
 .btn-primary {
-	background: var(--primary-color);
+	background: /*make a var*/;
 	color: var(--light-color);
-	border: 2px solid var(--primary-color);
+	border: 2px solid /*make a var*/;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
 	background: #44a4f2 !important;
@@ -34,11 +34,11 @@
 }
 .btn-primary.btn-outline {
 	background: transparent;
-	color: var(--primary-color);
-	border: 2px solid var(--primary-color);
+	color: /*make a var*/;
+	border: 2px solid /*make a var*/;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-	background: var(--primary-color-hover);
+	background: var/*make a var*/);
 	color: var(--light-color);
 }
 .btn-success {

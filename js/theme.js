@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const themeSelector = document.getElementById('theme-selector');
-    const defaultTheme = 'theme-ocean-breeze'; // Define the default theme
-  
+    const defaultTheme = 'theme-default'; // Define the default theme
+    
     // Function to fetch and parse the CSS file
     async function loadCSSThemes(cssPath) {
+      console.log(`Attempting to load CSS themes from ${cssPath}`); // Added logging
       try {
         console.log(`Fetching CSS themes from ${cssPath}...`);
         const response = await fetch(cssPath);
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Function to parse CSS text and populate theme selector
     function parseAndPopulateThemes(cssText) {
+      console.log('Starting to parse CSS themes...'); // Added logging
       const themeRegex = /\.theme-([a-z-]+) {([\s\S]+?)}/g;
       let match;
   
@@ -41,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to change theme
     function changeTheme(theme) {
       document.body.className = theme;
-      console.log(`Theme changed to: ${theme}`);
+      console.log(`Theme changed to: ${theme}`); // Added logging
     }
   
     // Initialize with the default theme or previously selected theme
@@ -59,4 +61,3 @@ document.addEventListener("DOMContentLoaded", () => {
     // Load themes from CSS file
     loadCSSThemes('css/pallete.css');
   });
-  

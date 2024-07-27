@@ -1,107 +1,93 @@
-.skills {
-    border-bottom: 1px solid var(--border-color);
-    text-align: center;
-    margin-top: 10px;
-	margin-bottom: 10px;
+
+
+.skills_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0px;
+    width: 100%;
 }
 
-.skills .desc h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.skills .link {
+.skills_list .link {
+    background-color: var(--dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: var(--border-medium);
+    padding: var(--padding-medium);
+    margin: var(--margin-medium);
+    transition: background 0.3s ease; /* Added transition for background change on hover */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background: var(--primary-color);
-    color: var(--light-color);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin: 10px 0;
-    box-shadow: 0 2px 4px var(--shadow-color);
-}
-.skills .link:hover {
-    background: var(--primary-color-hover);
-    box-shadow: 0 4px 8px var(--shadow-color);
-    transform: translateY(-5px);
+    cursor: pointer; /* Indicate clickable items */
 }
 
-
-
-.skills .link p {
-    margin: 0;
-    font-size: 1.5em;
-    font-weight: bold;
+.skills_list .link:hover {
+    background-color: var(--dark-hover); /* Changed to use a darker background on hover */
+    box-shadow: 0 4px 8px var(--shadow-color); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Added subtle depth on hover */
 }
 
-.skills .submenu {
-    display: none;
-    padding: 20px;
-    background: var(--light-color);
-    border-radius: 8px;
-    margin-top: 10px;
-    transition: max-height 0.3s ease;
-    overflow: hidden;
-    box-shadow: 0 2px 4px var(--shadow-color);
-}
-
-.skills .submenu.show {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.skills .submenu .skill-item {
-    list-style: none;
-    border: 1px solid var(--border-color);
+.skills_list .skill_item {
+    background-color: var(--dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: var(--border-medium);
+    padding: var(--padding-medium);
+    margin: var(--margin-medium);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: var(--background-light);
-    border-radius: 8px;
-    transition: background 0.3s ease;
-    width: calc(33.333% - 20px);
-    box-shadow: 0 2px 4px var(--shadow-color);
+    align-items: center; /* Center vertically */
 }
 
-.skills .submenu .skill-item:hover {
-    background: var(--background-light-hover);
-}
 
-.skills .submenu .skill-item img {
+
+.skill_logo {
     width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+    height: auto;
+    margin-bottom: var(--margin-small);
+    object-fit: cover; /* Ensures images are equally sized and spaced */
 }
 
-.skills .submenu .skill-item .skill-name {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 10px;
+.skill_sublist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--padding-medium);
+    padding: var(--padding-medium);
+    background: var(--lighter);
+    border-radius: var(--border-radius);
+    list-style: none;
+    margin: var(--margin-medium) 0;
+    box-sizing: border-box;
+    transition: max-height 0.3s ease; /* Added transition for height change */
+    overflow: hidden; /* Ensures a clean transition */
 }
 
-.skills .submenu .skill-item .skill-description {
-    color: var(--dark-color);
-    font-size: 1em;
-    text-align: center;
+.skill_name {
+    margin-bottom: var(--margin-small);
+    color: var(--dark);
+    background-color: var(--lighter);
+    padding-left: var(--padding-medium);
+    padding-right: var(--padding-medium);
+    padding-top: var(--padding-medium);
+    padding-bottom: var(--padding-medium);
+    border-radius: var(--border-radius);
+}
+.skill_description {
+    
 }
 
 @media (max-width: 768px) {
-    .skills .link p {
-        font-size: 1.2em;
+    .link p {
+        font-size: var(--text-small);
     }
 
-    .skills .submenu .skill-item {
-        width: calc(50% - 10px);
+    .skill_sublist .skill_item {
+        width: calc(50% - var(--margin-small));
     }
 
-    .skills .submenu .skill-item .skill-name {
-        font-size: 1.2em;
+    .skill_sublist .skill_item .skill_name {
+        font-size: var(--text-small);
     }
 }

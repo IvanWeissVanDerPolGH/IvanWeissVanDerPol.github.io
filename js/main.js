@@ -28,14 +28,7 @@
     },
   };
 
-  var fullHeight = function () {
-    if (!isMobile.any()) {
-      $(".js-fullheight").css("height", $(window).height());
-      $(window).resize(function () {
-        $(".js-fullheight").css("height", $(window).height());
-      });
-    }
-  };
+
 
   var counter = function () {
     $(".js-counter").countTo({
@@ -252,7 +245,6 @@
 
   // Document on load.
   $(function () {
-    fullHeight();
     counter();
     counterWayPoint();
     contentWayPoint();
