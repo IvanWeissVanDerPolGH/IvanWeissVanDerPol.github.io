@@ -137,10 +137,10 @@
 
 
     /* Font Variables */
-    --font-primary: "Quicksand", Arial, sans-serif;
-    --font-secondary: "Montserrat", sans-serif;
-    --font-tertiary: "Playfair Display", Georgia, serif;
-    --footer-font-family: 'Roboto', sans-serif;
+    --font-primary: "Poppins", sans-serif !important; 
+    --font-secondary: "Poppins", sans-serif !important;
+    --font-tertiary: "Poppins", sans-serif !important;
+    --footer-font-family: "Poppins", sans-serif !important;
 
     /* Text Sizes */
     --text-small: 14px;
