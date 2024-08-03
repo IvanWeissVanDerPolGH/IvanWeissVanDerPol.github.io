@@ -9,11 +9,13 @@
 }
 
 .about-header {
-    font-size: var(--text-massive);
+    width: inherit;
+    font-size: var(--text-ultra-massive);
     font-family: var(--font-secondary);
-    text-align: center;
-    margin-bottom: var(--margin-large);
+    text-align: left;
+    margin-bottom: var(--margin-small);
     color: var(--about-header-text-color);
+    font-weight: var(--text-weight);
 }
 
 .about-bio {
@@ -23,8 +25,9 @@
     color: var(--about-bio-text-color);
     text-align: left; /* Left-align for readability */
     max-width: 800px;
-    margin: 0 auto;
-    padding: var(--padding-medium);
+    text-align: justify;
+    /* margin: 0 auto; */
+    /* padding: var(--padding-medium); */
 }
 
 .bio_item {

@@ -164,6 +164,8 @@
     --text-huge: 28px;
     --text-giant: 32px;
     --text-massive: 36px;
+    --text-ultra-massive: 38px;
+
     --small-text-size: 12px;
     --header-size: 36px;
     --subheader-size: 30px;
@@ -219,8 +221,8 @@
 .desc {
     text-align: center;
     max-width: 800px;
-    margin: var(--margin-large) auto;
-    padding: var(--padding-large);
+    margin: 0 auto;
+    padding: 0 var(--padding-large);
     border-radius: var(--border-radius);
     border: var(--border-medium);
     display: flex;
