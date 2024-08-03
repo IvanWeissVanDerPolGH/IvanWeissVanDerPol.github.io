@@ -1,12 +1,14 @@
 
 
 .experience_article {
-    background-color: var(--btn-bg-color);
+    background-color: var(--experience-article-bg-color); /* Updated to use the new variable */
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+        border-left: 5px solid var(--experience-article-border-left-color); /* Updated to use the new variable */
+
 }
 
 .experience_article:hover {
@@ -48,7 +50,7 @@
 .experience_detail {
     margin-bottom: 10px;
     font-size: 1em;
-    color: var(--dark-color);
+    color: var(--experience-detail-color); /* Updated to use the existing variable */
     line-height: 1.6;
 }
 
@@ -135,17 +137,17 @@
 
 .experience_article {
     animation: slideIn 0.5s ease;
-    border-left: 5px solid /*make a var*/;
+    border-left: 5px solid var(--experience-article-border-left-color); /* Updated to use the new variable */
 }
 
 
-/* Skills List Styling */
+
 
 .category-item {
-    margin-bottom: 20px; /* Space between categories */
+    margin-bottom: var(--category-item-margin-bottom); /* Updated to use the new variable */
 }
 
 .link {
-    cursor: pointer; /* Indicate clickable items */
-    font-weight: bold; /* Emphasize category titles */
+    cursor: var(--link-cursor); /* Updated to use the new variable */
+    font-weight: var(--link-font-weight); /* Updated to use the new variable  */
 }

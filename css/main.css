@@ -15,102 +15,127 @@
 :root {
     /* Color Variables */
     --primary-color: #f9bf3f; /* New primary color: bright blue */
-    --secondary-color: #2ECC71; /* New secondary color: bright green */
+    --secondary-color: rgb(165, 42, 42)    ; /* New secondary color: bright green */
     --tertiary-color: #000000; /* Dark blue for text */
     /* Background Colors */
     --primary-color-bg: var(--primary-color); /* Lightened grey */
     --secondary-color-bg: var(--secondary-color); /* Lightened green */
     --tertiary-color-bg: var(--tertiary-color);
-
+    --primary-color-hover :var(--primary-color-bg);
+    --secondary-color-hover: var(--secondary-color-bg);
+    --tertiary-color-hover: var(--tertiary-color-bg);
     
-    --accent-color: #E74C3C; /* Accent color: bright red */
-    --dark-color: #2C3E50; /* Dark blue for backgrounds */
-    --light-color: #ECF0F1; /* Light grey for backgrounds */
-    --text-color: #34495E; /* Darker grey for text */
-    --link-color: #3498DB; /* Link color: bright blue */
-    --link-hover-color: #2980B9; /* Darker blue for link hover */
-    --error-color: #E74C3C; /* Error color: bright red */
-    --success-color: #2ECC71; /* Success color: bright green */
-    --warning-color: #F39C12; /* Warning color: bright orange */
-    --info-color: #3498DB; /* Info color: bright blue */
-    --input-border: #BDC3C7; /* Light grey for input borders */
-    --btn-bg-color: #3498DB; /* Button background color: bright blue */
-    --btn-hover-bg: #2980B9; /* Button hover background color: darker blue */
-    --btn-color: #FFFFFF; /* Button text color: white */
-
- 
-    --about-bg-color: var(--primary-color-bg); /* Light grey */
-    --about-bio-bg-color: var(--primary-color-bg); /* Light grey */
-    --profile-bg-color: var(--primary-color-bg); /* Light grey */
-    --profile-cards-bg-color: var(--primary-color-bg); /* Light grey */
-    --github-card-bg-color: var(--primary-color-bg); /* Light grey */
-    --profile-card-bg-color: var(--secondary-color-bg); /* Light green */
-    --main-bg-color: var(--tertiary-color-bg); /* Default background color */
-    --desc-bg-color: var(--light-color); /* Background color for description */
-    --section-div-bg-color: var(--dark-color); /* Background color for section dividers */
-    --section-bg-color: var(--light-color); /* Background color for sections */
-    --aside-text-color: var(--dark-color);    
+    --primary-color-text: black;
+    --secondary-color-text: white;
+    --tertiary-color-text: var(--primary-color);
+    
+    
+    --about-bg-color: var(--primary-color-bg);
+    --about-bio-bg-color: var(--primary-color-bg);
+    --profile-bg-color: var(--primary-color-bg);
+    --profile-cards-bg-color: var(--primary-color-bg);
+    --github-card-bg-color: var(--primary-color-bg);
+    --profile-card-bg-color: var(--primary-color-bg);
+    --main-bg-color: var(--tertiary-color-bg);
+    --desc-bg-color: var(--primary-color-text);
+    --section-div-bg-color: var(--tertiary-color);
+    --section-bg-color: var(--primary-color-text);
+    --aside-text-color: var(--tertiary-color);    
     --aside-bg-color: var(--about-bg-color);
     --sidebar-bg-color: var(--aside-bg-color);
     --page-bg-color: var(--main-bg-color);
-    --about-bg-color: var(--primary-color-bg); /* Background color for About section */
-    --profile-bg-color: var(--primary-color-bg); /* Background color for profile section */
-    --profile-card-bg-color: var(--secondary-color-bg); /* Background color for profile cards */
-    --tag-bg-color: var(--primary-color); /* Added variable for tag background color */
-    --link-hover-bg-color: var(--link-hover-color); /* Added variable for link hover background color */
-    --education-tag-bg-color: var(--primary-color); /* Added variable for education tag background color */
-    --btn-primary-bg: var(--primary-color); /* Added variable for primary button background */
-    --btn-primary-hover-bg: var(--link-hover-color); /* Added variable for primary button hover background */
-    --education-link-hover-bg-color: var(--link-hover-color); /* Added variable for education link hover background color */
+    --tag-bg-color: var(--primary-color);
+    --link-hover-bg-color: var(--primary-color-hover);
+    --education-tag-bg-color: var(--primary-color);
+    --btn-primary-bg: var(--primary-color);
+    --btn-primary-hover-bg: var(--primary-color-hover);
+    --education-link-hover-bg-color: var(--primary-color-hover);
 
-    --education-detail-color: var(--dark-color); /* Utilizing existing variable for education detail text color */
-    --education-header-color: var(--text-header-color); /* Utilizing existing variable for education header text color */
-    --education-link-color: var(--link-color); /* Utilizing existing variable for education link text color */
-    --education-border-color: var(--primary-color); /* Added variable for education border color */
-    --education-link-hover-border-color: var(--link-hover-color); /* Added variable for education link hover border color */
-    --education-article-border-color: var(--primary-color); /* Added variable for education article border color */
-    --education-duration-color: var(--text-secondary-color); /* Added variable for education duration color */
-    --btn-primary-border: var(--link-hover-color); /* Added variable for primary button border */
-    --btn-primary-color: var(--btn-color); /* Added variable for primary button text color */
-    --btn-primary-hover-border: var(--btn-hover-bg); /* Added variable for primary button hover border */
+    --education-detail-color: var(--tertiary-color);
+    --education-header-color: var(--secondary-color);
+    --education-link-color: var(--primary-color);
+    --education-border-color: var(--primary-color);
+    --education-link-hover-border-color: var(--primary-color-hover);
+    --education-article-border-color: var(--primary-color);
+    --education-duration-color: var(--secondary-color);
+    --btn-primary-border: var(--primary-color-hover);
+    --btn-primary-color: var(--primary-color-text);
+    --btn-primary-hover-border: var(--primary-color-hover);
 
-    --footer-link-color: var(--primary-color); /* Added variable for footer link color */
-    --footer-link-hover-color: var(--link-hover-color); /* Added variable for footer link hover color */
-    --footer-text-color: var(--text-color); /* Utilizing existing variable for footer text color */
-    --footer-note-text-color: var(--text-secondary-color); /* Added variable for footer note text color */
-    --footer-intro-text-color: var(--text-primary-color); /* Added variable for footer intro text color */
-    --col-title-color: var(--text-header-color); /* Added variable for column title color */
-    --col-list-link-color: var(--link-color); /* Utilizing existing variable for column list link color */
+    --footer-link-color: var(--primary-color);
+    --footer-link-hover-color: var(--primary-color-hover);
+    --footer-text-color: var(--primary-color-text);
+    --footer-note-text-color: var(--secondary-color);
+    --footer-intro-text-color: var(--primary-color);
+    --col-title-color: var(--secondary-color);
+    --col-list-link-color: var(--primary-color);
 
     /* Text Colors */
     --text-header-color: var(--secondary-color);
-    --text-normal-color: var(--text-color);
+    --text-normal-color: var(--primary-color-text);
     --text-list-color: var(--primary-color);
     --text-image-color: var(--primary-color);
-    --text-primary-color: var(--text-color);
-    --text-secondary-color: var(--text-color);
-    --text-tertiary-color: var(--text-color);
-    --about-text-color: var(--text-primary-color); 
-    --about-bio-text-color: var(--text-color);
-    --profile-text-color: var(--text-primary-color); 
-    --profile-cards-text-color: var(--text-primary-color); 
-    --github-card-text-color: var(--text-primary-color); 
-    --profile-card-text-color: var(--text-primary-color); 
-    --profile-header-text-color: var(--text-primary-color); 
-    --sidebar-text-color: var(--aside-text-color);
-    --about-bio-text-color: var(--text-primary-color); /* Text color for bio */
-    --profile-card-text-color: var(--text-secondary-color); /* Text color for profile cards */
-    --profile-header-text-color: var(--text-header-color); /* Text color for profile header */
-    --about-header-text-color: var(--btn-color);
-    --link-text-color: var(--secondary-color); /* Added variable for link text color */
-    --sidebar-link-color: var(--link-color);
-    --sidebar-link-hover-color: var(--link-hover-color);
-    --sidebar-border-color: var(--input-border);
-    --section-title-color: var(--text-header-color);
-    --experience-duration-color: var(--text-secondary-color); /* Added variable for experience duration color */
-    --link-border-color: var(--primary-color); /* Added variable for link border color */
-    --link-hover-border-color: var(--link-hover-color); /* Added variable for link hover border color */
-    
+    --text-primary-color: var(--primary-color-text);
+    --text-secondary-color: var(--primary-color-text);
+    --text-tertiary-color: var(--primary-color-text);
+    --about-text-color: var(--primary-color-text);
+    --about-bio-text-color: var(--secondary-color-text);
+    --profile-text-color: var(--primary-color-text);
+    --profile-cards-text-color: var(--primary-color-text);
+    --github-card-text-color: var(--primary-color-text);
+    --profile-card-text-color: var(--secondary-color);
+    --profile-header-text-color: var(--secondary-color);
+    --about-header-text-color: var(--secondary-color-text);
+    --link-text-color: var(--secondary-color);
+    --sidebar-text-color: var(--tertiary-color);
+    --sidebar-link-color: var(--primary-color);
+    --sidebar-link-hover-color: var(--primary-color-hover);
+    --sidebar-border-color: var(--primary-color);
+    --section-title-color: var(--secondary-color);
+    --experience-duration-color: var(--secondary-color);
+    --link-border-color: var(--primary-color);
+    --link-hover-border-color: var(--primary-color-hover);
+    --language-header-text-color:var(--secondary-color-text);
+    --language-list-text-color:var(--secondary-color-text);
+    --skills-bg-color:var(--primary-color);
+
+
+    --skills-header-bg-color: var(--primary-color); /* Added variable for skills header background color */
+    --skills-header-color: var(--primary-color-text); /* Added variable for skills header text color */
+    --skills-bg-color: var(--primary-color-bg); /* Added variable for skills background color */
+    --skills-link-hover-bg-color: var(--primary-color-hover); /* Added variable for skills link hover background color */
+    --skills-shadow-color: rgba(0, 0, 0, 0.2); /* Added variable for skills shadow color */
+    --skills-item-bg-color: var(--primary-color-bg); /* Added variable for skills item background color */
+    --skills-logo-margin-bottom: var(--margin-small); /* Added variable for skills logo margin bottom */
+    --skills-sublist-bg-color: var(--secondary-color-bg); /* Added variable for skills sublist background color */
+    --skills-name-color: var(--tertiary-color); /* Added variable for skills name text color */
+    --skills-name-bg-color: var(--secondary-color-bg); /* Added variable for skills name background color */
+    --skills-name-padding: var(--padding-medium); /* Added variable for skills name padding */
+    --skills-name-margin-bottom: var(--margin-small); /* Added variable for skills name margin bottom */
+    --cert-link-bg-color: var(--primary-color-bg); /* Added variable for certification link background color */
+    --cert-link-hover-bg-color: var(--primary-color-hover); /* Added variable for certification link hover background color */
+    --cert-link-shadow-color: rgba(0, 0, 0, 0.2); /* Added variable for certification link shadow color */
+    --cert-item-bg-color: var(--primary-color-bg); /* Added variable for certification item background color */
+    --cert-sublist-bg-color: var(--secondary-color-bg); /* Added variable for certification sublist background color */
+    --cert-name-font-size: var(--text-medium); /* Added variable for certification name font size */
+    --cert-name-margin-bottom: var(--margin-small); /* Added variable for certification name margin bottom */
+    --cert-name-font-weight: bold; /* Added variable for certification name font weight */
+    --cert-name-text-align: center; /* Added variable for certification name text alignment */
+    --experience-article-bg-color: var(--primary-color); /* Updated to use the new variable */
+    --experience-article-border-left-color: var(--secondary-color); /* Updated to use the new variable */
+    --experience-detail-color: var(--dark-color); /* Updated to use the new variable */
+    --category-item-margin-bottom: var(--margin-medium); /* Updated to use the new variable */
+    --link-cursor: pointer; /* Updated to use the new variable */
+    --link-font-weight: bold; /* Updated to use the new variable */
+    --education-article-bg-color: var(--primary-color); /* Utilizing existing variable for education article background */
+    --education-article-border-left-color: var(--secondary-color);; /* Added variable for education article border left color */
+    --education-logo-shadow-color: #FFFFFF; /* Added variable for education logo shadow color */
+    --carousel-btn-bg: #e0e0e0; /* Added variable for carousel button background */
+    --carousel-btn-hover-bg: #c0c0c0; /* Added variable for carousel button hover background */
+    --carousel-indicator-bg: #d0d0d0; /* Added variable for carousel indicator background */
+    --carousel-indicator-active-bg: #a0a0a0; /* Added variable for carousel indicator active background */
+
+
     /* Font Variables */
     --font-primary: "Quicksand", Arial, sans-serif;
     --font-secondary: "Montserrat", sans-serif;
@@ -150,37 +175,33 @@
     --padding-huge: 50px;
     --avatar-size:  80px;
 
-
     --sidebar-icon-size: 1.2em;
     --section-title-size: var(--header-size);
-    --profile-avatar-size: var(--avatar-size); /* Size of profile avatar */
-    --profile-stat-title-size: var(--text-small); /* Font size for profile stat title */
-    --profile-stat-value-size: var(--text-extra-large); /* Font size for profile stat value */
+    --profile-avatar-size: var(--avatar-size);
+    --profile-stat-title-size: var(--text-small);
+    --profile-stat-value-size: var(--text-extra-large);
    
     --sidebar-padding: var(--padding-medium);
     --section-padding: var(--spacing);
-    --profile-card-padding: var(--card-padding); /* Padding for profile card */
+    --profile-card-padding: var(--padding-large);
 
     --sidebar-margin: var(--margin-medium);
     --section-margin: var(--margin-small);
     --desc-margin-bottom: var(--margin-large);
-    --bio-item-margin-bottom: var(--margin-medium); /* Margin bottom for bio items */
-    --profile-info-margin-left: var(--info-margin-left); /* Margin left for profile info */
-    --profile-stat-margin-top: var(--stat-margin-top); /* Margin top for profile stats */
+    --bio-item-margin-bottom: var(--margin-medium);
+    --profile-info-margin-left: var(--margin-medium);
+    --profile-stat-margin-top: var(--margin-medium);
     
     /* Additional Variables */
-    --background-dark-hover: #444;
-    --background-lighter: #f9f9f9;
     --box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
       
     --sidebar-shadow: var(--box-shadow);
     --sidebar-width: var(--aside-width);
     --sidebar-transition: 0.3s ease-in-out;
-    --sidebar-focus-outline: 2px solid var(--accent-color);
-    --bio-item-line-height: var(--margin-large); /* Line height for bio items */
-
+    --sidebar-focus-outline: 2px solid var(--primary-color);
+    --bio-item-line-height: var(--margin-large);
 }
-/* General Styles */
+    /* General Styles */
 .desc {
     text-align: center;
     max-width: 800px;

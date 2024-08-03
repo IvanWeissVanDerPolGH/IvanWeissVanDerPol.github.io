@@ -1,5 +1,12 @@
 
-
+.skills-header {
+    font-size: var(--text-extra-large);
+    font-weight: bold;
+    color: var(--skills-header-color); /* Updated to use the new variable */
+    margin-bottom: var(--margin-large);
+    text-align: center;
+    background-color: var(--skills-header-bg-color); /* Updated to use the new variable */
+}
 .skills_list {
     display: flex;
     flex-direction: column;
@@ -9,8 +16,9 @@
     width: 100%;
 }
 
+
 .skills_list .link {
-    background-color: var(--skills-background-color);
+    background-color: var(--skills-bg-color); /* Updated to use the new variable */
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     border: var(--border-medium);
@@ -24,13 +32,13 @@
 }
 
 .skills_list .link:hover {
-    background-color: var(--dark-hover); /* Changed to use a darker background on hover */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Enhanced shadow on hover */
-    transform: translateY(-5px); /* Added subtle depth on hover */
+    background-color: var(--skills-link-hover-bg-color); /* Updated to use the new variable */
+    box-shadow: 0 4px 8px var(--skills-shadow-color); /* Updated to use the new variable */
+transform: translateY(-5px); /* Added subtle depth on hover */
 }
 
 .skills_list .skill_item {
-    background-color: var(--dark);
+    background-color: var(--skills-item-bg-color); /* Updated to use the new variable */
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     border: var(--border-medium);
@@ -48,6 +56,8 @@
     height: auto;
     margin-bottom: var(--margin-small);
     object-fit: cover; /* Ensures images are equally sized and spaced */
+    margin-bottom: var(--skills-logo-margin-bottom); /* Updated to use the new variable */
+
 }
 
 .skill_sublist {
@@ -55,7 +65,7 @@
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: var(--padding-medium);
     padding: var(--padding-medium);
-    background: var(--lighter);
+    background: var(--skills-sublist-bg-color); /* Updated to use the new variable */
     border-radius: var(--border-radius);
     list-style: none;
     margin: var(--margin-medium) 0;
@@ -65,13 +75,10 @@
 }
 
 .skill_name {
-    margin-bottom: var(--margin-small);
-    color: var(--dark);
-    background-color: var(--lighter);
-    padding-left: var(--padding-medium);
-    padding-right: var(--padding-medium);
-    padding-top: var(--padding-medium);
-    padding-bottom: var(--padding-medium);
+    color: var(--skills-name-color); /* Updated to use the new variable */
+    background-color: var(--skills-name-bg-color); /* Updated to use the new variable */
+    margin-bottom: var(--skills-name-margin-bottom); /* Updated to use the new variable */
+    padding: var(--skills-name-padding); /* Updated to use the new variable */
     border-radius: var(--border-radius);
 }
 

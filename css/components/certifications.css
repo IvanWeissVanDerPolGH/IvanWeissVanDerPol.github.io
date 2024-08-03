@@ -8,7 +8,7 @@
 }
 
 .cert_list .link {
-    background-color: var(--dark);
+    background-color: var(--cert-link-bg-color); /* Updated to use the new variable */
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     border: var(--border-medium);
@@ -22,13 +22,13 @@
 }
 
 .cert_list .link:hover {
-    background-color: var(--dark-hover); /* Changed to use a darker background on hover */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Enhanced shadow on hover */
+    background-color: var(--cert-link-hover-bg-color); /* Updated to use the new variable */
+    box-shadow: 0 4px 8px var(--cert-link-shadow-color); /* Updated to use the new variable */
     transform: translateY(-5px); /* Added subtle depth on hover */
 }
 
 .cert_list .cert_item {
-    background-color: var(--dark);
+    background-color: var(--cert-item-bg-color); /* Updated to use the new variable */
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     border: var(--border-medium);
@@ -50,7 +50,7 @@
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: var(--padding-medium);
     padding: var(--padding-medium);
-    background: var(--lighter);
+    background: var(--cert-sublist-bg-color); /* Updated to use the new variable */
     border-radius: var(--border-radius);
     list-style: none;
     margin: var(--margin-medium) 0;
@@ -59,10 +59,10 @@
     overflow: hidden; /* Ensures a clean transition */
 }
 .cert_name {
-    font-size: var(--text-medium);
-    margin-bottom: var(--margin-small);
-    font-weight: bold;
-    text-align: center;
+    font-size: var(--cert-name-font-size); /* Updated to use the new variable */
+    margin-bottom: var(--cert-name-margin-bottom); /* Updated to use the new variable */
+    font-weight: var(--cert-name-font-weight); /* Updated to use the new variable */
+    text-align: var(--cert-name-text-align); /* Updated to use the new variable */
 }
 
 @media (max-width: 768px) {

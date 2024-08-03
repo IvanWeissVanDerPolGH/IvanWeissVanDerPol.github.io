@@ -4,10 +4,10 @@
     padding: var(--padding-large); /* Add padding for better spacing */
 }
 
-.languages .desc h1 {
+.languages-header {
     font-size: var(--text-extra-large);
     font-weight: bold;
-    color: var(--primary-color); /* Updated color */
+    color: var(--language-header-text-color); /* Updated color */
     margin-bottom: var(--margin-large);
     text-align: center; /* Center the heading */
 }
@@ -21,7 +21,7 @@
     font-size: var(--text-medium);
     font-family: var(--font-primary);
     margin-bottom: var(--margin-small);
-    color: var(--text-primary-color);
+    color: var(--language-list-text-color);
 }
 
 .progress {
