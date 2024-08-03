@@ -5,7 +5,7 @@
 }
 
 .carousel-controls .btn {
-    background: /*make a var*/;
+    background: var(--carousel-btn-bg); /* Updated to use the new variable */
     color: var(--btn-color);
     border: none;
     border-radius: 50%;
@@ -20,7 +20,7 @@
 }
 
 .carousel-controls .btn:hover {
-    background: var/*make a var*/);
+    background: var(--carousel-btn-hover-bg); /* Updated to use the new variable */
 }
 
 /* Carousel Inner Styling */
@@ -82,14 +82,14 @@
 .carousel-indicators .indicator {
     width: 10px;
     height: 10px;
-    background: /*make a var*/;
+    background: var(--carousel-indicator-bg); /* Updated to use the new variable */
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
 }
 
 .carousel-indicators .indicator.active {
-    background: var/*make a var*/);
+    background: var(--carousel-indicator-active-bg); /* Updated to use the new variable */
 }
 
 /* Add transition effects */
