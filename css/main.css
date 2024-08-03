@@ -1,4 +1,3 @@
-/* Importing component styles */
 @import url('./components/sidebar.css');
 @import url('./components/about.css');
 @import url('./components/languages.css');
@@ -13,7 +12,6 @@
 @import url('./components/general/buttons.css');
 @import url('./components/general/responsive.css');
 
-/* Root variables for theming and global styles */
 :root {
     /* Color Variables */
     --primary-color: #3498DB; /* New primary color: bright blue */
@@ -98,6 +96,7 @@
     --padding-large: 24px;
     --padding-xlarge: 30px;
     --padding-huge: 50px;
+    --avatar-size:  80px;
 
     /* Additional Variables */
     --background-dark-hover: #444;
@@ -145,8 +144,14 @@
     --profile-stat-value-size: var(--text-extra-large); /* Font size for profile stat value */
     --profile-card-padding: var(--card-padding); /* Padding for profile card */
     --about-header-text-color: white;
-}
+    --experience-duration-color: var(--text-secondary-color); /* Added variable for experience duration color */
+    --tag-bg-color: #3498DB; /* Added variable for tag background color */
+    --link-text-color: #2ECC71; /* Added variable for link text color */
+    --link-border-color: #3498DB; /* Added variable for link border color */
+    --link-hover-bg-color: #2980B9; /* Added variable for link hover background color */
+    --link-hover-border-color: #2980B9; /* Added variable for link hover border color */
 
+}
 /* General Styles */
 .desc {
     text-align: center;
@@ -184,6 +189,7 @@ body, .page {
     margin: var(--margin-medium) auto;
 }
 
+
 ul,
 ol {
     list-style: none;
@@ -209,3 +215,4 @@ ol {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
+

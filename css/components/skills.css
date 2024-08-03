@@ -74,9 +74,7 @@
     padding-bottom: var(--padding-medium);
     border-radius: var(--border-radius);
 }
-.skill_description {
-    
-}
+
 
 @media (max-width: 768px) {
     .link p {

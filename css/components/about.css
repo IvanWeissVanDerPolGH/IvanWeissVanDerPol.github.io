@@ -68,7 +68,7 @@
     font-family: var(--font-primary);
     border-radius: 6px;
     line-height: 1.5;
-    padding: var(--profile-card-padding);
+    padding: var(--padding-medium);
     font-size: var(--text-medium);
     color: var(--profile-card-text-color);
     background-color: var(--profile-card-bg-color);
@@ -89,6 +89,7 @@
     width: var(--profile-avatar-size);
     height: var(--profile-avatar-size);
     border-radius: 50%;
+    padding:var(--padding-small);
 }
 
 .profile-info {

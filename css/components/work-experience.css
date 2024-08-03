@@ -25,7 +25,7 @@
     flex: 1;
 }
 
-.work-logo {
+.work_logo {
     width: 80px;
     height: 80px;
     margin-left: 10px;
@@ -42,7 +42,7 @@
 .experience_duration {
     font-size: 1.2em;
     font-weight: 500;
-    color: /*make a var*/);
+    color: var(--experience-duration-color); /* Updated to use the new variable */
 }
 
 .experience_detail {
@@ -59,7 +59,7 @@
     font-size: 0.875em;
     font-weight: bold;
     color: #fff;
-    background-color: /*make a var*/;
+    background-color: var(--tag-bg-color); /* Updated to use the new variable */
     border-radius: 20px;
     margin-right: 5px;
     margin-bottom: 5px;
@@ -71,19 +71,19 @@
 .experience_label a {
     display: inline-block;
     margin-top: 10px;
-    color: /*make a var*/;
+    color: var(--link-text-color); /* Updated to use the new variable */
     font-weight: bold;
     text-decoration: none;
     padding: 5px 10px;
-    border: 2px solid /*make a var*/;
+    border: 2px solid var(--link-border-color); /* Updated to use the new variable */
     border-radius: 4px;
     transition: color 0.3s, background-color 0.3s, border 0.3s;
 }
 
 .experience_label a:hover {
     color: #fff;
-    background-color: /*make a var*/;
-    border-color: /*make a var*/;
+    background-color: var(--link-hover-bg-color); /* Updated to use the new variable */
+    border-color: var(--link-hover-border-color); /* Updated to use the new variable */
 }
 
 .experience_label a::after {
