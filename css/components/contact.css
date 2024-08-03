@@ -4,16 +4,21 @@
 	align-items: center;
 	text-align: center;
 }
-.about-desc h1 {
-	font-size: var(--text-giant);
-	color: /*make a var*/;
-	font-weight: bold;
+
+
+
+#contact-desc {
+    font-size: var(--text-giant);
+    color: var(--about-desc-h1-color); /* Updated to use the new variable */
+    font-weight: bold;
+	background-color: var(--tertiary-color);
 }
+
 #contact_info {
-	font-size: var(--text-medium);
-	color: rgba(0, 0, 0, 0.7);
-	line-height: 1.6;
-	max-width: 800px;
-	margin: 0 auto;
-	padding: var(--padding-medium);
+    font-size: var(--text-medium);
+    color: var(--contact-info-color); /* Updated to use the new variable */
+    line-height: var(--contact-info-line-height); /* Updated to use the new variable */
+    max-width: var(--contact-info-max-width); /* Updated to use the new variable */
+    margin: var(--contact-info-margin); /* Updated to use the new variable */
+    padding: var(--padding-medium);
 }

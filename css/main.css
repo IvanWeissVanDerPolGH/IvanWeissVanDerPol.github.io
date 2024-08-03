@@ -62,7 +62,7 @@
     --btn-primary-color: var(--primary-color-text);
     --btn-primary-hover-border: var(--primary-color-hover);
 
-    --footer-link-color: var(--primary-color);
+    --footer-link-color: var(--primary-color-text);
     --footer-link-hover-color: var(--primary-color-hover);
     --footer-text-color: var(--primary-color-text);
     --footer-note-text-color: var(--secondary-color);
@@ -130,11 +130,25 @@
     --education-article-bg-color: var(--primary-color); /* Utilizing existing variable for education article background */
     --education-article-border-left-color: var(--secondary-color);; /* Added variable for education article border left color */
     --education-logo-shadow-color: #FFFFFF; /* Added variable for education logo shadow color */
-    --carousel-btn-bg: #e0e0e0; /* Added variable for carousel button background */
-    --carousel-btn-hover-bg: #c0c0c0; /* Added variable for carousel button hover background */
-    --carousel-indicator-bg: #d0d0d0; /* Added variable for carousel indicator background */
-    --carousel-indicator-active-bg: #a0a0a0; /* Added variable for carousel indicator active background */
+    --carousel-btn-bg: var(--primary-color); /* Button background color */
+    --carousel-btn-hover-bg: var(--primary-color-hover); /* Button hover background color */
+    --carousel-indicator-bg: var(--input-border); /* Indicator background color */
+    --carousel-indicator-active-bg: var(--primary-color); /* Active indicator background color */
+    --carousel-item-bg: var(--light-color); /* Carousel item background color */
+    --carousel-shadow: var(--box-shadow-light); /* Carousel shadow */
+    --carousel-text-color: var(--dark-color); /* Carousel text color */
+    --carousel-inner-border-radius: 10px; /* Carousel inner border radius */
+    --carousel-inner-padding: 20px; /* Carousel inner padding */
+    --carousel-inner-bg: var(--primary-color); /* Carousel inner background color */
 
+    /* About Description Variables */
+    --about-desc-h1-color: var(--secondary-color-text); /* Color for about description h1 */
+
+    /* Contact Info Variables */
+    --contact-info-color:var(--secondary-color-text); /* Color for contact info text */
+    --contact-info-line-height: 1.6; /* Line height for contact info text */
+    --contact-info-max-width: 800px; /* Max width for contact info */
+    --contact-info-margin: 0 auto; /* Margin for contact info */
 
     /* Font Variables */
     --font-primary: "Poppins", sans-serif !important; 

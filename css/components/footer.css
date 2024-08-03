@@ -1,6 +1,6 @@
 footer {
 	font-size: var(--text-small);
-	background: var(--light);
+	background: var(--primary-color);
 	padding: var(--padding-medium) var(--padding-xlarge);
 	display: flex;
 	align-items: start;
@@ -8,12 +8,12 @@ footer {
 	gap: var(--margin-medium);
 	border-radius: 5px;
 }
-footer h2 {
+.col_title {
 	font-size: 1.5em;
 	font-weight: bold;
 	margin-bottom: var(--margin-small);
 }
-footer ul {
+.col_list {
 	list-style: none;
 	padding-left: 0px;
 }

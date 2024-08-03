@@ -5,7 +5,7 @@
 }
 
 .carousel-controls .btn {
-    background: /*make a var*/;
+    background: var(--carousel-btn-bg);
     color: var(--btn-color);
     border: none;
     border-radius: 50%;
@@ -20,19 +20,19 @@
 }
 
 .carousel-controls .btn:hover {
-    background: var/*make a var*/);
+    background: var(--carousel-btn-hover-bg);
 }
 
 /* Carousel Inner Styling */
 .carousel-inner {
-    background: var(--lighter);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: var(--carousel-inner-border-radius);
+    box-shadow: var(--carousel-shadow);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: var(--carousel-inner-padding);
+    background-color: var(--carousel-inner-bg);
 }
 
 /* Carousel Item Styling */
@@ -53,9 +53,9 @@
     align-items: center;
     justify-content: center;
     padding: 40px;
-    background: var(--light);
+    background: var(--carousel-item-bg);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--carousel-shadow);
     max-width: 700px;
     min-width: 300px;
     text-align: center; /* Center align text */
@@ -65,11 +65,12 @@
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 20px;
+    color: var(--carousel-text-color);
 }
 
 .carousel-content p {
     font-size: 1em;
-    color: var(--dark-color);
+    color: var(--carousel-text-color);
 }
 
 /* Indicators for the carousel */
@@ -82,14 +83,14 @@
 .carousel-indicators .indicator {
     width: 10px;
     height: 10px;
-    background: /*make a var*/;
+    background: var(--carousel-indicator-bg);
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
 }
 
 .carousel-indicators .indicator.active {
-    background: var/*make a var*/);
+    background: var(--carousel-indicator-active-bg);
 }
 
 /* Add transition effects */
