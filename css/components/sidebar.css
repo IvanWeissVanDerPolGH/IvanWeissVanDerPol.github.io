@@ -3,7 +3,7 @@
     text-align: center;
     padding-top: 3em;
     padding-bottom: var(--padding-small);
-    /* margin: 0 var(--sidebar-margin); */
+    margin: 0 var(--sidebar-margin);
     position: fixed;
     width: var(--sidebar-width);
     background-color: var(--sidebar-bg-color);
@@ -14,6 +14,10 @@
     padding-right: var(--sidebar-padding);
     color: var(--sidebar-text-color);
     box-shadow: var(--sidebar-shadow);
+    margin: 0;             /* Remove existing margin for better control */
+    width: calc(25% - 2 * var(--sidebar-padding)); /* Dynamically calculate width */
+    left:12%;            /* Position it 20% from the left edge */
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 768px) {
@@ -188,7 +192,8 @@
 
 .main-section {
     
-    margin-left: calc(var(--sidebar-width) + var(--sidebar-width)/3 );
+    margin-left: 36vw;
+    /* --margin-right: 20%; */
     /* transform: translateX(0); */
 }
 
