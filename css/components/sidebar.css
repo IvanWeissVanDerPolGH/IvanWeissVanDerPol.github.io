@@ -3,7 +3,7 @@
     text-align: center;
     padding-top: 3em;
     padding-bottom: var(--padding-small);
-    margin: 0 var(--sidebar-margin);
+    /* margin: 0 var(--sidebar-margin); */
     position: fixed;
     width: var(--sidebar-width);
     background-color: var(--sidebar-bg-color);
