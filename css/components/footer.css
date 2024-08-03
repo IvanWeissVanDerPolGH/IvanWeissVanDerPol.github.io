@@ -2,11 +2,15 @@ footer {
 	font-size: var(--text-small);
 	background: var(--primary-color);
 	padding: var(--padding-medium) var(--padding-xlarge);
-	display: flex;
-	align-items: start;
-	justify-content: center;
 	gap: var(--margin-medium);
 	border-radius: 5px;
+	display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    font-weight: 400;
+    color: var(--footer-text-color);
+    width: 100%;
 }
 .col_title {
 	font-size: 1.5em;
@@ -88,13 +92,6 @@ footer {
 }
 
 
-.footer {
-    font-size: var(--text-extra-large);
-    text-align: center;
-    font-weight: 400;
-    color: var(--footer-text-color);
-    width: 100%;
-}
 
 @media screen and (max-width: 768px) {
     .footer {

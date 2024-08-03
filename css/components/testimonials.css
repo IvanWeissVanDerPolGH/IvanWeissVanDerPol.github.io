@@ -4,6 +4,9 @@
     margin-top: 20px;
 }
 
+.testimonials-header{
+  color: var(--secondary-color-text);  
+}
 .carousel-controls .btn {
     background: var(--carousel-btn-bg);
     color: var(--btn-color);
