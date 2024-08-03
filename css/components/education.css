@@ -1,7 +1,7 @@
 
 
 .education_article {
-    background-color: var(--btn-bg-color);
+    background-color: var(--education-article-bg-color); /* Updated to use the new variable */
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
@@ -32,7 +32,7 @@
     width: 80px;
     height: 80px;
     margin-left: 10px;
-    box-shadow: 0 0 0 3px #fff;
+    box-shadow: 0 0 0 3px var(--education-logo-shadow-color); /* Updated to use the new variable */
     border-radius: 15%;
 }
 
@@ -139,6 +139,6 @@
 
 .education_article {
     animation: slideIn 0.5s ease;
-    border-left: 5px solid var(--education-article-border-color); /* Updated to use the new variable */
+    border-left: 5px solid var(--education-article-border-left-color); /* Updated to use the new variable */
 }
 
