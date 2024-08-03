@@ -88,7 +88,7 @@
     --about-header-text-color: var(--secondary-color-text);
     --link-text-color: var(--secondary-color);
     --sidebar-text-color: var(--tertiary-color);
-    --sidebar-link-color: var(--primary-color);
+    --sidebar-link-color: var(--tertiary-color);
     --sidebar-link-hover-color: var(--primary-color-hover);
     --sidebar-border-color: var(--primary-color);
     --section-title-color: var(--secondary-color);
