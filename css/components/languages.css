@@ -7,7 +7,7 @@
 .languages .desc h1 {
     font-size: var(--text-extra-large);
     font-weight: bold;
-    color: /*make a var*/;
+    color: var(--primary-color); /* Updated color */
     margin-bottom: var(--margin-large);
     text-align: center; /* Center the heading */
 }

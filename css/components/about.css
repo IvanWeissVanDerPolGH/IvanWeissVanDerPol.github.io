@@ -1,24 +1,30 @@
 /* About Section Styles */
 
 .about {
-    background-color: var(--about-bg-color);
-    padding: var(--padding-large);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    padding: var(--padding-xlarge);
+    width: 100%;
+    max-width: 1200px; /* Limits the width for readability */
+    margin: 0 auto; /* Centers the section */
 }
+
 .about-header {
-    font-size: var(--text-giant);
+    font-size: var(--text-massive);
     font-family: var(--font-secondary);
     text-align: center;
-    margin-bottom: var(--margin-medium);
+    margin-bottom: var(--margin-large);
     color: var(--about-header-text-color);
 }
+
 .about-bio {
     font-size: var(--text-medium);
     font-family: var(--font-primary);
-    line-height: var(--margin-medium);
+    line-height: var(--line-height-medium);
     color: var(--about-bio-text-color);
-    text-align: justify;
+    text-align: left; /* Left-align for readability */
     max-width: 800px;
     margin: 0 auto;
+    padding: var(--padding-medium);
 }
 
 .bio_item {
@@ -30,11 +36,12 @@
 .profile {
     background-color: var(--profile-bg-color);
 }
+
 #gh-desc {
     font-size: var(--text-medium);
     font-family: var(--font-primary);
     line-height: var(--margin-medium);
-    border:0;
+    border: 0;
     text-align: justify;
     max-width: 800px;
     margin: 0 auto;
@@ -43,10 +50,12 @@
 
 .profile-cards {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
+    margin: var(--margin-medium) 0;
+    padding: var(--padding-medium);
 }
 
 .github_card {

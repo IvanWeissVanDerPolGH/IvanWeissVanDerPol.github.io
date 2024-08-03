@@ -4,17 +4,16 @@
     padding-top: 3em;
     padding-bottom: var(--padding-small);
     margin: 0 var(--sidebar-margin);
-    float: left;
     position: fixed;
     width: var(--sidebar-width);
     background-color: var(--sidebar-bg-color);
     transition: var(--sidebar-transition);
-    height: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enables vertical scrolling */
     padding-left: var(--sidebar-padding);
     padding-right: var(--sidebar-padding);
     color: var(--sidebar-text-color);
     box-shadow: var(--sidebar-shadow);
-    
 }
 
 @media screen and (max-width: 768px) {
@@ -29,6 +28,15 @@
     }
     .aside.open {
         transform: translateX(0);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .aside {
+        position: fixed;
+        top: 0;
+        height: 100%;
     }
 }
 
@@ -112,6 +120,7 @@
     }
 }
 
+
 .nav-item {
     margin: var(--margin-small) 0;
     padding: 0;
@@ -144,15 +153,16 @@
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.nav-item.active a {
-    font-size: var(--text-medium);
-    font-weight: 600;
-}
-
 .nav-item.active a:after {
     visibility: visible;
     transform: scaleX(1);
 }
+
+.nav-item a:hover {
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
 
 /* Toggle Button for Mobile */
 .toggle-btn {
@@ -163,7 +173,7 @@
     background-color: var(--sidebar-bg-color);
     border: none;
     font-size: var(--sidebar-icon-size);
-    cursor: pointer;
+    cursor: pointer
 }
 
 .toggle-btn:focus {
@@ -177,10 +187,9 @@
 }
 
 .main-section {
-    width: calc(100% - var(--sidebar-width) - var(--spacing));
-    margin: auto;
-    float: right;
-    transform: translateX(var(--sidebar-width));
+    
+    margin-left: calc(var(--sidebar-width) + var(--sidebar-width)/3 );
+    /* transform: translateX(0); */
 }
 
 @media screen and (max-width: 768px) {

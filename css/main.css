@@ -1,3 +1,4 @@
+/* Importing component styles */
 @import url('./components/sidebar.css');
 @import url('./components/about.css');
 @import url('./components/languages.css');
@@ -12,52 +13,53 @@
 @import url('./components/general/buttons.css');
 @import url('./components/general/responsive.css');
 
+/* Root variables for theming and global styles */
 :root {
     /* Color Variables */
-    --primary-color: #F1C40F;
-    --secondary-color: #E74C3C;
-    --tertiary-color: black;
-    --accent-color: #2ECC71;
-    --dark-color: #34495E;
-    --light-color: #ECF0F1;
-    --text-color: #2C3E50;
-    --link-color: #3498DB;
-    --link-hover-color: #2980B9;
-    --error-color: #E74C3C;
-    --success-color: #27AE60;
-    --warning-color: #E67E22;
-    --info-color: #16A085;
-    --input-border: #BDC3C7;
-    --btn-bg-color: #F1C40F;
-    --btn-hover-bg: #E74C3C;
-    --btn-color: #FFFFFF;
+    --primary-color: #3498DB; /* New primary color: bright blue */
+    --secondary-color: #2ECC71; /* New secondary color: bright green */
+    --tertiary-color: #2C3E50; /* Dark blue for text */
+    --accent-color: #E74C3C; /* Accent color: bright red */
+    --dark-color: #2C3E50; /* Dark blue for backgrounds */
+    --light-color: #ECF0F1; /* Light grey for backgrounds */
+    --text-color: #34495E; /* Darker grey for text */
+    --link-color: #3498DB; /* Link color: bright blue */
+    --link-hover-color: #2980B9; /* Darker blue for link hover */
+    --error-color: #E74C3C; /* Error color: bright red */
+    --success-color: #2ECC71; /* Success color: bright green */
+    --warning-color: #F39C12; /* Warning color: bright orange */
+    --info-color: #3498DB; /* Info color: bright blue */
+    --input-border: #BDC3C7; /* Light grey for input borders */
+    --btn-bg-color: #3498DB; /* Button background color: bright blue */
+    --btn-hover-bg: #2980B9; /* Button hover background color: darker blue */
+    --btn-color: #FFFFFF; /* Button text color: white */
 
     /* Background Colors */
-    --primary-color-bg: #FCF3CF; /* Lightened yellow */
-    --secondary-color-bg: #FADBD8; /* Lightened red */
+    --primary-color-bg: #ECF0F1; /* Lightened grey */
+    --secondary-color-bg: #A9DFBF; /* Lightened green */
     --tertiary-color-bg: var(--tertiary-color);
-    --about-bg-color: var(--primary-color-bg); /* Light Cyan */
-    --about-bio-bg-color: var(--primary-color-bg); /* Light Cyan */
-    --profile-bg-color: var(--primary-color-bg); /* Light Cyan */
-    --profile-cards-bg-color: var(--primary-color-bg); /* Light Cyan */
-    --github-card-bg-color: var(--primary-color-bg); /* Light Cyan */
-    --profile-card-bg-color: var(--primary-color-bg); /* Ocean Blue */
+    --about-bg-color: var(--primary-color-bg); /* Light grey */
+    --about-bio-bg-color: var(--primary-color-bg); /* Light grey */
+    --profile-bg-color: var(--primary-color-bg); /* Light grey */
+    --profile-cards-bg-color: var(--primary-color-bg); /* Light grey */
+    --github-card-bg-color: var(--primary-color-bg); /* Light grey */
+    --profile-card-bg-color: var(--secondary-color-bg); /* Light green */
 
     /* Text Colors */
     --text-header-color: var(--secondary-color);
-    --text-normal-color: black;
+    --text-normal-color: var(--text-color);
     --text-list-color: var(--primary-color);
-    --text-image-color: var(--primary-color);
-    --text-primary-color: black;
-    --text-secondary-color: black;
-    --text-tertiary-color: black;
-    --about-text-color: var(--primary-color-text); /* Deep Sea Blue */
-    --about-bio-text-color: white;
-    --profile-text-color: var(--primary-color-text); /* Ocean Blue */
-    --profile-cards-text-color: var(--primary-color-text); /* Ocean Blue */
-    --github-card-text-color: var(--primary-color-text); /* Ocean Blue */
-    --profile-card-text-color: var(--primary-color-text); /* Ocean Blue */
-    --profile-header-text-color: var(--primary-color-text); /* Ocean Blue */
+    --text-image-color: var (--primary-color);
+    --text-primary-color: var(--text-color);
+    --text-secondary-color: var(--text-color);
+    --text-tertiary-color: var(--text-color);
+    --about-text-color: var(--text-primary-color); 
+    --about-bio-text-color: var(--text-color);
+    --profile-text-color: var(--text-primary-color); 
+    --profile-cards-text-color: var(--text-primary-color); 
+    --github-card-text-color: var(--text-primary-color); 
+    --profile-card-text-color: var(--text-primary-color); 
+    --profile-header-text-color: var(--text-primary-color); 
     
     /* Font Variables */
     --font-primary: "Quicksand", Arial, sans-serif;
@@ -97,25 +99,11 @@
     --padding-xlarge: 30px;
     --padding-huge: 50px;
 
-    /* Border and Shadow */
-    --border-radius: 10px;
-    --border: 1px solid var(--dark-color);
-    --border-medium: 2px solid var(--dark-color);
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --shadow-color: rgba(0, 0, 0, 0.2);
-
-    /* Footer */
-    --footer-text-color: #333333;
-    --footer-link-color: #ffffff;
-    --footer-link-hover-color: #ffeb3b;
-
     /* Additional Variables */
-    --background-dark: #333;
     --background-dark-hover: #444;
     --background-lighter: #f9f9f9;
     --box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
     
- 
     --main-bg-color: var(--tertiary-color-bg); /* Default background color */
     --desc-bg-color: var(--light-color); /* Background color for description */
     --section-div-bg-color: var(--dark-color); /* Background color for section dividers */
@@ -135,16 +123,12 @@
     --sidebar-transition: 0.3s ease-in-out;
     --sidebar-icon-size: 1.2em;
     --sidebar-focus-outline: 2px solid var(--accent-color);
-    --desc-bg-color: var(--light-color);
     --page-bg-color: var(--main-bg-color);
-    --section-divider-bg-color: var(--section-div-bg-color);
-    --section-bg-color: var(--section-bg-color);
     --section-title-color: var(--text-header-color);
-    --section-padding: 40px;
-    --section-margin: 20px;
-    --section-min-width: 800px;
-    --section-title-size: 2.5em;
-    --desc-margin-bottom: 40px;
+    --section-padding: var(--spacing);
+    --section-margin: var(--margin-small);
+    --section-title-size: var(--header-size);
+    --desc-margin-bottom: var(--margin-large);
 
     --about-bg-color: var(--primary-color-bg); /* Background color for About section */
     --about-bio-text-color: var(--text-primary-color); /* Text color for bio */
@@ -154,32 +138,23 @@
     --profile-header-text-color: var(--text-header-color); /* Text color for profile header */
     --bio-item-line-height: var(--margin-large); /* Line height for bio items */
     --bio-item-margin-bottom: var(--margin-medium); /* Margin bottom for bio items */
-    --profile-avatar-size: 48px; /* Size of profile avatar */
-    --profile-info-margin-left: 12px; /* Margin left for profile info */
-    --profile-stat-margin-top: 12px; /* Margin top for profile stats */
+    --profile-avatar-size: var(--avatar-size); /* Size of profile avatar */
+    --profile-info-margin-left: var(--info-margin-left); /* Margin left for profile info */
+    --profile-stat-margin-top: var(--stat-margin-top); /* Margin top for profile stats */
     --profile-stat-title-size: var(--text-small); /* Font size for profile stat title */
     --profile-stat-value-size: var(--text-extra-large); /* Font size for profile stat value */
-    --profile-card-padding: 16px; /* Padding for profile card */
-    --about-header-text-color: white
+    --profile-card-padding: var(--card-padding); /* Padding for profile card */
+    --about-header-text-color: white;
 }
 
-
-
+/* General Styles */
 .desc {
     text-align: center;
-    /* Centers the content for better visual appeal */
     max-width: 800px;
-    /* Limits the width for better readability */
-    margin: var(--margin-large);
+    margin: var(--margin-large) auto;
     padding: var(--padding-large);
-    /* Increased padding for more whitespace and readability */
-    /* background-color: var(--desc-bg-color); */
     border-radius: var(--border-radius);
-    /* Rounded edges for a softer look */
-    /* box-shadow: var(--box-shadow); */
-    /* Adds a subtle shadow for depth */
     border: var(--border-medium);
-    /* Adds a border for a clean look */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -187,16 +162,26 @@
     width: 100%;
 }
 
+body, .page {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .page {
     background-color: var(--page-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 .container-wrap {
     display: flex;
+    flex-direction: column;
     width: 100%;
+    padding: var(--padding-large);
+    margin: var(--margin-medium) auto;
 }
 
 ul,
@@ -216,33 +201,11 @@ ol {
     background-color: var(--section-bg-color);
     padding: var(--section-padding);
     margin: var(--section-margin) 0;
-    display: inline-block;
-    min-width: var(--section-min-width);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     justify-content: center;
     align-items: center;
-}
-
-
-
-.section .narrow-content {
-    max-width: 800px;
-}
-
-.section .desc {
-    margin-bottom: var(--desc-margin-bottom);
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .section[data-section="certifications"] .link p {
-        font-size: var(--text-small);
-    }
-
-    .section[data-section="certifications"] .certification_ul .certification_item {
-        width: calc(50% - var(--margin-small));
-    }
-
-    .section[data-section="certifications"] .certification_ul .certification_item .certification_name {
-        font-size: var(--text-small);
-    }
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
