@@ -233,6 +233,7 @@
 body, .page {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: "Poppins" !important;
 }
 
 .page {
