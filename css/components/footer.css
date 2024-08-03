@@ -20,7 +20,7 @@ footer ul {
 .footer a {
 	cursor: pointer;
 	text-decoration: underline;
-	color: /*make a var*/;
+    color: var(--footer-link-color); /* Updated to use the new variable */
 	transition: color 0.3s, background-color 0.3s, transform 0.3s;
 	padding: var(--padding-small);
 	border-radius: 4px;
@@ -29,7 +29,7 @@ footer ul {
 }
 .footer a:hover {
 	color: #fff;
-	background-color: /*make a var*/;
+    background-color: var(--footer-link-hover-color); /* Updated to use the new variable */
 	transform: scale(1.05);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -40,7 +40,7 @@ footer ul {
 	text-align: center;
 	font-size: var(--small-text-size);
 	margin-top: var(--margin-small);
-	color: /*make a var*/;
+    color: var(--footer-note-text-color); /* Updated to use the new variable */
 	width: 100%;
 	padding: var(--padding-small) 0;
 	background-color: var(--light);
@@ -49,7 +49,7 @@ footer ul {
 	text-align: left;
 	font-size: var(--text-medium);
 	margin-top: var(--margin-small);
-	color: /*make a var*/;
+    color: var(--footer-intro-text-color); /* Updated to use the new variable */
 	font-weight: bold;
 	width: 100%;
 	padding: var(--padding-small) 0;
@@ -60,13 +60,13 @@ footer ul {
 	display: inline-grid;
 }
 .col-title {
-	color: /*make a var*/;
+    color: var(--col-title-color); /* Updated to use the new variable */
 	font-size: 1.2em;
 	font-weight: 600;
 	margin: 0;
 }
 .col-list a {
-	color: /*make a var*/);
+    color: var(--col-list-link-color); /* Updated to use the existing variable */
 	text-decoration: none;
 	line-height: 1.4;
 	font-weight: 400;

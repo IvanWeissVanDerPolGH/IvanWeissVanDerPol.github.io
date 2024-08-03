@@ -10,7 +10,7 @@
 }
 
 .skills_list .link {
-    background-color: var(--dark);
+    background-color: var(--skills-background-color);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     border: var(--border-medium);
