@@ -11,231 +11,110 @@
 @import url('./components/general/modal.css');
 @import url('./components/general/buttons.css');
 @import url('./components/general/responsive.css');
-
 :root {
-    /* Color Variables */
-    --primary-color: #f9bf3f; /* New primary color: bright blue */
-    --secondary-color: rgb(165, 42, 42)    ; /* New secondary color: bright green */
-    --tertiary-color: #000000; /* Dark blue for text */
+    /* Core Colors */
+    --primary-color: #f9bf3f; /* Bright blue */
+    --primary-color-hover: #d1a736; /* Darker hover version of the primary color */
+    --secondary-color: rgb(165, 42, 42); /* Bright green */
+    --secondary-color-hover: rgb(140, 35, 35); /* Darker hover version of the secondary color */
+    --tertiary-color: white; /* Dark blue for text */
+    --primary-text-color: black;
+    --secondary-text-color: black;
+    --tertiary-text-color: var(--primary-color);
+    --input-border-color: #d3d3d3;
+    --light-color: #f5f5f5;
+    --dark-color: #333;
+
+    /* Reusable Components */
+    --text-color: var(--primary-text-color);
+    --bg-color-primary: var(--primary-color);
+    --bg-color-secondary: var(--secondary-color);
+    --bg-color-tertiary: var(--tertiary-color);
+    --bg-hover-color-primary: var(--primary-color-hover);
+    --bg-hover-color-secondary: var(--secondary-color-hover);
+    --text-hover-color: var(--secondary-color);
+    --border-color-primary: var(--primary-color);
+    --border-color-secondary: var(--secondary-color);
+    --box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 4px 8px var(--bg-hover-color-primary);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+
     /* Background Colors */
-    --primary-color-bg: var(--primary-color); /* Lightened grey */
-    --secondary-color-bg: var(--secondary-color); /* Lightened green */
-    --tertiary-color-bg: var(--tertiary-color);
-    --primary-color-hover :var(--primary-color-bg);
-    --secondary-color-hover: var(--secondary-color-bg);
-    --tertiary-color-hover: var(--tertiary-color-bg);
-    
-    --primary-color-text: black;
-    --secondary-color-text: white;
-    --tertiary-color-text: var(--primary-color);
-    
-    
-    --about-bg-color: var(--primary-color-bg);
-    --about-bio-bg-color: var(--primary-color-bg);
-    --profile-bg-color: var(--primary-color-bg);
-    --profile-cards-bg-color: var(--primary-color-bg);
-    --github-card-bg-color: var(--primary-color-bg);
-    --profile-card-bg-color: var(--primary-color-bg);
-    --main-bg-color: var(--tertiary-color-bg);
-    --desc-bg-color: var(--primary-color-text);
-    --section-div-bg-color: var(--tertiary-color);
-    --section-bg-color: var(--primary-color-text);
-    --aside-text-color: var(--tertiary-color);    
-    --aside-bg-color: var(--about-bg-color);
-    --sidebar-bg-color: var(--aside-bg-color);
-    --page-bg-color: var(--main-bg-color);
-    --tag-bg-color: var(--primary-color);
-    --link-hover-bg-color: var(--primary-color-hover);
-    --education-tag-bg-color: var(--primary-color);
-    --btn-primary-bg: var(--primary-color);
-    --btn-primary-hover-bg: var(--primary-color-hover);
-    --education-link-hover-bg-color: var(--primary-color-hover);
+    --about-bg-color: var(--bg-color-primary);
+    --profile-bg-color: var(--bg-color-primary);
+    --aside-bg-color: var(--bg-color-primary);
+    --sidebar-bg-color: var(--bg-color-primary);
+    --main-bg-color: var(--bg-color-tertiary);
+    --section-bg-color: var(--bg-color-tertiary);
+    --tag-bg-color: var(--bg-color-secondary);
+    --education-bg-color: var(--bg-color-primary);
+    --skills-bg-color: var(--bg-color-primary);
+    --carousel-bg-color: var(--bg-color-primary);
+    --carousel-hover-bg-color: var(--bg-hover-color-primary);
+    --cert-header-bg-color: var(--bg-color-primary);
+    --page-bg-color: var(--bg-color-tertiary);
 
-    --education-detail-color: var(--tertiary-color);
-    --education-header-color: var(--secondary-color);
-    --education-link-color: var(--primary-color);
-    --education-border-color: var(--primary-color);
-    --education-link-hover-border-color: var(--primary-color-hover);
-    --education-article-border-color: var(--primary-color);
-    --education-duration-color: var(--secondary-color);
-    --btn-primary-border: var(--primary-color-hover);
-    --btn-primary-color: var(--primary-color-text);
-    --btn-primary-hover-border: var(--primary-color-hover);
-
-    --footer-link-color: var(--primary-color-text);
-    --footer-link-hover-color: var(--primary-color-hover);
-    --footer-text-color: var(--primary-color-text);
-    --footer-note-text-color: var(--secondary-color);
-    --footer-intro-text-color: var(--primary-color);
-    --col-title-color: var(--secondary-color);
-    --col-list-link-color: var(--primary-color);
+    /* Border Colors */
+    --education-border-color: var(--border-color-secondary);
+    --experience-border-color: var(--border-color-secondary);
+    --btn-border-color: var(--bg-hover-color-primary);
+    --link-border-color: var(--border-color-primary);
+    --sidebar-border-color: var(--border-color-primary);
+    --section-divider-bg-color: var(--bg-color-tertiary);
 
     /* Text Colors */
-    --text-header-color: var(--secondary-color);
-    --text-normal-color: var(--primary-color-text);
-    --text-list-color: var(--primary-color);
-    --text-image-color: var(--primary-color);
-    --text-primary-color: var(--primary-color-text);
-    --text-secondary-color: var(--primary-color-text);
-    --text-tertiary-color: var(--primary-color-text);
-    --about-text-color: var(--primary-color-text);
-    --about-bio-text-color: var(--secondary-color-text);
-    --profile-text-color: var(--primary-color-text);
-    --profile-cards-text-color: var(--primary-color-text);
-    --github-card-text-color: var(--primary-color-text);
-    --profile-card-text-color: var(--secondary-color);
-    --profile-header-text-color: var(--secondary-color);
-    --about-header-text-color: var(--secondary-color-text);
-    --link-text-color: var(--secondary-color);
-    --sidebar-text-color: var(--tertiary-color);
-    --sidebar-link-color: var(--tertiary-color);
-    --sidebar-link-hover-color: var(--primary-color-hover);
-    --sidebar-border-color: var(--primary-color);
-    --section-title-color: var(--secondary-color);
-    --experience-duration-color: var(--secondary-color);
-    --link-border-color: var(--primary-color);
-    --link-hover-border-color: var(--primary-color-hover);
-    --language-header-text-color:var(--secondary-color-text);
-    --language-list-text-color:var(--secondary-color-text);
-    --skills-bg-color:var(--primary-color);
+    --header-text-color: var(--secondary-text-color);
+    --normal-text-color: var(--text-color);
+    --about-text-color: var(--text-color);
+    --profile-text-color: var(--text-color);
+    --link-text-color: var(--text-hover-color);
+    --sidebar-text-color: var(--bg-color-tertiary);
+    --skills-header-color: var(--text-color);
+    --footer-text-color: var(--text-color);
+    --footer-note-text-color: var(--text-hover-color);
+    --section-title-color: var(--text-hover-color);
 
-
-    --skills-header-bg-color: var(--primary-color); /* Added variable for skills header background color */
-    --skills-header-color: var(--primary-color-text); /* Added variable for skills header text color */
-    --skills-bg-color: var(--primary-color-bg); /* Added variable for skills background color */
-    --skills-link-hover-bg-color: var(--primary-color-hover); /* Added variable for skills link hover background color */
-    --skills-shadow-color: rgba(0, 0, 0, 0.2); /* Added variable for skills shadow color */
-    --skills-item-bg-color: var(--primary-color-bg); /* Added variable for skills item background color */
-    --skills-logo-margin-bottom: var(--margin-small); /* Added variable for skills logo margin bottom */
-    --skills-sublist-bg-color: var(--secondary-color-bg); /* Added variable for skills sublist background color */
-    --skills-name-color: var(--tertiary-color); /* Added variable for skills name text color */
-    --skills-name-bg-color: var(--secondary-color-bg); /* Added variable for skills name background color */
-    --skills-name-padding: var(--padding-medium); /* Added variable for skills name padding */
-    --skills-name-margin-bottom: var(--margin-small); /* Added variable for skills name margin bottom */
-    --cert-link-bg-color: var(--primary-color-bg); /* Added variable for certification link background color */
-    --cert-link-hover-bg-color: var(--primary-color-hover); /* Added variable for certification link hover background color */
-    --cert-link-shadow-color: rgba(0, 0, 0, 0.2); /* Added variable for certification link shadow color */
-    --cert-item-bg-color: var(--primary-color-bg); /* Added variable for certification item background color */
-    --cert-sublist-bg-color: var(--secondary-color-bg); /* Added variable for certification sublist background color */
-    --cert-name-font-size: var(--text-medium); /* Added variable for certification name font size */
-    --cert-name-margin-bottom: var(--margin-small); /* Added variable for certification name margin bottom */
-    --cert-name-font-weight: bold; /* Added variable for certification name font weight */
-    --cert-name-text-align: center; /* Added variable for certification name text alignment */
-    --experience-article-bg-color: var(--primary-color); /* Updated to use the new variable */
-    --experience-article-border-left-color: var(--secondary-color); /* Updated to use the new variable */
-    --experience-detail-color: var(--dark-color); /* Updated to use the new variable */
-    --category-item-margin-bottom: var(--margin-medium); /* Updated to use the new variable */
-    --link-cursor: pointer; /* Updated to use the new variable */
-    --link-font-weight: bold; /* Updated to use the new variable */
-    --education-article-bg-color: var(--primary-color); /* Utilizing existing variable for education article background */
-    --education-article-border-left-color: var(--secondary-color);; /* Added variable for education article border left color */
-    --education-logo-shadow-color: #FFFFFF; /* Added variable for education logo shadow color */
-    --carousel-btn-bg: var(--primary-color); /* Button background color */
-    --carousel-btn-hover-bg: var(--primary-color-hover); /* Button hover background color */
-    --carousel-indicator-bg: var(--input-border); /* Indicator background color */
-    --carousel-indicator-active-bg: var(--primary-color); /* Active indicator background color */
-    --carousel-item-bg: var(--light-color); /* Carousel item background color */
-    --carousel-shadow: var(--box-shadow-light); /* Carousel shadow */
-    --carousel-text-color: var(--dark-color); /* Carousel text color */
-    --carousel-inner-border-radius: 10px; /* Carousel inner border radius */
-    --carousel-inner-padding: 20px; /* Carousel inner padding */
-    --carousel-inner-bg: var(--primary-color); /* Carousel inner background color */
-
-    /* About Description Variables */
-    --about-desc-h1-color: var(--secondary-color-text); /* Color for about description h1 */
-
-    /* Contact Info Variables */
-    --contact-info-color:var(--secondary-color-text); /* Color for contact info text */
-    --contact-info-line-height: 1.6; /* Line height for contact info text */
-    --contact-info-max-width: 800px; /* Max width for contact info */
-    --contact-info-margin: 0 auto; /* Margin for contact info */
-
-    /* Font Variables */
-    --font-primary: "Poppins", sans-serif !important; 
+    /* Hover Colors */
+    --hover-bg-color: var(--bg-hover-color-primary);
+    --hover-border-color: var(--bg-hover-color-primary);
+    --sidebar-hover-color: var(--bg-hover-color-primary);
+    
+    /* Font Settings */
+    --font-primary: "Poppins", sans-serif !important;
     --font-secondary: "Poppins", sans-serif !important;
     --font-tertiary: "Poppins", sans-serif !important;
-    --footer-font-family: "Poppins", sans-serif !important;
-
-    /* Text Sizes */
     --text-small: 14px;
     --text-medium: 16px;
     --text-large: 18px;
     --text-extra-large: 24px;
-    --text-huge: 28px;
-    --text-giant: 32px;
-    --text-massive: 36px;
-    --text-ultra-massive: 38px;
-
-    --small-text-size: 12px;
-    --header-size: 36px;
-    --subheader-size: 30px;
-    --paragraph-size: 16px;
-    --button-size: 14px;
-    --caption-size: 12px;
-    --footer-font-size: 16px;
-
-    /* Text Weight */
-    --text-weight: 300;
-
-    /* Spacing */
-    --aside-width: 250px;
-    --spacing: 20px;
-    --mobile-spacing: 12px;
-    --margin-small: 8px;
-    --margin-medium: 16px;
-    --margin-large: 24px;
+    --header-weight:bold;
+    --header-size: 40px;
+    /* Spacing and Sizing */
     --padding-small: 8px;
     --padding-medium: 16px;
     --padding-large: 24px;
     --padding-xlarge: 30px;
     --padding-huge: 50px;
-    --avatar-size:  80px;
+    --margin-small: 8px;
+    --margin-medium: 16px;
+    --margin-large: 24px;
+    --avatar-size: 80px;
 
-    --sidebar-icon-size: 1.2em;
-    --section-title-size: var(--header-size);
-    --profile-avatar-size: var(--avatar-size);
-    --profile-stat-title-size: var(--text-small);
-    --profile-stat-value-size: var(--text-extra-large);
-   
-    --sidebar-padding: var(--padding-medium);
-    --section-padding: var(--spacing);
-    --profile-card-padding: var(--padding-large);
-
-    --sidebar-margin: var(--margin-medium);
-    --section-margin: var(--margin-small);
-    --desc-margin-bottom: var(--margin-large);
-    --bio-item-margin-bottom: var(--margin-medium);
-    --profile-info-margin-left: var(--margin-medium);
-    --profile-stat-margin-top: var(--margin-medium);
-    
-    /* Additional Variables */
+    /* Other Variables */
     --box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
-      
-    --sidebar-shadow: var(--box-shadow);
-    --sidebar-width: var(--aside-width);
-    --sidebar-transition: 0.3s ease-in-out;
-    --sidebar-focus-outline: 2px solid var(--primary-color);
-    --bio-item-line-height: var(--margin-large);
-}
-    /* General Styles */
-.desc {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 var(--padding-large);
-    border-radius: var(--border-radius);
-    border: var(--border-medium);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    --sidebar-width: 250px;
+    --section-padding: var(--padding-large);
+    --profile-card-padding: var(--padding-large);
+    --sidebar-padding: var(--padding-medium);
+    --profile-avatar-size: var(--avatar-size);
 }
 
+/* General Styles */
 body, .page {
     max-width: 100%;
     overflow-x: hidden;
-    font-family: "Poppins" !important;
+    font-family: var(--font-primary);
+    margin: 0;
 }
 
 .page {
@@ -247,38 +126,64 @@ body, .page {
     width: 100%;
 }
 
+
+
+.desc {
+    text-align: center;
+    max-width: 800px;
+    /* padding: 0 var(--padding-large); */
+    border-radius: var(--border-radius);
+    border: var(--border-medium);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.link {
+    background-color: var(--bg-color-primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    border: var(--border-medium);
+    padding: var(--padding-medium);
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.link:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-5px);
+}
+
 .container-wrap {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* --padding: var(--padding-large); */
-    margin: var(--margin-medium) auto;
 }
 
-
-ul,
-ol {
+ul, ol {
     list-style: none;
 }
 
-/* Section Dividers */
 .section-divider {
     height: 2px;
     background-color: var(--section-divider-bg-color);
     margin: 40px 0;
 }
 
-/* Section Styling */
 .section {
     background-color: var(--section-bg-color);
     padding: var(--section-padding);
-    margin: var(--section-margin) 0;
+    margin: var(--margin-small) 0;
     display: flex;
     flex-direction: column;
     width: 50vw;
     justify-content: center;
     align-items: center;
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-light);
 }
-

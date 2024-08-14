@@ -1,63 +1,41 @@
-
 .skills-header {
     font-size: var(--text-extra-large);
-    font-weight: bold;
-    color: var(--skills-header-color); /* Updated to use the new variable */
-    margin-bottom: var(--margin-large);
+    font-weight: var(--header-weight);
+    color: var(--header-text-color);
     text-align: center;
-    background-color: var(--skills-header-bg-color); /* Updated to use the new variable */
+    background-color: var(--header-bg-color);
+    border-radius: var(--border-radius);
+    padding: var(--margin-small);
+    padding-left: var(--margin-medium);
+    padding-right: var(--margin-medium);
 }
+
 .skills_list {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    padding: 0px;
+    padding: 0;
     width: 100%;
 }
 
-
-.skills_list .link {
-    background-color: var(--skills-bg-color); /* Updated to use the new variable */
+.skill_item {
+    background-color: var(--bg-color-primary);
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    border: var(--border-medium);
-    padding: var(--padding-medium);
-    margin: var(--margin-medium);
-    transition: background 0.3s ease; /* Added transition for background change on hover */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer; /* Indicate clickable items */
-}
-
-.skills_list .link:hover {
-    background-color: var(--skills-link-hover-bg-color); /* Updated to use the new variable */
-    box-shadow: 0 4px 8px var(--skills-shadow-color); /* Updated to use the new variable */
-transform: translateY(-5px); /* Added subtle depth on hover */
-}
-
-.skills_list .skill_item {
-    background-color: var(--skills-item-bg-color); /* Updated to use the new variable */
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-light);
     border: var(--border-medium);
     padding: var(--padding-medium);
     margin: var(--margin-medium);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center vertically */
+    align-items: center;
 }
-
-
 
 .skill_logo {
     width: 50px;
     height: auto;
     margin-bottom: var(--margin-small);
-    object-fit: cover; /* Ensures images are equally sized and spaced */
-    margin-bottom: var(--skills-logo-margin-bottom); /* Updated to use the new variable */
-
+    object-fit: cover;
 }
 
 .skill_sublist {
@@ -65,34 +43,28 @@ transform: translateY(-5px); /* Added subtle depth on hover */
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: var(--padding-medium);
     padding: var(--padding-medium);
-    background: var(--skills-sublist-bg-color); /* Updated to use the new variable */
+    background: var(--bg-color-secondary);
     border-radius: var(--border-radius);
     list-style: none;
-    margin: var(--margin-medium) 0;
     box-sizing: border-box;
-    transition: max-height 0.3s ease; /* Added transition for height change */
-    overflow: hidden; /* Ensures a clean transition */
+    transition: max-height 0.3s ease;
+    overflow: hidden;
 }
 
 .skill_name {
-    color: var(--skills-name-color); /* Updated to use the new variable */
-    background-color: var(--skills-name-bg-color); /* Updated to use the new variable */
-    margin-bottom: var(--skills-name-margin-bottom); /* Updated to use the new variable */
-    padding: var(--skills-name-padding); /* Updated to use the new variable */
+    color: var(--text-color);
+    background-color: var(--bg-color-secondary);
+    margin-bottom: var(--margin-small);
+    padding: var(--padding-medium);
     border-radius: var(--border-radius);
 }
 
-
 @media (max-width: 768px) {
-    .link p {
-        font-size: var(--text-small);
-    }
-
     .skill_sublist .skill_item {
         width: calc(50% - var(--margin-small));
     }
 
-    .skill_sublist .skill_item .skill_name {
+    .skill_name {
         font-size: var(--text-small);
     }
 }

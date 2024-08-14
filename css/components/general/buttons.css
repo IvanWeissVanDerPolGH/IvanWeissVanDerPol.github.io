@@ -24,14 +24,14 @@
 	outline: none !important;
 }
 .btn-primary {
-    background: var(--btn-primary-bg); /* Updated to use the new variable */
+    background: var(--btn-primary); /* Updated to use the new variable */
     color: var(--light-color);
     border: 2px solid var(--btn-primary-border); /* Updated to use the new variable */
 }
 
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background: var(--btn-primary-hover-bg) !important; /* Updated to use the new variable */
+    background: var(--btn-primary-hover) !important; /* Updated to use the new variable */
     border-color: var(--btn-primary-hover-border) !important; /* Updated to use the new variable */
 }
 
@@ -41,7 +41,7 @@
     border: 2px solid var(--btn-primary-border); /* Updated to use the new variable */
 }
 .primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-    background: var(--btn-primary-hover-bg); /* Updated to use the new variable */
+    background: var(--btn-primary-hover); /* Updated to use the new variable */
     color: var(--light-color);
 }
 

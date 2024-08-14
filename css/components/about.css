@@ -1,7 +1,5 @@
-/* About Section Styles */
-
-.about {
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+.about-section {
+    background: linear-gradient(to right, var(--bg-color-primary), var(--bg-color-secondary));
     padding: var(--padding-xlarge);
     width: 100%;
     max-width: 1200px; /* Limits the width for readability */
@@ -9,80 +7,80 @@
 }
 
 .about-header {
-    width: inherit;
-    font-size: var(--text-ultra-massive);
+    width: 100%;
+    font-size: var(--header-size);
     font-family: var(--font-secondary);
     text-align: left;
     margin-bottom: var(--margin-small);
-    color: var(--about-header-text-color);
-    font-weight: var(--text-weight);
+    color: var(--header-text-color);
+    font-weight: var(--header-weight);
 }
 
 .about-bio {
     font-size: var(--text-medium);
     font-family: var(--font-primary);
     line-height: var(--line-height-medium);
-    color: var(--about-bio-text-color);
-    text-align: left; /* Left-align for readability */
-    max-width: 800px;
+    color: var(--text-color);
     text-align: justify;
-    /* margin: 0 auto; */
-    /* padding: var(--padding-medium); */
+    max-width: 800px;
+    margin-bottom: var(--margin-large);
 }
 
-.bio_item {
+.bio-item {
     line-height: var(--bio-item-line-height);
     margin-bottom: var(--bio-item-margin-bottom);
-    color: var(--about-bio-text-color);
+    color: var(--text-color);
 }
 
-.profile {
-    background-color: var(--profile-bg-color);
+/* Profile Section Styles */
+.profile-section {
+    background-color: var(--bg-color-primary);
 }
 
 #gh-desc {
     font-size: var(--text-medium);
     font-family: var(--font-primary);
     line-height: var(--margin-medium);
-    border: 0;
     text-align: justify;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0;
+}
+
+.profile-cards-wrapper {
+    text-align: center; /* Center the GitHub card */
+    width: 100%;
 }
 
 .profile-cards {
-    display: flex;
+    display: inline-flex; /* Change to inline-flex to keep the card centered */
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    justify-content: space-between;
+    justify-content: center; /* Center within the wrapper */
     width: 100%;
     box-sizing: border-box;
-    margin: var(--margin-medium) 0;
-    padding: var(--padding-medium);
+    margin: 0 auto;
 }
 
-.github_card {
-    width: 100%;
-    margin: 0;
+.github-card {
+    width: auto;
+    margin: 0 auto;
     padding: var(--padding-medium);
 }
 
 .profile-card {
     font-family: var(--font-primary);
-    border-radius: 6px;
-    line-height: 1.5;
+    border-radius: var(--border-radius);
+    line-height: var(--line-height-medium);
     padding: var(--padding-medium);
     font-size: var(--text-medium);
-    color: var(--profile-card-text-color);
-    background-color: var(--profile-card-bg-color);
+    color: var(--text-color);
+    background-color: var(--bg-color-primary);
 }
 
 .profile-header {
     display: flex;
     align-items: center;
-    margin-top: -4px;
     font-size: var(--text-giant);
-    color: var(--profile-header-text-color);
+    color: var(--header-text-color);
     font-family: var(--font-secondary);
     text-align: center;
     margin-bottom: var(--margin-medium);
@@ -92,18 +90,18 @@
     width: var(--profile-avatar-size);
     height: var(--profile-avatar-size);
     border-radius: 50%;
-    padding:var(--padding-small);
+    padding: var(--padding-small);
 }
 
 .profile-info {
     display: flex;
     flex-direction: column;
-    margin-left: var(--profile-info-margin-left);
+    margin-left: var(--margin-medium);
 }
 
 .profile-name {
     font-weight: var(--text-weight);
-    color: var(--profile-text-color);
+    color: var(--text-color);
     font-size: var(--text-large);
 }
 
@@ -114,12 +112,12 @@
 
 .profile-username {
     font-weight: var(--text-weight);
-    color: var(--profile-text-color);
+    color: var(--text-color);
     font-size: var(--text-small);
 }
 
 .profile-stats {
-    margin-top: var(--profile-stat-margin-top);
+    margin-top: var(--margin-medium);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -128,17 +126,18 @@
 .profile-stat {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .profile-stat-title {
-    font-size: var(--profile-stat-title-size);
+    font-size: var(--text-small);
     font-weight: var(--text-weight);
-    color: var(--profile-text-color);
+    color: var(--text-color);
 }
 
 .profile-stat-value {
     font-weight: var(--text-weight);
-    color: var(--profile-text-color);
-    font-size: var(--profile-stat-value-size);
+    color: var(--text-color);
+    font-size: var(--text-extra-large);
     line-height: 1;
 }

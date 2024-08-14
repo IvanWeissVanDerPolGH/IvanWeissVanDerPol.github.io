@@ -8,10 +8,10 @@
 
 
 #contact-desc {
-    font-size: var(--text-giant);
+    font-size: var(--text-large);
     color: var(--about-desc-h1-color); /* Updated to use the new variable */
     font-weight: bold;
-	background-color: var(--tertiary-color);
+	background-color: var(--tertiary-bg-color);
 }
 
 #contact_info {

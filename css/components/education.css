@@ -12,27 +12,23 @@
 .education_article:hover {
     transform: scale(1.02);
 }
-
-/* Header Styling */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.header h2 {
-    font-size: 1.75em;
+.education-header {
+    font-size: var(--text-extra-large);
     font-weight: bold;
-    color: var(--education-header-color); /* Updated to use the new variable */
-    flex: 1;
+    color: var(--header-text-color); /* Updated color */
+    text-align: center; /* Center the heading */
+    background-color: var(--header-bg-color);
+    border-radius: 8px;
+    padding: var(--margin-small);
+    padding-left: var(--margin-medium);
+    padding-right: var(--margin-medium);
 }
 
 .edu_logo {
     width: 80px;
     height: 80px;
     margin-left: 10px;
-    box-shadow: 0 0 0 3px var(--education-logo-shadow-color); /* Updated to use the new variable */
+    box-shadow: 0 0 0 3px var(--shadow-color); /* Updated to use the new variable */
     border-radius: 15%;
 }
 
@@ -62,7 +58,7 @@
     font-size: 0.875em;
     font-weight: bold;
     color: #fff;
-    background-color: var(--education-tag-bg-color); /* Updated to use the new variable */
+    background-color: var(--tag-bg-color); /* Updated to use the new variable */
     border-radius: 20px;
     margin-right: 5px;
     margin-bottom: 5px;
@@ -85,7 +81,7 @@
 
 .education_label a:hover {
     color: #fff;
-    background-color: var(--education-link-hover-bg-color); /* Updated to use the new variable */
+    background-color: var(--hover-bg-color); /* Updated to use the new variable */
     border-color: var(--education-link-hover-border-color); /* Updated to use the new variable */
 }
 

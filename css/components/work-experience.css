@@ -1,14 +1,25 @@
 
 
 .experience_article {
-    background-color: var(--experience-article-bg-color); /* Updated to use the new variable */
+    background-color: var(--article-bg-color); /* Updated to use the new variable */
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-        border-left: 5px solid var(--experience-article-border-left-color); /* Updated to use the new variable */
+        border-left: 5px solid var(--article-border-left-color); /* Updated to use the new variable */
 
+}
+.experience-header{
+    font-size: var(--text-extra-large);
+    font-weight: bold;
+    color: var(--header-text-color); /* Updated color */
+    text-align: center; /* Center the heading */
+    background-color: var(--header-bg-color);
+    border-radius: 8px;
+    padding: var(--margin-small);
+    padding-left: var(--margin-medium);
+    padding-right: var(--margin-medium);
 }
 
 .experience_article:hover {
@@ -44,13 +55,13 @@
 .experience_duration {
     font-size: 1.2em;
     font-weight: 500;
-    color: var(--experience-duration-color); /* Updated to use the new variable */
+    color: var(--duration-color); /* Updated to use the new variable */
 }
 
 .experience_detail {
     margin-bottom: 10px;
     font-size: 1em;
-    color: var(--experience-detail-color); /* Updated to use the existing variable */
+    color: var(--detail-color); /* Updated to use the existing variable */
     line-height: 1.6;
 }
 
@@ -84,7 +95,7 @@
 
 .experience_label a:hover {
     color: #fff;
-    background-color: var(--link-hover-bg-color); /* Updated to use the new variable */
+    background-color: var(--hover-bg-color); /* Updated to use the new variable */
     border-color: var(--link-hover-border-color); /* Updated to use the new variable */
 }
 
@@ -137,14 +148,14 @@
 
 .experience_article {
     animation: slideIn 0.5s ease;
-    border-left: 5px solid var(--experience-article-border-left-color); /* Updated to use the new variable */
+    border-left: 5px solid var(--article-border-left-color); /* Updated to use the new variable */
 }
 
 
 
 
 .category-item {
-    margin-bottom: var(--category-item-margin-bottom); /* Updated to use the new variable */
+    margin-bottom: var(--margin-medium); /* Updated to use the new variable */
 }
 
 .link {

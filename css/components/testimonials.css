@@ -5,10 +5,18 @@
 }
 
 .testimonials-header{
-  color: var(--secondary-color-text);  
+    font-size: var(--text-extra-large);
+    font-weight: bold;
+    color: var(--header-text-color); /* Updated color */
+    text-align: center; /* Center the heading */
+    background-color: var(--header-bg-color);
+    border-radius: 8px;
+    padding: var(--margin-small);
+    padding-left: var(--margin-medium);
+    padding-right: var(--margin-medium);
 }
 .carousel-controls .btn {
-    background: var(--carousel-btn-bg);
+    background: var(--carousel-btn);
     color: var(--btn-color);
     border: none;
     border-radius: 50%;
@@ -23,7 +31,7 @@
 }
 
 .carousel-controls .btn:hover {
-    background: var(--carousel-btn-hover-bg);
+    background: var(--carousel-btn-hover);
 }
 
 /* Carousel Inner Styling */
@@ -35,20 +43,10 @@
     justify-content: center;
     align-items: center;
     padding: var(--carousel-inner-padding);
-    background-color: var(--carousel-inner-bg);
+    background-color: var(--carousel-inner);
 }
 
-/* Carousel Item Styling */
-.carousel-item {
-    flex: 0 0 100%;
-    display: none; /* Hide by default */
-    transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
-}
 
-.carousel-item.active {
-    display: flex; /* Show active item */
-    opacity: 1;
-}
 
 .carousel-content {
     display: flex;
@@ -56,9 +54,9 @@
     align-items: center;
     justify-content: center;
     padding: 40px;
-    background: var(--carousel-item-bg);
+    background: var(--carousel-item);
     border-radius: 10px;
-    box-shadow: var(--carousel-shadow);
+    /* box-shadow: var(--carousel-shadow); */
     max-width: 700px;
     min-width: 300px;
     text-align: center; /* Center align text */
@@ -86,20 +84,26 @@
 .carousel-indicators .indicator {
     width: 10px;
     height: 10px;
-    background: var(--carousel-indicator-bg);
+    background: var(--carousel-indicator);
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
 }
 
 .carousel-indicators .indicator.active {
-    background: var(--carousel-indicator-active-bg);
+    background: var(--carousel-indicator-active);
 }
 
-/* Add transition effects */
+
+/* Carousel Item Styling */
 .carousel-item {
+    flex: 0 0 100%;
+    display: none; /* Hide by default */
     transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
 }
+
+
+
 
 .carousel-item-next,
 .carousel-item-prev,
@@ -113,4 +117,5 @@
 .carousel-item-prev.carousel-item-right,
 .carousel-item.active {
     opacity: 1; /* Fully opaque when active */
+    display: flex; /* Show active item */
 }

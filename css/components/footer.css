@@ -12,6 +12,16 @@ footer {
     color: var(--footer-text-color);
     width: 100%;
 }
+
+.footer_intro{
+	font-size: var(--text-medium);
+	color: var(--footer-intro-text-color);
+	font-weight: bold;
+	width: 100%;
+	padding: var(--padding-small) 0;
+	background-color: var(--light);
+
+}
 .col_title {
 	font-size: 1.5em;
 	font-weight: bold;
@@ -33,7 +43,7 @@ footer {
 }
 .footer a:hover {
 	color: #fff;
-    background-color: var(--footer-link-hover-color); /* Updated to use the new variable */
+    background-color: var(--hover-bg-color); /* Updated to use the new variable */
 	transform: scale(1.05);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

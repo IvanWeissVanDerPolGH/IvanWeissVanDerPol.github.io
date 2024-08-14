@@ -1,48 +1,47 @@
+.certifications-header {
+    font-size: var(--text-extra-large);
+    font-weight: var(--header-weight);
+    color: var(--header-text-color);
+    text-align: center;
+    background-color: var(--header-bg-color);
+    border-radius: var(--border-radius);
+    padding: var(--margin-small);
+    padding-left: var(--margin-medium);
+    padding-right: var(--margin-medium);
+}
+
+.category_item {
+    background-color: var(--bg-color-primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
 .cert_list {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    padding: 0px;
+    padding: 0;
     width: 100%;
 }
 
-.cert_list .link {
-    background-color: var(--cert-link-bg-color); /* Updated to use the new variable */
+.cert_item {
+    background-color: var(--bg-color-primary);
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-light);
     border: var(--border-medium);
     padding: var(--padding-medium);
-    margin: var(--margin-medium);
-    transition: background 0.3s ease; /* Added transition for background change on hover */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer; /* Indicate clickable items */
-}
-
-.cert_list .link:hover {
-    background-color: var(--cert-link-hover-bg-color); /* Updated to use the new variable */
-    box-shadow: 0 4px 8px var(--cert-link-shadow-color); /* Updated to use the new variable */
-    transform: translateY(-5px); /* Added subtle depth on hover */
-}
-
-.cert_list .cert_item {
-    background-color: var(--cert-item-bg-color); /* Updated to use the new variable */
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    border: var(--border-medium);
-    padding: var(--padding-medium);
-    margin: var(--margin-medium);
-    display: flex;
-    align-items: flex-start; /* Center vertically */
+    align-items: flex-start;
 }
 
 .cert_image {
     height: auto;
     width: 100%;
     margin-bottom: var(--margin-small);
-    object-fit: cover; /* Ensures images are equally sized and spaced */
+    object-fit: cover;
 }
 
 .cert_sublist {
@@ -50,31 +49,28 @@
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: var(--padding-medium);
     padding: var(--padding-medium);
-    background: var(--cert-sublist-bg-color); /* Updated to use the new variable */
+    background: var(--bg-color-secondary);
     border-radius: var(--border-radius);
     list-style: none;
     margin: var(--margin-medium) 0;
     box-sizing: border-box;
-    transition: max-height 0.3s ease; /* Added transition for height change */
-    overflow: hidden; /* Ensures a clean transition */
+    transition: max-height 0.3s ease;
+    overflow: hidden;
 }
+
 .cert_name {
-    font-size: var(--cert-name-font-size); /* Updated to use the new variable */
-    margin-bottom: var(--cert-name-margin-bottom); /* Updated to use the new variable */
-    font-weight: var(--cert-name-font-weight); /* Updated to use the new variable */
-    text-align: var(--cert-name-text-align); /* Updated to use the new variable */
+    font-size: var(--text-medium);
+    margin-bottom: var(--margin-small);
+    font-weight: var(--header-weight);
+    text-align: center;
 }
 
 @media (max-width: 768px) {
-    .link p {
-        font-size: var(--text-small);
-    }
-
     .cert_sublist .cert_item {
         width: calc(50% - var(--margin-small));
     }
 
-    .cert_sublist .cert_item .cert_name {
+    .cert_name {
         font-size: var(--text-small);
     }
 }

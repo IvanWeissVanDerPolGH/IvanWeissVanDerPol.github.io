@@ -13,7 +13,7 @@ export const metaKeywords = "Ivan Weiss Van Der Pol, software engineer, portfoli
 export const metaAuthor = "Ivan Weiss Van Der Pol";
 
 // Contact information
-export const contactInfo = `I'm just an email or a message away on any platform. Send me an email at ${mail}, or find me on LinkedIn, Twitter, Facebook, or Instagram. Let’s start a conversation about your ideas or just enjoy a casual chat.`;
+export const contactInfo = "";//  `I'm just an email or a message away on any platform. Send me an email at ${mail}, or find me on LinkedIn, Twitter, Facebook, or Instagram. Let’s start a conversation about your ideas or just enjoy a casual chat.`;
 
 export const bio = [
     "Discover Ivan Weiss: Engineer, Innovator, Educator.",
@@ -30,16 +30,46 @@ export const languages = [
         skillName: "English ",
         color: "1",
         percentage: "100",
+        proficiencyText: "fluent",
+        flags:[
+            {
+                countryName: "United States",
+                SVGpath:"images\\lang\\us.svg"
+            },{
+                countryName: "United States",
+                SVGpath:"images\\lang\\us.svg"
+            }
+        ]
     }, {
         title: "Spanish Communication",
         skillName: "Spanish",
         color: "2",
         percentage: "100",
+        proficiencyText: "fluent",
+        flags:[
+            {
+                countryName: "United States",
+                SVGpath:"images\\lang\\us.svg"
+            },{
+                countryName: "United States",
+                SVGpath:"images\\lang\\us.svg"
+            }
+        ]
     }, {
         title: "Dutch Communication",
         skillName: "Dutch",
         color: "3",
         percentage: "85",
+        proficiencyText: "fluent",
+        flags:[
+            {
+                countryName: "United States",
+                SVGpath:"images\\lang\\us.svg"
+            },{
+                countryName: "United States",
+                SVGpath:"images\\lang\\us.svg"
+            }
+        ]
     }
 ];
 
