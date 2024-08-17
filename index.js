@@ -610,3 +610,19 @@ function initializeCarouselWithAutoPlay(carouselSelector, prevButtonSelector, ne
 
     showItem(currentIndex);
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const certHeader = document.querySelector('.certifications-header');
+    const certList = document.querySelector('.certifications_list');
+    const skillsHeader = document.querySelector('.skills-header');
+    const skillsList = document.querySelector('.skills_list');
+
+    certHeader.addEventListener('click', function () {
+        certList.style.display = certList.style.display === 'grid' ? 'none' : 'grid';
+    });
+
+    skillsHeader.addEventListener('click', function () {
+        skillsList.style.display = skillsList.style.display === 'grid' ? 'none' : 'grid';
+    });
+});
