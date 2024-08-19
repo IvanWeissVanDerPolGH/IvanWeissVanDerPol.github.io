@@ -54,7 +54,7 @@
 .profile-cards {
     display: inline-flex; /* Change to inline-flex to keep the card centered */
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    justify-content: center; /* Center within the wrapper */
+    justify-content: left; /* Center within the wrapper */
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
