@@ -87,7 +87,7 @@
     --text-medium: 16px;
     --text-large: 18px;
     --text-extra-large: 24px;
-    --header-weight:bold;
+    --header-weight:400;
     --header-size: 40px;
     /* Spacing and Sizing */
     --padding-small: 8px;
@@ -107,6 +107,7 @@
     --profile-card-padding: var(--padding-large);
     --sidebar-padding: var(--padding-medium);
     --profile-avatar-size: var(--avatar-size);
+    --header-width: 100%;
 }
 
 /* General Styles */
@@ -187,4 +188,14 @@ ul, ol {
     align-items: center;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-light);
+}
+
+.section-title {
+    width: var(--header-width);
+    font-size: var(--header-size);
+    font-family: var(--font-secondary);
+    text-align: left;
+    margin-bottom: var(--margin-small);
+    color: var(--header-text-color);
+    font-weight: var(--header-weight);
 }
