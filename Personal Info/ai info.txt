@@ -134,26 +134,76 @@ languages:
     reading: Intermediate
     writing: Beginner
 
-experience_intro: "I have accumulated a wealth of experience in the software development industry, working on a diverse range of projects and contributing to the success of various organizations. Here is a brief overview of my professional journey:"
-experience:
-  - role: QA Engineer (Manual Testing)
-    company: WPG.srl
-    duration: "October 2018 - December 2023"
-    description: Focused on manual testing processes and automation, contributing significantly to improving product quality and reducing time-to-market.
-    picture_path: "/assets/img/experience/wpg_logo.png"
-    more_info_link: "https://www.wpg.com/"
-  - role: Software Developer
-    company: WPG.srl
-    duration: "October 2018 - December 2023"
-    description: Developed and maintained key software components, utilizing my skills in Java, Python, and database management to enhance application functionalities.
-    picture_path: "/assets/img/experience/wpg_logo.png"
-    more_info_link: "https://www.wpg.com/"
-  - role: Quality Specialist II
-    company: MentorMate
-    duration: "August 2024 - Present"
-    description: Currently working as quality assurance on innovative medical software projects, which is aimed at improving women's health through technology.
-    picture_path: "/assets/img/experience/mentormate_logo.png"
-    more_info_link: "https://www.mentormate.com/"
+
+**experience_intro**:  
+"I have accumulated extensive experience in software development, quality assurance, and automation. Over the years, I have worked on a wide range of projects, from manual testing to advanced AI-powered automation solutions. My work has spanned multiple industries, including healthcare, technology, and retail, allowing me to contribute to both the improvement of product quality and the development of innovative software solutions. Below is a comprehensive overview of my professional journey and key contributions."
+
+---
+
+**experience**:
+
+### **QA Engineer & Software Developer**  
+**Company**: WPG.srl  
+**Duration**: October 2018 – December 2023  
+**Roles**: QA Engineer (Manual Testing), Software Developer  
+**Location**: Asunción, Paraguay  
+**Description**:  
+I began my career at WPG.srl, where I honed my skills in both manual testing and software development. Working in a dual role, I contributed to improving product quality through meticulous testing processes and developing automated systems that streamlined internal workflows. My focus was on ensuring that software met client expectations while driving innovation within the team.
+
+**Key Responsibilities**:
+- **Manual Testing**: Executed rigorous manual testing processes on a range of software products, ensuring alignment with customer requirements and minimizing bugs before production releases.
+  - Collaborated closely with international teams to streamline testing operations and improve communication within cross-functional teams.
+  - Identified, documented, and tracked software defects using **JIRA**, ensuring efficient resolution of issues.
+  - Prepared comprehensive reports on bug reproduction, test results, and recommendations for software improvements.
+- **Test Automation**: Created automation scripts using **Selenium** and **Python**, automating up to 40% of repetitive test cases, significantly reducing manual effort and accelerating the release cycle.
+  - Developed an XML message testing system using Python to validate communication between systems and applications.
+  - Automated data conversion processes, converting test data from XSD to XML-structured Excel files, which optimized the test case generation process.
+- **Software Development**: Contributed to backend development efforts, creating software components using **Java** and **Python**. This work enabled the enhancement of system functionalities and improved overall performance.
+  - Led the development of a proprietary automation tool for **online ad postings**, using **Selenium** and **Python**. This system significantly improved the efficiency of managing digital advertising for internal projects.
+
+**Technologies Used**: Selenium, Python, Java, Git, JIRA, XSD, XML, Excel, MySQL  
+**Achievements**:
+- Automated the creation of structured test reports, reducing manual effort by over 30%.
+- Developed a tool for automating ad posting, which improved operational efficiency by 50%.
+
+---
+
+### **Quality Specialist II (QA Automation)**  
+**Company**: MentorMate  
+**Duration**: August 2024 – Present  
+**Role**: Quality Specialist II (Automation & Generative AI)  
+**Location**: Remote  
+**Description**:  
+At MentorMate, I play a pivotal role in implementing automated testing frameworks and integrating AI-driven solutions to enhance product quality. I work primarily on healthcare-related projects, where I focus on ensuring seamless communication between mobile applications and medical devices, with an emphasis on automation, security, and user experience.
+
+**Key Responsibilities**:
+- **Generative AI for QA**: Implemented **Generative AI** techniques to automate and optimize the QA process, reducing time spent on manual tasks such as test case generation and defect tracking.
+  - Leveraged **OpenAI** technologies to create systems that automatically generate test cases from user requirements, enhancing coverage and accuracy.
+- **Automation Framework Development**: Developed and maintained automated testing scripts using **Selenium** and **Python** for both web and mobile applications. Integrated the automation framework into the continuous integration (CI) pipeline, improving build quality and deployment speed.
+  - Automated API testing using **Postman** and **Charles Proxy** for complex workflows involving medical devices and data communication between healthcare portals and mobile apps.
+- **Data Management & Security**: Led initiatives to implement data security features such as **SSL pinning**, ensuring secure communication between mobile applications and the backend. Also developed tools for automating data extraction and processing from various sources (databases, API endpoints).
+  - Focused on creating robust logging systems for enhanced error tracking and user behavior monitoring.
+- **Collaboration with International Teams**: Worked in close coordination with developers, UX/UI designers, and product managers to ensure that the QA process is tightly integrated into the development lifecycle.
+  - Participated in **Agile** development cycles, attending daily standups and actively contributing to sprint planning and reviews.
+
+**Key Projects**:
+- **Flyte Project**: Worked on Flyte, a medical device system aimed at improving women’s health through pelvic floor therapy. My role was to ensure the smooth integration of the mobile app with the **Provider Portal**, enabling real-time tracking of therapy progress and secure data exchange.
+  - Automated testing of the **Flyte wand**, an FDA-cleared device, and its integration with the mobile app.
+  - Designed test cases for the 6-week therapeutic program embedded in the app, ensuring accurate tracking of user progress and therapy goals.
+- **Provider Portal Development**: Led the quality assurance of the healthcare provider portal, ensuring that clinicians could effectively monitor patient progress and provide timely interventions based on data analytics from the mobile app.
+
+**Technologies Used**: Selenium, Python, Postman, Charles Proxy, MongoDB, Django, Git, Jenkins, React  
+**Achievements**:
+- Successfully reduced QA cycle time by 50% through automation, leading to faster product releases.
+- Implemented an AI-driven system to automate test case creation, which increased test coverage by 35%.
+
+---
+
+**Additional Contributions**:
+- **Mentorship & Training**: Provided training and mentorship to junior QA engineers and developers on automation best practices, use of **Selenium**, and effective communication in Agile teams.
+- **Process Improvement**: Spearheaded process improvements by implementing automation frameworks and AI-driven tools that improved both team productivity and the overall quality of product releases.
+- **Continuous Learning**: Continued to enhance my skills by pursuing certifications in **AWS**, **Generative AI**, and **DevOps** technologies, aiming to further streamline software development and QA processes.
+
     
 skills_description: >
   As a software engineer, I possess a comprehensive range of technical skills that empower me to address complex challenges and deliver high-quality solutions. My experience extends across various facets of software development, from backend processes to user interfaces. Below are some of my key skills, neatly organized by category:
