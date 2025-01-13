@@ -340,9 +340,25 @@ export const certifications = {
 
 export const experience = [
     {
+        title: "Stoic Finch",
+        subtitle: "Technical Lead - Sturgeon County Project",
+        duration: "October 2024 - January 2024",
+        details: [
+            "Led a cross-functional team of 2 developers and 1 business analyst to deliver a comprehensive Power Apps solution for Sturgeon County.",
+            "Architected and implemented the application’s core functionalities, including task management, case handling, and role-based access control.",
+            "Developed backend automation workflows using Power Automate, streamlining key processes such as case creation, task assignments, and resolution tracking.",
+            "Designed and deployed interactive Power BI dashboards, providing stakeholders with actionable insights into case and task data.",
+            "Integrated SharePoint for centralized document management, ensuring secure handling of attachments and case records.",
+            "Collaborated with a UI/UX developer to refine the application’s design, ensuring an intuitive and visually appealing user experience.",
+            "Provided client training and documentation to support system scalability and independent management."
+        ],
+        tags: ["Power Apps Development", "Workflow Automation", "Power BI Dashboards", "SharePoint Integration", "Technical Leadership"],
+        icon: "briefcase",
+    },
+    {
         title: "MentorMate",
         subtitle: "Quality Specialist II - Professional Development and Training",
-        duration: "August 2023 - Present",
+        duration: "August 2023 - September 2024 ",
         details: [
             "Engaged in a structured professional development program, enhancing knowledge in QA methodologies and compliance standards.",
             "Participated in multiple training programs and workshops, gaining proficiency in new tools and technologies including Postman, Charles Proxy, and MongoDB.",
