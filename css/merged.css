@@ -1,0 +1,1636 @@
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\animate.css */
+:root {
+    --animation-duration: 1s;
+}
+
+@keyframes baseAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+.fadeIn, .fadeInUp, .fadeInLeft, .fadeInRight, .bounceIn, .slideInUp, .slideInDown, .slideInLeft, .slideInRight, .bounce, .zoomIn, .rotateIn {
+    animation: baseAnimation var(--animation-duration) ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fadeIn, .fadeInUp, .fadeInLeft, .fadeInRight, .bounceIn, .slideInUp, .slideInDown, .slideInLeft, .slideInRight, .bounce, .zoomIn, .rotateIn {
+        animation: none;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+.fadeInLeft {
+    animation-name: fadeInLeft;
+}
+
+.fadeInRight {
+    animation-name: fadeInRight;
+}
+
+.bounceIn {
+    animation-name: bounceIn;
+}
+
+.slideInUp {
+    animation-name: slideInUp;
+}
+
+.slideInDown {
+    animation-name: slideInDown;
+}
+
+.slideInLeft {
+    animation-name: slideInLeft;
+}
+
+.slideInRight {
+    animation-name: slideInRight;
+}
+
+.bounce {
+    animation-name: bounce;
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+}
+
+.rotateIn {
+    animation-name: rotateIn;
+}
+
+.fadeIn, .fadeInUp, .fadeInLeft, .fadeInRight, .bounceIn, .slideInUp, .slideInDown, .slideInLeft, .slideInRight, .bounce, .zoomIn, .rotateIn {
+    will-change: opacity, transform;
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\main.css */
+/* Global Styles and Variables */
+@import url("pallete.css");
+
+/* Component-Specific Styles */
+@import url("components/sidebar.css");
+@import url("components/bio.css"); 
+@import url("components/profile.css");
+@import url("components/languages.css");
+@import url("components/skills.css");
+@import url("components/certifications.css"); 
+@import url("components/experience.css");
+@import url("components/education.css");
+@import url("components/testimonials.css");
+@import url("components/contact.css"); 
+@import url("components/footer.css");
+
+
+#main-content {
+    background-color: var(--background-light-alt, #f8f8f8); /* Fallback background color */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 15vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    #main-content {
+        margin-left: 0px;
+    }
+}
+
+#main-content .section{
+    width: 100%;
+    margin-left: 150vw;
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\pallete.css */
+/* Default Theme */
+.theme-default {
+	--primary-color: #0077b6;
+	--secondary-color: #023e8a;
+	--tertiary-color: #90e0ef;
+	--dark-color: #03045e;
+	--light-color: #caf0f8;
+	--background-dark: #023047;
+	--background-light: #ade8f4;
+	--error-color: #ef233c;
+	--success-color: #2a9d8f;
+	--warning-color: #ffb703;
+	--info-color: #8ecae6;
+
+	--text-color: var(--primary-color);
+	--title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+}
+
+/* Ocean Breeze Theme */
+.theme-ocean-breeze {
+    --primary-color: #005f99; /* Darker blue for better contrast */
+    --secondary-color: #014f86; /* Refined secondary blue for consistency */
+    --tertiary-color: #56cfe1; /* Slightly softer tertiary color */
+    --dark-color: #012a4a; /* Darker shade for depth */
+    --light-color: #e0f7fa; /* Softer light color for a smoother feel */
+    --background-dark: #01497c; /* Darkened background for stronger contrast */
+    --background-light: #b2ebf2; /* Softer and lighter background */
+    --error-color: #d90429; /* Adjusted error color for better readability */
+    --success-color: #38b000; /* More vibrant success color */
+    --warning-color: #ff8800; /* Adjusted warning color to stand out */
+    --info-color: #118ab2; /* Improved info color for a professional feel */
+
+    --text-color: #013a63; /* A strong, darker text color for readability */
+    --title-color: #005f99; /* Make titles stand out with refined blue */
+    --color: var(--background-dark);
+    --color-smooth: #036aa7; /* Smooth transition color for hover effects */
+
+    /* New additions for shadow and gradients */
+    --card-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    --gradient-light: linear-gradient(to right, #ade8f4, #56cfe1); /* Soft gradient for light areas */
+    --gradient-dark: linear-gradient(to right, #012a4a, #01497c); /* Gradient for dark elements */
+}
+
+
+/* Sunset Glow Theme */
+.theme-sunset-glow {
+	--primary-color: #ff6f61;
+	--secondary-color: #ff9a76;
+	--tertiary-color: #ffd1ba;
+	--dark-color: #d1495b;
+	--light-color: #ffe8d6;
+	--background-dark: #6d597a;
+	--background-light: #f4acb7;
+	--error-color: #d62828;
+	--success-color: #38b000;
+	--warning-color: #ffca3a;
+	--info-color: #2ec4b6;
+
+	--text-color: var(--primary-color);
+	--title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+}
+
+/* Forest Harmony Theme */
+.theme-forest-harmony {
+	--primary-color: #2a9d8f;
+	--secondary-color: #264653;
+	--tertiary-color: #e9c46a;
+	--dark-color: #1d3557;
+	--light-color: #f1faee;
+	--background-dark: #457b9d;
+	--background-light: #a8dadc;
+	--error-color: #e63946;
+	--success-color: #2a9d8f;
+	--warning-color: #f4a261;
+	--info-color: #457b9d;
+
+	--text-color: var(--primary-color);
+	--title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+}
+
+/* Desert Mirage Theme */
+.theme-desert-mirage {
+	--primary-color: #e76f51;
+	--secondary-color: #264653;
+	--tertiary-color: #f4a261;
+	--dark-color: #2a9d8f;
+	--light-color: #e9c46a;
+	--background-dark: #1d3557;
+	--background-light: #f1faee;
+	--error-color: #e63946;
+	--success-color: #2a9d8f;
+	--warning-color: #f4a261;
+	--info-color: #457b9d;
+
+	--text-color: var(--primary-color);
+	--title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+}
+
+/* Midnight Sky Theme */
+.theme-midnight-sky {
+	--primary-color: #14213d;
+	--secondary-color: #fca311;
+	--tertiary-color: #e5e5e5;
+	--dark-color: #000000;
+	--light-color: #ffffff;
+	--background-dark: #2a2a2a;
+	--background-light: #e5e5e5;
+	--error-color: #e63946;
+	--success-color: #38b000;
+	--warning-color: #fca311;
+	--info-color: #3a86ff;
+
+	--text-color: var(--primary-color);
+	--title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\components\bio.css */
+.about-section {
+    background-color: var(--background-light);
+    color: var(--text-color);
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for better depth */
+    margin: 40px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Increased shadow on hover */
+}
+
+.about-section .content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: justify; /* Consistent alignment across child elements */
+}
+
+.about-section .description {
+    text-align: justify; /* Consistent alignment with bio-body */
+    margin-bottom: 30px;
+}
+
+.about-section .bio-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--background-light-alt); /* Subtle contrasting background */
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for content box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Prevent layout shifts */
+    z-index: 1; /* Ensure hover effect doesn't affect layout */
+}
+
+.about-section .bio-container:hover {
+    transform: translateY(-2px); /* Alternative hover effect to avoid scaling */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Highlighted shadow on hover */
+}
+
+.about-section .bio-title {
+    font-size: 2.4em; /* Reduced font size for better balance */
+    font-weight: bold;
+    color: var(--primary-color); /* Ensure color contrast is checked for readability */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.about-section .bio-intro {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: var(--text-primary); /* Softer text color for the intro */
+}
+
+.about-section .bio-body {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: var(--text-secondary); /* Slightly muted color for readability */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 40px;
+        margin: 20px auto;
+    }
+
+    .about-section .bio-title {
+        font-size: 2em; /* Adjusted for better balance on smaller screens */
+    }
+
+    .about-section .bio-intro {
+        font-size: 1.3em;
+    }
+
+    .about-section .bio-body {
+        font-size: 1em;
+    }
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\components\certifications.css */
+/* Base styles for the Certifications section */
+.colorlib-certifications {
+    padding: 50px 0;
+    background-color: var(--background-light); /* Light background from palette */
+    color: var(--text-color); /* Primary text color */
+}
+
+/* Section header */
+.colorlib-certifications h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Accordion container */
+#accordion {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+/* Accordion links */
+#accordion .link {
+    background-color: var(--secondary-color); /* Secondary color for links */
+    color: var(--text-light); /* Light text color */
+    padding: 15px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+#accordion .link:hover {
+    background-color: var(--primary-color); /* Highlight on hover */
+    color: var(--text-light);
+}
+
+/* Submenu styles */
+#accordion .submenu {
+    display: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: var(--background-dark); /* Darker background for submenu */
+    border-left: 3px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+#accordion .submenu .skill-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#accordion .submenu .skill-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+#accordion .submenu .skill-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#accordion .submenu .skill-description {
+    font-size: 0.95em;
+    color: var(--text-color);
+    margin-left: 65px; /* Align description to account for image */
+}
+
+/* Animation for accordion open/close */
+@keyframes slideDown {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: auto;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        height: auto;
+        opacity: 1;
+    }
+    to {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+#accordion .submenu.open {
+    display: block;
+    animation: slideDown 0.5s ease-out;
+}
+
+#accordion .submenu.closed {
+    display: none;
+    animation: slideUp 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #accordion {
+        padding: 0 10px;
+    }
+
+    #accordion .link {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    #accordion .submenu .skill-name {
+        font-size: 1em;
+    }
+
+    #accordion .submenu .skill-description {
+        margin-left: 60px;
+        font-size: 0.9em;
+    }
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\components\contact.css */
+/* Base styles for the Contact section */
+.colorlib-contact {
+    padding: 50px 0;
+    background-color: var(--background-light); /* Light background from palette */
+    color: var(--text-color); /* Primary text color */
+}
+
+/* Section header */
+.colorlib-contact h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Contact info paragraph */
+#contact-info {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+    color: var(--text-color);
+}
+
+/* Links styling */
+#contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#contact-info a:hover {
+    color: var(--secondary-color);
+}
+
+/* Social icons container */
+.colorlib-contact .social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual social icons */
+.colorlib-contact .social-links a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+}
+
+.colorlib-contact .social-links a:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Form styles (if applicable) */
+.colorlib-contact form {
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.colorlib-contact form input,
+.colorlib-contact form textarea,
+.colorlib-contact form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    font-size: 1em;
+}
+
+.colorlib-contact form input:focus,
+.colorlib-contact form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.colorlib-contact form button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.colorlib-contact form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #contact-info {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .colorlib-contact .social-links a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2em;
+    }
+
+    .colorlib-contact form {
+        padding: 0 10px;
+    }
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\components\education.css */
+/* Base styles for the Education section */
+.colorlib-education {
+    padding: 50px 0;
+    background-color: var(--background-light); /* Light background color from palette */
+    color: var(--text-color); /* Text color from palette */
+}
+
+/* Section header */
+.colorlib-education h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Timeline container */
+.timeline-centered {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Timeline entry */
+.timeline-entry {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-entry-inner {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Timeline icon */
+.timeline-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    font-size: 1.5em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-icon i {
+    line-height: 50px;
+}
+
+/* Timeline label */
+.timeline-label {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.timeline-label h2 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.timeline-label h2 .timeline-sublabel {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
+.timeline-label .duration {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.timeline-label p {
+    font-size: 1em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .timeline-centered {
+        padding: 0;
+    }
+
+    .timeline-label h2 {
+        font-size: 1.2em;
+    }
+
+    .timeline-label p {
+        font-size: 0.95em;
+    }
+
+    .timeline-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\components\experience.css */
+/* Base styles for the Work Experience section */
+.colorlib-experience {
+    padding: 50px 0;
+    background-color: var(--background-light); /* Light background from palette */
+    color: var(--text-color); /* Text color from palette */
+}
+
+/* Section header */
+.colorlib-experience h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Timeline container */
+.timeline-centered {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Timeline entry */
+.timeline-entry {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-entry-inner {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Timeline icon */
+.timeline-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    font-size: 1.5em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-icon i {
+    line-height: 50px;
+}
+
+/* Timeline label */
+.timeline-label {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.timeline-label h2 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.timeline-label h2 .timeline-sublabel {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
+.timeline-label .duration {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.timeline-label p {
+    font-size: 1em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Badges for skills/technologies */
+.timeline-label .badge {
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Hover effect for badges */
+.timeline-label .badge:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .timeline-centered {
+        padding: 0;
+    }
+
+    .timeline-label h2 {
+        font-size: 1.2em;
+    }
+
+    .timeline-label p {
+        font-size: 0.95em;
+    }
+
+    .timeline-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\components\footer.css */
+/* Footer Base Styles */
+.footer {
+    background-color: #282c34;
+    color: #ffffff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Footer Columns */
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-columns .col {
+    flex: 1 1 30%; /* Allows 3 columns in a row on larger screens */
+    min-width: 200px; /* Ensures a minimum size for small screens */
+}
+
+/* Column Titles */
+.footer-columns .col-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #f8f9fa;
+}
+
+/* Column Links */
+.footer-columns .col-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-columns .col-list ul li {
+    margin-bottom: 8px;
+}
+
+.footer-columns .col-list ul li a {
+    color: #61dafb;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.footer-columns .col-list ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Footer Copyright Section */
+.footer-copyright {
+    font-size: 0.9em;
+    color: #adb5bd;
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columns .col {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\components\languages.css */
+.languages-section {
+    padding: 60px; /* Increased padding for better spacing */
+    background-color: var(--background-light, #f8f9fa);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 40px auto; /* Increased margin for more separation */
+    max-width: 900px; /* Wider container for larger layouts */
+    text-align: center;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.languages-section .content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.languages-section h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color, #0077b6);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-bottom: 2px solid var(--primary-color, #0077b6);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#languages {
+    display: flex;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    gap: 30px; /* Increased gap between items */
+    justify-content: center;
+    padding: 20px; /* Adds spacing inside the parent container */
+    background-color: var(--background-light-alt, #eaf4fc);
+    border-radius: 10px; /* Matches child container style */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Language-container {
+    flex: 1 1 200px; /* Flexible sizing for responsiveness */
+    max-width: 250px; /* Prevents overly wide cards */
+    min-width: 200px; /* Ensures minimum size for cards */
+    background-color: var(--background-light-alt, #ffffff);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Language-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.progress-wrap h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-primary, #333);
+    margin-bottom: 10px;
+}
+
+.progress-wrap {
+    position: relative;
+    margin-bottom: 10px;
+    background-color: var(--background-light-alt, #f0f8ff);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+    position: relative;
+    height: 12px;
+    background-color: var(--progress-track-color, #ddd);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress .progress-bar {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.progress-bar.color-1 {
+    background-color: var(--progress-bar-color-1, #3498db);
+}
+
+.progress-bar.color-2 {
+    background-color: var(--progress-bar-color-2, #e74c3c);
+}
+
+.progress-bar.color-3 {
+    background-color: var(--progress-bar-color-3, #f1c40f);
+}
+
+.progress-bar::after {
+    content: attr(data-label); /* Displays percentage inside the bar */
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85em;
+    color: var(--text-secondary, #555);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    #languages {
+        flex-direction: column; /* Stack items on smaller screens */
+        gap: 20px; /* Adjust gap for smaller screens */
+        padding: 15px; /* Reduce padding for smaller devices */
+    }
+
+    .Language-container {
+        max-width: 100%; /* Take full width on smaller screens */
+    }
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\components\profile.css */
+/* Enhanced GitHub card */
+.github-card {
+    width: 350px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-light);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.github-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Overlay effect */
+.github-card::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    border-radius: 50%;
+    z-index: 0;
+    animation: pulse 3s infinite;
+}
+
+/* Profile image */
+.github-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    position: relative;
+}
+
+/* Username and link */
+.github-card a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.6em;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.github-card a:hover {
+    color: var(--highlight-color);
+}
+
+/* Stats section */
+.github-card .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.github-card .stats div {
+    text-align: center;
+}
+
+.github-card .stats span {
+    display: block;
+    font-weight: 700;
+    color: var(--text-light);
+    font-size: 2em;
+}
+
+.github-card .stats label {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .github-card {
+        width: 90%;
+    }
+
+    .github-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .github-card a {
+        font-size: 1.4em;
+    }
+
+    .github-card .stats span {
+        font-size: 1.6em;
+    }
+}
+
+/* Animation keyframes */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\components\sidebar.css */
+/* Base styles for the Sidebar */
+#sidebar {
+    width: 15vw; /* Use relative units for adaptive width */
+    background-color: #b3e6f7; /* Light blue background */
+    color: #0b0c10; /* Dark text color for contrast */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for more depth */
+    z-index: 10; /* Adjusted for a clearer z-index hierarchy */
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out; /* Added transition for smoother state changes */
+}
+
+/* Center content within the sidebar */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Use flexbox for better alignment */
+    padding: 10px; /* Streamlined padding for consistency */
+    border-bottom: 2px solid #90d4f0; /* Lighter blue for visual separation */
+}
+
+/* Profile Image */
+.profile-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 6em; /* Use relative units for adaptive sizing */
+    height: 6em;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.1); /* Removed rotation for a more subtle effect */
+}
+
+/* Full Name Styling */
+#logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0b0c10; /* Darker text color */
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+#logo a {
+    color: #0b0c10;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#logo a:hover {
+    color: #005b7f; /* Slightly darker blue for hover */
+}
+
+/* Email Styling */
+#email {
+    font-size: 1em;
+    color: #0b0c10;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+#email a {
+    color: #0b0c10;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#email a:hover {
+    color: #005b7f; /* Slightly darker blue for hover */
+}
+
+/* Navigation Menu */
+#main-menu {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Use gap for consistent spacing */
+}
+
+#main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-menu ul li {
+    text-align: center; /* Center-align menu items */
+}
+
+#main-menu ul li a {
+    display: block;
+    color: #0b0c10; /* Match text with overall theme */
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#main-menu ul li a:hover {
+    background-color: #0077a3; /* Slightly lighter blue for hover */
+    color: #ffffff; /* White text on hover */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow for emphasis */
+}
+
+#main-menu ul li.active a {
+    background-color: #003f5c; /* Deeper blue for better contrast */
+    color: #f0f8ff; /* Slightly off-white text for softness */
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to emphasize active menu */
+}
+
+/* Ensure the navbar is visible */
+#navbar {
+    display: block; /* Ensure the navbar is displayed */
+}
+
+/* Theme Selector Dropdown */
+#theme-selector {
+    width: 90%; /* Fit within the sidebar */
+    margin: 20px auto;
+    padding: 12px; /* Increased padding for improved touch targets */
+    background-color: #f5faff; /* Updated background color */
+    color: #005b7f; /* Updated text color */
+    border: 1px solid #003f5c; /* Updated border color */
+    border-radius: 5px;
+    font-size: 1.1em; /* Slightly larger font for better readability */
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for contrast */
+}
+
+#theme-selector:hover {
+    background-color: #003f5c; /* Darker background color on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Scrollbar Styling */
+#sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(45deg, #90d4f0, #005b7f); /* Gradient for modern look */
+    border-radius: 10px;
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #005b7f;
+}
+
+#sidebar::-webkit-scrollbar-track {
+    background-color: #b3e6f7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    #main-menu ul li a {
+        font-size: 0.9em;
+        padding: 8px 0;
+    }
+
+    #main-menu ul li a:hover {
+        background-color: #005b7f; /* Maintain hover color consistency */
+    }
+
+    #theme-selector {
+        font-size: 0.9em;
+        width: 95%; /* Adjust width for smaller devices */
+    }
+
+    .profile-image img {
+        width: 5em; /* Adjust profile image size for mobile */
+        height: 5em;
+        margin-top: 10px; /* Added space above for better spacing on mobile */
+    }
+
+    #logo {
+        font-size: 1.2em;
+    }
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\components\skills.css */
+.skills-section {
+    padding: 60px; /* Use full padding for better spacing */
+    background-color: var(--background-light-alt, #f8f9fa); /* Light background for contrast */
+    border-radius: 15px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    margin: 0; /* Center the section with auto margins */
+    max-width: 100%; /* Utilize full width available */
+    text-align: center; /* Center-align text for uniformity */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+/* Base styles for the Skills section */
+.colorlib-certifications {
+    padding: 60px 0; /* Increased padding for more breathing room */
+    background-color: var(--background-light); /* Light background color from palette */
+    color: var(--text-color); /* Primary text color */
+}
+
+/* Section header */
+.colorlib-certifications h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px; /* Added more space below the header */
+    font-weight: bold;
+}
+
+/* Skills accordion container */
+#skills-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 20px; /* Added padding for separation from the header */
+}
+
+/* Accordion links (categories) */
+#skills-accordion .link {
+    display: block;
+    padding: 20px 25px; /* Increased padding for better spacing */
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Increased margin for more vertical space */
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#skills-accordion .link:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for hover effect */
+}
+
+
+.submenu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Increased gap for better spacing between items */
+}
+
+/* Accordion submenu (individual skills) */
+#skills-accordion .submenu {
+    display: none;
+    background-color: var(--background-dark);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 20px 25px; /* Increased padding for better spacing */
+    margin-bottom: 20px; /* Increased margin for more vertical space */
+    
+}
+
+/* Skill item styling */
+#skills-accordion .submenu .skill-item {
+    display: flex;
+    align-items: flex-start; /* Align items to the start for vertical alignment */
+    margin-bottom: 25px; /* Increased spacing for better separation */
+    flex-direction: column;
+    align-items: center;
+}
+
+#skills-accordion .submenu .skill-item img {
+    width: 35px; /* Standardized icon size */
+    height: 35px; /* Standardized icon size */
+    margin-bottom: 10px; /* Consistent spacing between icon and text */
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Added transition for hover effect */
+}
+
+#skills-accordion .submenu .skill-item img:hover {
+    transform: scale(1.1); /* Subtle hover effect for icons */
+}
+
+#skills-accordion .submenu .skill-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px; /* Added margin for spacing */
+}
+
+#skills-accordion .submenu .skill-description {
+    font-size: 1em; /* Increased font size for better readability */
+    color: var(--text-secondary);
+    font-weight: lighter; /* Lighter font weight for differentiation */
+    background-color: rgba(255, 255, 255, 0.1); /* Lighter background for readability */
+    padding: 10px; /* Added padding for text area */
+    border-radius: 5px; /* Rounded corners for text area */
+    text-align: center;
+    white-space: wrap;
+    max-width: 300px; /* Set a maximum width for the text area */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+/* Animation for expanding/closing */
+@keyframes slideDown {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: auto;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        height: auto;
+        opacity: 1;
+    }
+    to {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+#skills-accordion .submenu.open {
+    display: block;
+    animation: slideDown 0.3s ease-out; /* Reduced duration for faster transition */
+}
+
+#skills-accordion .submenu.closed {
+    display: none;
+    animation: slideUp 0.3s ease-out; /* Reduced duration for faster transition */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #skills-accordion .link {
+        font-size: 1em;
+        padding: 15px 20px; /* Adjusted padding for smaller screens */
+    }
+
+    #skills-accordion .submenu .skill-name {
+        font-size: 1em;
+    }
+
+    #skills-accordion .submenu .skill-description {
+        font-size: 0.95em; /* Slightly increased font size for readability */
+    }
+}
+
+
+/* Merged from: C:\Users\weiss\Github\ivanweissvanderpol.github.io\css\components\testimonials.css */
+/* Base styles for the Testimonials section */
+.colorlib-testimonials {
+    padding: 50px 0;
+    background-color: var(--background-light); /* Light background from palette */
+    color: var(--text-color); /* Text color from palette */
+}
+
+/* Section header */
+.colorlib-testimonials h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Carousel container */
+#testimonialCarousel {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Carousel items */
+#testimonialCarousel .carousel-inner {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+#testimonialCarousel .carousel-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Testimonial title */
+#testimonialCarousel .testimonial-title {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Testimonial details */
+#testimonialCarousel .testimonial-detail {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* Carousel controls */
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.carousel-controls .btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-controls .btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #testimonialCarousel .testimonial-title {
+        font-size: 1.2em;
+    }
+
+    #testimonialCarousel .testimonial-detail {
+        font-size: 1em;
+    }
+
+    .carousel-controls .btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+}
+
+

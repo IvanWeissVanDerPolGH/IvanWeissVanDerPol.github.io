@@ -1,0 +1,122 @@
+/* Base styles for the Contact section */
+.colorlib-contact {
+    padding: 50px 0;
+    background-color: var(--background-light); /* Light background from palette */
+    color: var(--text-color); /* Primary text color */
+}
+
+/* Section header */
+.colorlib-contact h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Contact info paragraph */
+#contact-info {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+    color: var(--text-color);
+}
+
+/* Links styling */
+#contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#contact-info a:hover {
+    color: var(--secondary-color);
+}
+
+/* Social icons container */
+.colorlib-contact .social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual social icons */
+.colorlib-contact .social-links a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+}
+
+.colorlib-contact .social-links a:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Form styles (if applicable) */
+.colorlib-contact form {
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.colorlib-contact form input,
+.colorlib-contact form textarea,
+.colorlib-contact form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    font-size: 1em;
+}
+
+.colorlib-contact form input:focus,
+.colorlib-contact form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.colorlib-contact form button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.colorlib-contact form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #contact-info {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .colorlib-contact .social-links a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2em;
+    }
+
+    .colorlib-contact form {
+        padding: 0 10px;
+    }
+}

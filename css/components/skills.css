@@ -1,0 +1,147 @@
+.skills-section {
+    padding: 40px; /* Add spacing for section padding */
+    background-color: var(--light-color); /* Light color for the background */
+    border-radius: 15px; /* Rounded corners for aesthetics */
+    margin: 20px auto; /* Center the section */
+    max-width: 1000px; /* Restrict maximum width for better alignment */
+    text-align: center; /* Center text for uniformity */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+.skills-section h1 {
+    font-size: 2em; /* Adjust font size for section title */
+    color: var(--primary-color); /* Use primary color for title */
+    margin-bottom: 30px; /* Spacing below the title */
+    font-weight: bold; /* Highlighted font for section title */
+}
+
+/* Categories */
+#skills-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between categories */
+}
+
+#skills-accordion .accordion-category {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+#skills-accordion .category-header {
+    font-size: 1.2em; /* Header font size */
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 10px;
+    color: var(--secondary-color); /* Secondary color for category title */
+    border-bottom: 2px solid var(--secondary-color); /* Add underline */
+    margin-bottom: 15px;
+}
+
+/* Content Styling */
+#skills-accordion .category-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap items for responsiveness */
+    gap: 20px; /* Space between items */
+    padding: 15px; /* Add padding to separate content */
+    background-color: var(--background-light); /* Light background color for content */
+    border-radius: 10px; /* Rounded corners for smooth appearance */
+}
+
+#skills-accordion .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px; /* Restrict width for uniformity */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+#skills-accordion .skill-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+#skills-accordion .skill-item img {
+    width: 80px; /* Icon size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+    border-radius: 10px; /* Rounded icons for smooth look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for icons */
+}
+
+#skills-accordion .skill-title {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--primary-color); /* Primary color for skill titles */
+    margin-top: 5px;
+}
+
+#skills-accordion .skill-description {
+    font-size: 0.9em;
+    color: var(--text-color); /* Use text color for descriptions */
+    padding: 10px;
+    border-radius: 5px; /* Rounded description container */
+    max-width: 200px; /* Limit text width for readability */
+    text-align: center;
+    background-color: var(--tertiary-color); /* Tertiary color for description background */
+}
+
+/* Animations for expand/collapse */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.category-content.open {
+    animation: slideDown 0.3s ease-out;
+}
+
+.category-content.closed {
+    animation: slideUp 0.3s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 20px;
+    }
+
+    #skills-accordion {
+        gap: 20px;
+    }
+
+    #skills-accordion .skill-item {
+        width: 100px; /* Adjust item width for smaller screens */
+    }
+
+    #skills-accordion .skill-item img {
+        width: 60px; /* Adjust icon size */
+    }
+
+    #skills-accordion .skill-title {
+        font-size: 0.9em; /* Adjust font size */
+    }
+
+    #skills-accordion .skill-description {
+        font-size: 0.8em; /* Adjust description font size */
+    }
+}

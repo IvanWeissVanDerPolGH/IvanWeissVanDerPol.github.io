@@ -1,4 +1,3 @@
-
 export const githubUsername = "IvanWeissVanDerPol";
 
 export const Name = "Ivan";
@@ -15,33 +14,21 @@ export const metaAuthor = "Ivan Weiss Van Der Pol";
 // Contact information
 export const contactInfo = `I'm just an email or a message away on any platform. Send me an email at ${mail}, or find me on LinkedIn, Twitter, Facebook, or Instagram. Let’s start a conversation about your ideas or just enjoy a casual chat.`;
 
-export const bio = [
-    "Discover Ivan Weiss: Engineer, Innovator, Educator.",
-    `As a Software Developer, I merge a rigorous academic background in Software Engineering with profound real-world experience across development and quality assurance.`,
-    `I excel in harnessing multiple programming languages and automation tools to not only meet but advance industry standards through innovative solutions.`,
-    `Beyond developing software, I'm committed to educating and empowering the next generation of tech professionals, sharing insights and inspiring innovation.`,
-    "Thank you for exploring my journey and contributions to the tech world!",
+export const bio = {
+    title: "About Me",
+    intro: "Welcome! I’m Ivan Weiss Van Der Pol—a passionate software developer with expertise in automation, AI, and quality assurance.",
+    body: [
+        "With a strong academic background and hands-on experience across diverse projects, I specialize in crafting innovative solutions that drive efficiency and impact.",
+        "Beyond development, I’m committed to inspiring the tech community through education and collaboration.",
+        "Let’s explore technology together!"
+    ]
+};
+export const languagesData = [
+    { skillName: 'English', color: '1', percentage: 90 },
+    { skillName: 'Spanish', color: '2', percentage: 85 },
+    { skillName: 'Dutch', color: '3', percentage: 70 }
 ];
 
-export const languages = [
-
-    {
-        title: "English Communication",
-        skillName: "English ",
-        color: "1",
-        percentage: "100",
-    }, {
-        title: "Spanish Communication",
-        skillName: "Spanish",
-        color: "2",
-        percentage: "100",
-    }, {
-        title: "Dutch Communication",
-        skillName: "Dutch",
-        color: "3",
-        percentage: "85",
-    }
-];
 
 export const skills = {
     "Programming and Scripting Languages": [
@@ -517,7 +504,7 @@ export const testimonials = {
   };
   
 
-export const footer = [
+  export const footer = [
     {
         label: "Dev Profiles",
         data: [
@@ -566,3 +553,28 @@ export const footer = [
         ],
     },
 ];
+
+
+
+export const pageConfig = {
+    sections: {
+        bio: { containerId: 'bio', label: 'Biography', displayInMenu: true },
+        skills: { containerId: 'skills', accordionId: 'skills-accordion', label: 'Skills', displayInMenu: true },
+        certifications: { containerId: 'certifications', accordionId: 'certifications-accordion', label: 'Certifications', displayInMenu: true },
+        experience: { containerId: 'experience', label: 'Experience', displayInMenu: true },
+        education: { containerId: 'education', label: 'Education', displayInMenu: true },
+        testimonials: {
+            containerId: 'testimonials',
+            carouselSelector: '#testimonials-carousel',
+            prevButtonId: 'prev-btn',
+            nextButtonId: 'next-btn',
+            label: 'Testimonials',
+            displayInMenu: true,
+        },
+        footer: { containerId: 'footer', label: 'Footer', displayInMenu: false },
+    },
+    themes: [
+        { value: 'light', label: 'Light Theme' },
+        { value: 'dark', label: 'Dark Theme' },
+    ],
+};

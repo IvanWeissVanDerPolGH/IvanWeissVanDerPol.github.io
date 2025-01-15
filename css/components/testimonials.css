@@ -1,0 +1,111 @@
+/* Base styles for the Testimonials section */
+.testimonials-section {
+    padding: 60px 0;
+    background-color: var(--background-light, #f8f9fa);
+    color: var(--text-color, #333);
+    text-align: center;
+}
+
+/* Section header */
+.testimonials-section h1 {
+    font-size: 2.5em;
+    color: var(--primary-color, #007bff);
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Carousel container */
+#testimonials {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: var(--background-dark, #fff);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Carousel inner wrapper */
+.testimonials-section .carousel-item {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Active carousel item */
+.testimonials-section .carousel-item.active {
+    display: block;
+}
+
+/* Testimonial title */
+.testimonials-section .testimonial-title {
+    font-size: 1.8em;
+    color: var(--primary-color, #007bff);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Testimonial detail */
+.testimonials-section .testimonial-detail {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: var(--text-secondary, #555);
+    margin-bottom: 15px;
+}
+
+/* Carousel navigation buttons */
+.testimonials-section .carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.testimonials-section .carousel-controls .btn {
+    background-color: var(--primary-color, #007bff);
+    color: var(--text-light, #fff);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.testimonials-section .carousel-controls .btn:hover {
+    background-color: var(--secondary-color, #0056b3);
+    transform: scale(1.1);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonials-section .testimonial-title {
+        font-size: 1.4em;
+    }
+
+    .testimonials-section .testimonial-detail {
+        font-size: 1em;
+    }
+
+    .testimonials-section .carousel-controls .btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2em;
+    }
+}

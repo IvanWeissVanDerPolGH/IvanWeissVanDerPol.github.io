@@ -1,0 +1,131 @@
+/* Base styles for the Work Experience section */
+.colorlib-experience {
+    padding: 50px 0;
+    background-color: var(--background-light); /* Light background from palette */
+    color: var(--text-color); /* Text color from palette */
+}
+
+/* Section header */
+.colorlib-experience h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Timeline container */
+.timeline-centered {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Timeline entry */
+.timeline-entry {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-entry-inner {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Timeline icon */
+.timeline-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    font-size: 1.5em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-icon i {
+    line-height: 50px;
+}
+
+/* Timeline label */
+.timeline-label {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.timeline-label h2 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.timeline-label h2 .timeline-sublabel {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
+.timeline-label .duration {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.timeline-label p {
+    font-size: 1em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Badges for skills/technologies */
+.timeline-label .badge {
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Hover effect for badges */
+.timeline-label .badge:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .timeline-centered {
+        padding: 0;
+    }
+
+    .timeline-label h2 {
+        font-size: 1.2em;
+    }
+
+    .timeline-label p {
+        font-size: 0.95em;
+    }
+
+    .timeline-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+}

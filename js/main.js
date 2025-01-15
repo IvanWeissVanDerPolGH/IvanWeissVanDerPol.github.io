@@ -267,6 +267,7 @@
     // detectDayNightMode();
   });
 })();
+
 class Accordion {
   constructor(el, multiple = false) {
     this.el = el || $(document);
@@ -278,7 +279,7 @@ class Accordion {
 
   initEvents() {
     // Using arrow function to maintain the context of 'this'
-    this.el.find('.link').on('click', (event) => {
+    this.el.find('.category-header').on('click', (event) => {
       this.dropdown(event);
     });
   }
@@ -292,9 +293,12 @@ class Accordion {
 
     // Only allow one submenu to be open unless `multiple` is true
     if (!this.multiple) {
-      $this.parent().siblings().children('.submenu').slideUp().parent().removeClass('open');
+      $this.parent().siblings().children('.category-content').slideUp().parent().removeClass('open');
     }
   }
 }
 
-var accordion = new Accordion($("#accordion"), false);
+$(document).ready(function() {
+  new Accordion($("#skills-accordion"), false);
+  new Accordion($("#certifications-accordion"), false);
+});

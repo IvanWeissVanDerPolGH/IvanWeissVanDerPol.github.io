@@ -1,0 +1,154 @@
+/*************************************************************/
+/* MAIN BIO SECTION                                          */
+/*************************************************************/
+.bio-section {
+    /* Overall section styling */
+    background-color: var(--background-light, #f9f9f9);
+    color: var(--text-color, #333);
+    margin: 40px auto;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .bio-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  /*************************************************************/
+  /* CONTAINER & FLEX LAYOUT                                   */
+  /*************************************************************/
+  .bio-container {
+    display: flex;            /* Lays out the left text and the right image side-by-side */
+    flex-wrap: wrap;          /* Allows wrapping on smaller screens */
+    gap: 20px;                /* Space between left and right columns */
+    max-width: 1200px;        /* Constrain max width if desired */
+    margin: 0 auto;           /* Center horizontally */
+  }
+  
+  .bio-left {
+    flex: 1;                  /* Take remaining space for bio & languages */
+    min-width: 300px;         /* Ensure some minimum width */
+  }
+  
+  .bio-image-wrapper {
+    flex: 0 0 300px;          /* Fixed width for the image column; adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /*************************************************************/
+  /* BIO TEXT & TITLES                                         */
+  /*************************************************************/
+  .bio-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--primary-color, #0066cc);
+    letter-spacing: 1px;
+  }
+  
+  .bio-intro {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-primary, #555);
+    margin-bottom: 20px;
+  }
+  
+  .bio-body {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    text-align: justify;
+    color: var(--text-secondary, #666);
+  }
+  
+  /*************************************************************/
+  /* LANGUAGES SECTION                                         */
+  /*************************************************************/
+  .languages-section {
+    margin-top: 30px;         /* Spacing above the language skills */
+  }
+  
+  /* Container for each language skill */
+  .Language-container {
+    margin-bottom: 20px;      /* Space between each language block */
+  }
+  
+  /* Wrap with the skill name & progress bar */
+  .progress-wrap h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--text-color, #333);
+  }
+  
+  .progress {
+    background-color: var(--background-light-alt, #ebebeb);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 12px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.4s ease;
+  }
+  
+  /* Example color classes for the bars */
+  .color-1 {
+    background-color: #4caf50;  /* Green-ish for 90% */
+  }
+  .color-2 {
+    background-color: #2196f3;  /* Blue-ish for 85% */
+  }
+  .color-3 {
+    background-color: #ff9800;  /* Orange-ish for 70% */
+  }
+  
+  /*************************************************************/
+  /* BIO IMAGE                                                 */
+  /*************************************************************/
+  .bio-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /*************************************************************/
+  /* RESPONSIVE BREAKPOINTS                                    */
+  /*************************************************************/
+  @media (max-width: 992px) {
+    .bio-section {
+      padding: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .bio-container {
+      flex-direction: column;
+    }
+    .bio-left, .bio-image-wrapper {
+      flex: 1 1 auto;
+      min-width: auto;
+    }
+  
+    .bio-title {
+      font-size: 2rem;
+    }
+  
+    .bio-intro {
+      font-size: 1.2rem;
+    }
+  
+    .bio-body {
+      font-size: 1.1rem;
+    }
+  }
+  

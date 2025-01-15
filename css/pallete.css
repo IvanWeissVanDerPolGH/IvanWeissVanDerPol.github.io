@@ -20,23 +20,29 @@
 
 /* Ocean Breeze Theme */
 .theme-ocean-breeze {
-	--primary-color: #0077b6;
-	--secondary-color: #023e8a;
-	--tertiary-color: #90e0ef;
-	--dark-color: #03045e;
-	--light-color: #caf0f8;
-	--background-dark: #023047;
-	--background-light: #ade8f4;
-	--error-color: #ef233c;
-	--success-color: #2a9d8f;
-	--warning-color: #ffb703;
-	--info-color: #8ecae6;
+    --primary-color: #005f99; /* Darker blue for better contrast */
+    --secondary-color: #014f86; /* Refined secondary blue for consistency */
+    --tertiary-color: #56cfe1; /* Slightly softer tertiary color */
+    --dark-color: #012a4a; /* Darker shade for depth */
+    --light-color: #e0f7fa; /* Softer light color for a smoother feel */
+    --background-dark: #01497c; /* Darkened background for stronger contrast */
+    --background-light: #b2ebf2; /* Softer and lighter background */
+    --error-color: #d90429; /* Adjusted error color for better readability */
+    --success-color: #38b000; /* More vibrant success color */
+    --warning-color: #ff8800; /* Adjusted warning color to stand out */
+    --info-color: #118ab2; /* Improved info color for a professional feel */
 
-	--text-color: var(--primary-color);
-	--title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
+    --text-color: #013a63; /* A strong, darker text color for readability */
+    --title-color: #005f99; /* Make titles stand out with refined blue */
+    --color: var(--background-dark);
+    --color-smooth: #036aa7; /* Smooth transition color for hover effects */
+
+    /* New additions for shadow and gradients */
+    --card-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    --gradient-light: linear-gradient(to right, #ade8f4, #56cfe1); /* Soft gradient for light areas */
+    --gradient-dark: linear-gradient(to right, #012a4a, #01497c); /* Gradient for dark elements */
 }
+
 
 /* Sunset Glow Theme */
 .theme-sunset-glow {

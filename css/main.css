@@ -1,0 +1,37 @@
+/* Global Styles and Variables */
+@import url("pallete.css");
+
+/* Component-Specific Styles */
+@import url("components/sidebar.css");
+@import url("components/bio.css"); 
+@import url("components/profile.css");
+@import url("components/languages.css");
+@import url("components/skills.css");
+@import url("components/certifications.css"); 
+@import url("components/experience.css");
+@import url("components/education.css");
+@import url("components/testimonials.css");
+@import url("components/contact.css"); 
+@import url("components/footer.css");
+
+
+#main-content {
+    background-color: var(--background-light-alt, #f8f8f8); /* Fallback background color */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 15vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    #main-content {
+        margin-left: 0px;
+    }
+}
+
+#main-content .section{
+    width: 100%;
+    margin-left: 150vw;
+}

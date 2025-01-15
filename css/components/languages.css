@@ -1,0 +1,122 @@
+.languages-section {
+    padding: 60px; /* Increased padding for better spacing */
+    background-color: var(--background-light, #f8f9fa);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 40px auto; /* Increased margin for more separation */
+    max-width: 900px; /* Wider container for larger layouts */
+    text-align: center;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.languages-section .content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.languages-section h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color, #0077b6);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-bottom: 2px solid var(--primary-color, #0077b6);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#languages {
+    display: flex;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    gap: 30px; /* Increased gap between items */
+    justify-content: center;
+    padding: 20px; /* Adds spacing inside the parent container */
+    background-color: var(--background-light-alt, #eaf4fc);
+    border-radius: 10px; /* Matches child container style */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Language-container {
+    flex: 1 1 200px; /* Flexible sizing for responsiveness */
+    max-width: 250px; /* Prevents overly wide cards */
+    min-width: 200px; /* Ensures minimum size for cards */
+    background-color: var(--background-light-alt, #ffffff);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Language-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.progress-wrap h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-primary, #333);
+    margin-bottom: 10px;
+}
+
+.progress-wrap {
+    position: relative;
+    margin-bottom: 10px;
+    background-color: var(--background-light-alt, #f0f8ff);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+    position: relative;
+    height: 12px;
+    background-color: var(--progress-track-color, #ddd);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress .progress-bar {
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.progress-bar.color-1 {
+    background-color: var(--progress-bar-color-1, #3498db);
+}
+
+.progress-bar.color-2 {
+    background-color: var(--progress-bar-color-2, #e74c3c);
+}
+
+.progress-bar.color-3 {
+    background-color: var(--progress-bar-color-3, #f1c40f);
+}
+
+.progress-bar::after {
+    content: attr(data-label); /* Displays percentage inside the bar */
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85em;
+    color: var(--text-secondary, #555);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    #languages {
+        flex-direction: column; /* Stack items on smaller screens */
+        gap: 20px; /* Adjust gap for smaller screens */
+        padding: 15px; /* Reduce padding for smaller devices */
+    }
+
+    .Language-container {
+        max-width: 100%; /* Take full width on smaller screens */
+    }
+}

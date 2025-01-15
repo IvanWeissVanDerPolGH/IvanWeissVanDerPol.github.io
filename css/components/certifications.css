@@ -1,0 +1,184 @@
+/* General Section Styling */
+.certifications-section {
+    padding: 40px;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1000px;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certifications-section:hover {
+    background-color: var(--background-hover);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Accordion Category Styling */
+.accordion-category {
+    margin-bottom: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Category Header Styling */
+.category-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: left;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.category-header:hover {
+    color: var(--primary-hover-color);
+    border-color: var(--secondary-hover-color);
+}
+
+/* Category Content Styling */
+.category-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: var(--background-light);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Certification Item Styling */
+.certification-item {
+    text-align: center;
+    max-width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.certification-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--background-hover);
+}
+
+/* Certification Image Styling */
+.certification-img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.certification-item:hover .certification-img {
+    transform: scale(1.1);
+}
+
+/* Certification Name Styling */
+.certification-name {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.certification-item:hover .certification-name {
+    color: var(--primary-hover-color);
+}
+
+/* Certification Description Styling */
+.certification-description {
+    font-size: 0.9em;
+    color: var(--text-color);
+    margin-top: 10px;
+    background-color: var(--tertiary-color);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Accessibility and Interaction */
+.certification-item a {
+    text-decoration: none;
+}
+
+.certification-item a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.category-content {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certification-item {
+        max-width: 120px;
+        padding: 8px;
+    }
+
+    .certification-img {
+        width: 80px;
+    }
+
+    .certification-name {
+        font-size: 0.9em;
+    }
+
+    .certification-description {
+        font-size: 0.8em;
+    }
+
+    .category-header {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .certifications-section {
+        padding: 20px;
+    }
+
+    .certification-item {
+        max-width: 100px;
+        padding: 5px;
+    }
+
+    .certification-img {
+        width: 60px;
+    }
+
+    .certification-name {
+        font-size: 0.8em;
+    }
+
+    .certification-description {
+        font-size: 0.7em;
+    }
+
+    .category-header {
+        font-size: 1em;
+        padding-bottom: 5px;
+    }
+}
